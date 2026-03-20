@@ -27,7 +27,7 @@ export default function OutfitPage() {
         </div>
       </section>
 
-      {/* STATS — PROMINENT */}
+      {/* STATS */}
       <section style={{ background: "#0A1628", padding: "80px 0" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "32px" }}>
@@ -71,14 +71,51 @@ export default function OutfitPage() {
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section style={{ background: "#f8f6f1", padding: "60px 0" }}>
+      {/* CANVA PRESENTATION */}
+      <section className="section-pad" style={{ background: "#f8f6f1" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.5rem", fontWeight: 600, color: "#0A1628", marginBottom: "16px" }}>Contact Supreme Outfit</h3>
-          <p style={{ color: "#374151", fontSize: "1rem" }}>
+          <div style={{ fontSize: "0.75rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
+            Company Presentation
+          </div>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 700, color: "#0A1628", marginBottom: "40px" }}>
+            Supreme Outfit Ltd. Overview
+          </h2>
+          <div style={{
+            position: "relative",
+            paddingBottom: "56.25%",
+            height: 0,
+            overflow: "hidden",
+            borderRadius: "8px",
+            border: "2px solid rgba(201,168,76,0.3)",
+            maxWidth: "960px",
+            margin: "0 auto",
+            background: "#0A1628",
+          }}>
+            <iframe
+              src="https://www.canva.com/design/DAGtAg3WIzc/gs9zClswhra_ETd4f1kP5Q/view?embed"
+              title="Supreme Outfit Ltd. Presentation"
+              allowFullScreen
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                border: "none",
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section style={{ background: "#0A1628", padding: "60px 0" }}>
+        <div className="container" style={{ textAlign: "center" }}>
+          <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.5rem", fontWeight: 600, color: "white", marginBottom: "16px" }}>Contact Supreme Outfit</h3>
+          <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "1rem" }}>
             Email: <a href="mailto:office@supremegroupbd.com" style={{ color: "#C9A84C", fontWeight: 600 }}>office@supremegroupbd.com</a>
             {" · "}
-            Phone: <span style={{ fontWeight: 600 }}>+8801678038802</span>
+            Phone: <span style={{ fontWeight: 600, color: "rgba(255,255,255,0.8)" }}>+8801678038802</span>
           </p>
         </div>
       </section>

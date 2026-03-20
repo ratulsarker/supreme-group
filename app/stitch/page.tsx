@@ -9,58 +9,39 @@ export const metadata: Metadata = {
 
 const features = [
   {
-    icon: (
-      <svg width="32" height="32" fill="none" stroke="#C9A84C" strokeWidth="1.5" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-      </svg>
-    ),
-    title: "Sustainable & Eco-Friendly Manufacturing",
-    description: "Powered by a 468 KW solar installation generating 94% renewable energy. Our commitment to sustainability is embedded in every stage of production.",
+    icon: "☀️",
+    title: "Sustainable & Solar Powered",
+    stat: "468 KW",
+    description: "Powered by a 468 KW solar installation generating 94% renewable energy. Sustainability is embedded in every stage of production.",
   },
   {
-    icon: (
-      <svg width="32" height="32" fill="none" stroke="#C9A84C" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-      </svg>
-    ),
+    icon: "⚡",
     title: "High Production Capacity",
-    description: "Producing 60,000 knitwear items per day with consistent quality. Our vertically integrated facility handles everything from yarn to finished product.",
+    stat: "60k/day",
+    description: "Producing 60,000 knitwear items per day with consistent quality. Vertically integrated from yarn to finished product.",
   },
   {
-    icon: (
-      <svg width="32" height="32" fill="none" stroke="#C9A84C" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-      </svg>
-    ),
-    title: "Uncompromising Quality Standards",
-    description: "In-house testing laboratory with AQL 1.0 quality control. Every garment passes through multi-stage inspections before shipment.",
+    icon: "✅",
+    title: "Uncompromising Quality",
+    stat: "AQL 1.0",
+    description: "In-house testing laboratory with AQL 1.0 quality control. Every garment passes multi-stage inspections before shipment.",
   },
   {
-    icon: (
-      <svg width="32" height="32" fill="none" stroke="#C9A84C" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/>
-      </svg>
-    ),
+    icon: "⭐",
     title: "Trusted by Global Brands",
+    stat: "World-Class",
     description: "Proud supplier to Fanatics, Hanes, Walmart, and Champion — some of the world's largest sportswear and retail brands.",
   },
   {
-    icon: (
-      <svg width="32" height="32" fill="none" stroke="#C9A84C" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-        <circle cx="12" cy="12" r="3"/>
-      </svg>
-    ),
-    title: "Innovation & Advanced Technology",
+    icon: "⚙️",
+    title: "Innovation & Technology",
+    stat: "1,064 Machines",
     description: "Operating 1,064 sewing machines, CAD-CAM design software, and automated printing systems for precision and efficiency at scale.",
   },
   {
-    icon: (
-      <svg width="32" height="32" fill="none" stroke="#C9A84C" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-      </svg>
-    ),
-    title: "Outstanding Worker Support",
+    icon: "❤️",
+    title: "Employee Support",
+    stat: "2,500+ Workers",
     description: "On-site medical care, childcare facilities, free worker transport, group insurance, and comprehensive welfare programs for all employees.",
   },
 ];
@@ -71,6 +52,13 @@ const certifications = [
   { src: "/images/cert-rsc.png", alt: "RSC" },
   { src: "/images/cert-sedex.png", alt: "Sedex" },
   { src: "/images/cert-accord.png", alt: "Accord" },
+  { src: "/images/cert-gots.png", alt: "GOTS" },
+  { src: "/images/cert-2.png", alt: "Certification" },
+  { src: "/images/cert-3.png", alt: "Certification" },
+  { src: "/images/cert-4.png", alt: "Certification" },
+  { src: "/images/cert-7.png", alt: "Certification" },
+  { src: "/images/cert-8.png", alt: "Certification" },
+  { src: "/images/cert-9.png", alt: "Certification" },
 ];
 
 const clients = [
@@ -82,10 +70,16 @@ const clients = [
 export default function StitchPage() {
   return (
     <>
-      {/* HERO */}
-      <section style={{ position: "relative", minHeight: "90vh", display: "flex", alignItems: "center", overflow: "hidden" }}>
+      {/* HERO with background image */}
+      <section style={{
+        position: "relative",
+        minHeight: "90vh",
+        display: "flex",
+        alignItems: "center",
+        overflow: "hidden",
+      }}>
         <Image
-          src="/images/stitch-hero.png"
+          src="/images/stitch-bg-slideshow.jpg"
           alt="Supreme Stitch Factory"
           fill
           priority
@@ -127,7 +121,7 @@ export default function StitchPage() {
               marginBottom: "16px",
               maxWidth: "580px",
             }}>
-              At Supreme Stitch Ltd., we combine cutting-edge technology, sustainable practices, and expert craftsmanship to deliver high-quality garments that meet international standards.
+              Cutting-edge technology, sustainable practices, and expert craftsmanship — delivering high-quality garments that meet international standards.
             </p>
             <p style={{
               fontSize: "1rem",
@@ -141,7 +135,7 @@ export default function StitchPage() {
             </p>
             <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
               <Link href="/contact" className="btn-gold">Partner With Us</Link>
-              <a href="#about" className="btn-outline-gold">Learn More</a>
+              <a href="#video" className="btn-outline-gold">Watch Video</a>
             </div>
           </div>
         </div>
@@ -196,6 +190,69 @@ export default function StitchPage() {
         <style>{`@media(max-width:768px){.container > div{grid-template-columns:1fr!important;}}`}</style>
       </section>
 
+      {/* YOUTUBE VIDEO SECTION */}
+      <section id="video" className="section-pad" style={{ background: "#0A1628" }}>
+        <div className="container" style={{ textAlign: "center" }}>
+          <div style={{ fontSize: "0.75rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
+            See Us In Action
+          </div>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.4rem", fontWeight: 700, color: "white", marginBottom: "40px" }}>
+            Factory Tour
+          </h2>
+          <div style={{
+            position: "relative",
+            paddingBottom: "56.25%",
+            height: 0,
+            overflow: "hidden",
+            borderRadius: "8px",
+            border: "2px solid rgba(201,168,76,0.3)",
+            maxWidth: "900px",
+            margin: "0 auto",
+          }}>
+            <iframe
+              src="https://www.youtube.com/embed/jY8u0RTi92I"
+              title="Supreme Stitch Ltd. Factory Tour"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                border: "none",
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CLIENTS */}
+      <section className="section-pad" style={{ background: "white" }}>
+        <div className="container" style={{ textAlign: "center" }}>
+          <div style={{ fontSize: "0.75rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
+            Our Clients
+          </div>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.4rem", fontWeight: 700, color: "#0A1628", marginBottom: "48px" }}>
+            Trusted by Global Brands
+          </h2>
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "80px", flexWrap: "wrap" }}>
+            {clients.map((logo) => (
+              <div key={logo.alt} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={160}
+                  height={80}
+                  style={{ height: "60px", width: "auto", objectFit: "contain" }}
+                />
+                <span style={{ fontSize: "0.8rem", color: "#6b7280", fontWeight: 500 }}>{logo.alt}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ABOUT SECTION */}
       <section id="about" className="section-pad">
         <div className="container">
@@ -214,6 +271,14 @@ export default function StitchPage() {
               <p style={{ color: "#374151", lineHeight: 1.8, marginBottom: "20px" }}>
                 As a vertically integrated manufacturer, Supreme Stitch Ltd. oversees the entire supply chain, from fabric production to final packaging. Our state-of-the-art knitting, cutting, sewing, printing, and finishing facilities, combined with in-house accessory manufacturing, allow us to maintain the highest quality standards while reducing lead times and costs.
               </p>
+              <a
+                href="/images/company-profile-thumb.jpg"
+                target="_blank"
+                className="btn-gold"
+                style={{ marginTop: "16px" }}
+              >
+                📄 Download Company Profile
+              </a>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
               <div style={{ position: "relative", height: "280px", borderRadius: "4px", overflow: "hidden" }}>
@@ -255,7 +320,10 @@ export default function StitchPage() {
                   padding: "32px 28px",
                 }}
               >
-                <div style={{ marginBottom: "16px" }}>{feature.icon}</div>
+                <div style={{ fontSize: "2rem", marginBottom: "8px" }}>{feature.icon}</div>
+                <div style={{ fontSize: "0.75rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "1px", marginBottom: "8px" }}>
+                  {feature.stat}
+                </div>
                 <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.1rem", fontWeight: 600, color: "white", marginBottom: "12px", lineHeight: 1.3 }}>
                   {feature.title}
                 </h3>
@@ -287,58 +355,40 @@ export default function StitchPage() {
                 <Image src="/images/stitch-factory-2.png" alt="Factory sewing floor" fill style={{ objectFit: "cover" }} sizes="400px" />
               </div>
               <div style={{ position: "relative", height: "192px", borderRadius: "4px", overflow: "hidden" }}>
-                <Image src="/images/stitch-2.png" alt="Factory production" fill style={{ objectFit: "cover" }} sizes="400px" />
+                <Image src="/images/stitch-hero.png" alt="Supreme Stitch" fill style={{ objectFit: "cover" }} sizes="400px" />
               </div>
             </div>
           </div>
-        </div>
-        <style>{`@media(max-width:768px){.container > div:last-child{grid-template-columns:1fr!important;}}`}</style>
-      </section>
-
-      {/* CLIENTS */}
-      <section className="section-pad" style={{ background: "white" }}>
-        <div className="container" style={{ textAlign: "center" }}>
-          <div style={{ fontSize: "0.75rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
-            Our Clients
-          </div>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.4rem", fontWeight: 700, color: "#0A1628", marginBottom: "48px" }}>
-            Trusted by Global Brands
-          </h2>
-          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "80px", flexWrap: "wrap" }}>
-            {clients.map((logo) => (
-              <div key={logo.alt} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={160}
-                  height={80}
-                  style={{ height: "60px", width: "auto", objectFit: "contain" }}
-                />
-                <span style={{ fontSize: "0.8rem", color: "#6b7280", fontWeight: 500 }}>{logo.alt}</span>
-              </div>
-            ))}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginTop: "16px" }}>
+            <div style={{ position: "relative", height: "260px", borderRadius: "4px", overflow: "hidden" }}>
+              <Image src="/images/stitch-2.png" alt="Production line" fill style={{ objectFit: "cover" }} sizes="600px" />
+            </div>
+            <div style={{ position: "relative", height: "260px", borderRadius: "4px", overflow: "hidden" }}>
+              <Image src="/images/stitch-3.png" alt="Quality control" fill style={{ objectFit: "cover" }} sizes="600px" />
+            </div>
           </div>
         </div>
+        <style>{`@media(max-width:768px){.container > div:nth-child(2){grid-template-columns:1fr!important;} .container > div:nth-child(2) > div:first-child{height:260px!important;}}`}</style>
       </section>
 
       {/* CERTIFICATIONS */}
-      <section style={{ background: "#112240", padding: "60px 0" }}>
+      <section style={{ background: "#112240", padding: "80px 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
           <div style={{ fontSize: "0.75rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
             Compliance & Certifications
           </div>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "white", marginBottom: "40px" }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "white", marginBottom: "48px" }}>
             Internationally Certified
           </h2>
-          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "48px", flexWrap: "wrap" }}>
-            {certifications.map((cert) => (
-              <div key={cert.alt} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: "24px", maxWidth: "900px", margin: "0 auto" }}>
+            {certifications.map((cert, i) => (
+              <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
                 <div style={{
                   background: "white",
                   borderRadius: "8px",
-                  padding: "16px",
-                  width: "100px",
-                  height: "100px",
+                  padding: "12px",
+                  width: "90px",
+                  height: "90px",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -346,25 +396,65 @@ export default function StitchPage() {
                   <Image
                     src={cert.src}
                     alt={cert.alt}
-                    width={80}
-                    height={80}
-                    style={{ maxHeight: "70px", width: "auto", objectFit: "contain" }}
+                    width={70}
+                    height={70}
+                    style={{ maxHeight: "65px", width: "auto", objectFit: "contain" }}
                   />
                 </div>
-                <span style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.6)", fontWeight: 500 }}>{cert.alt}</span>
+                <span style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.5)", fontWeight: 500 }}>{cert.alt}</span>
               </div>
             ))}
           </div>
         </div>
+        <style>{`@media(max-width:768px){.container > div:last-child{grid-template-columns:repeat(3,1fr)!important;}}@media(max-width:480px){.container > div:last-child{grid-template-columns:repeat(2,1fr)!important;}}`}</style>
       </section>
 
-      {/* CTA */}
+      {/* GOOGLE MAPS */}
+      <section style={{ background: "#f8f6f1", padding: "60px 0" }}>
+        <div className="container" style={{ textAlign: "center" }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#0A1628", marginBottom: "32px" }}>
+            Our Location
+          </h2>
+          <div style={{
+            borderRadius: "8px",
+            overflow: "hidden",
+            border: "2px solid rgba(201,168,76,0.3)",
+            maxWidth: "900px",
+            margin: "0 auto",
+          }}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.8977698763977!2d90.3554741!3d24.0185944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c1e5a57e1b1d%3A0x6c4c3e4e0e7b2a0d!2sKashimpur%2C%20Gazipur!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+              width="100%"
+              height="400"
+              style={{ border: "none" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Supreme Stitch Factory Location"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA with background */}
       <section style={{
-        background: "linear-gradient(135deg, #C9A84C 0%, #a8832e 100%)",
-        padding: "80px 0",
+        position: "relative",
+        padding: "100px 0",
         textAlign: "center",
+        overflow: "hidden",
       }}>
-        <div className="container">
+        <Image
+          src="/images/stitch-cta-bg.jpg"
+          alt="CTA Background"
+          fill
+          style={{ objectFit: "cover" }}
+        />
+        <div style={{
+          position: "absolute",
+          inset: 0,
+          background: "linear-gradient(135deg, rgba(201,168,76,0.92) 0%, rgba(168,131,46,0.92) 100%)",
+        }} />
+        <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.4rem", fontWeight: 700, color: "#0A1628", marginBottom: "16px" }}>
             Partner with a Leader in Garment Manufacturing
           </h2>
