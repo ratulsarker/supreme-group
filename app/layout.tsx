@@ -5,17 +5,20 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Supreme Group Bangladesh | Diversified Business Conglomerate",
+    default: "Supreme Group Bangladesh | Garments Conglomerate",
     template: "%s | Supreme Group Bangladesh",
   },
   description:
-    "Supreme Group Bangladesh is a diversified conglomerate with six sister concerns spanning garment manufacturing, accessories, agro, embellishment, food, and retail across Bangladesh.",
+    "Supreme Group Bangladesh — a diversified garments conglomerate with six sister concerns spanning garment manufacturing, accessories, sustainable agriculture, embellishment, retail, and food.",
   keywords: [
     "Supreme Group Bangladesh",
     "garment manufacturer Bangladesh",
     "Supreme Stitch",
     "Supreme Outfit",
     "Bangladesh conglomerate",
+    "export oriented garments",
+    "Fanatics supplier",
+    "Walmart supplier",
   ],
   openGraph: {
     type: "website",

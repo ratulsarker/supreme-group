@@ -1,14 +1,15 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const concerns = [
-  { href: "/stitch", label: "Supreme Stitch" },
-  { href: "/accessories", label: "Accessories" },
-  { href: "/ecobricks", label: "Eco Bricks & Agro" },
-  { href: "/embellishment", label: "Embellishment" },
+  { href: "/stitch", label: "Supreme Stitch Ltd." },
+  { href: "/accessories", label: "Supreme Accessories Industries Ltd." },
+  { href: "/ecobricks", label: "Supreme Eco Bricks & Agro Ltd." },
+  { href: "/embellishment", label: "Supreme Embellishment Ltd." },
+  { href: "/outfit", label: "Supreme Outfit Ltd." },
   { href: "/sweets", label: "Supreme Sweets" },
-  { href: "/outfit", label: "Supreme Outfit" },
 ];
 
 export default function Navbar() {
@@ -20,17 +21,19 @@ export default function Navbar() {
       <div className="container">
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "72px" }}>
           {/* Logo */}
-          <Link href="/" style={{ textDecoration: "none", display: "flex", flexDirection: "column" }}>
-            <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.25rem", fontWeight: 700, color: "#C9A84C", letterSpacing: "0.5px" }}>
-              SUPREME GROUP
-            </span>
-            <span style={{ fontSize: "0.65rem", color: "rgba(255,255,255,0.5)", letterSpacing: "2.5px", textTransform: "uppercase", marginTop: "1px" }}>
-              BANGLADESH
-            </span>
+          <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+            <Image
+              src="/images/logo.png"
+              alt="Supreme Group Bangladesh"
+              width={160}
+              height={54}
+              priority
+              style={{ height: "42px", width: "auto" }}
+            />
           </Link>
 
           {/* Desktop Nav */}
-          <div style={{ display: "flex", alignItems: "center", gap: "36px" }} className="desktop-nav">
+          <div style={{ display: "flex", alignItems: "center", gap: "32px" }} className="desktop-nav">
             <Link href="/" className="nav-link">Home</Link>
             <Link href="/about" className="nav-link">About</Link>
 
@@ -45,7 +48,7 @@ export default function Navbar() {
                 style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center", gap: "4px" }}
               >
                 Our Companies
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" style={{ marginTop: "1px" }}>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" style={{ marginTop: "1px", transition: "transform 0.2s", transform: dropOpen ? "rotate(180deg)" : "rotate(0)" }}>
                   <path d="M6 8L1 3h10z" />
                 </svg>
               </button>
@@ -60,7 +63,7 @@ export default function Navbar() {
                   background: "#0A1628",
                   border: "1px solid rgba(201,168,76,0.2)",
                   borderRadius: "4px",
-                  minWidth: "220px",
+                  minWidth: "280px",
                   padding: "8px 0",
                   zIndex: 100,
                   boxShadow: "0 20px 40px rgba(0,0,0,0.4)",

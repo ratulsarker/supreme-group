@@ -1,78 +1,87 @@
-import CompanyPage from "@/components/CompanyPage";
+import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Supreme Outfit Ltd.",
-  description: "High-capacity garment manufacturer — 5 buildings, 1,350+ sewing machines, 1.2M pcs/month, powered by 1MW solar.",
+  description: "High-capacity garment manufacturer — 5 buildings, 1,350+ sewing machines, 1.2M pcs/month, 1 MW solar power.",
 };
 
 export default function OutfitPage() {
   return (
-    <CompanyPage
-      category="Garment Manufacturing"
-      name="Supreme Outfit Ltd."
-      tagline="Massive-scale garment production powered by green energy — delivering 1.2 million pieces per month with precision and sustainability."
-      overview="Supreme Outfit Ltd. is one of Supreme Group's flagship garment manufacturing operations, representing the group's largest production facility by output. Operating across 5 multi-story production buildings, we deploy 1,350+ industrial sewing machines to produce 1.2 million garment pieces every month. What makes Supreme Outfit truly distinctive is our investment in clean energy: a 1 megawatt (MW) solar power installation supplies a significant portion of our energy needs — reducing both our operational costs and our environmental impact. Supreme Outfit is a model for what modern, responsible, high-volume garment manufacturing can look like in Bangladesh."
-      stats={[
-        { number: "5", label: "Buildings" },
-        { number: "1,350+", label: "Sewing Machines" },
-        { number: "1.2M", label: "Pcs/Month" },
-        { number: "1MW", label: "Solar Power" },
-      ]}
-      sections={[
-        {
-          heading: "Production Scale",
-          body: [
-            "Five production buildings house over 1,350 industrial sewing machines running in organized, efficient production lines.",
-            "Monthly output of 1.2 million pieces makes Supreme Outfit one of the highest-capacity garment manufacturers in the group — and one of the most reliable volume suppliers in Bangladesh.",
-          ],
-        },
-        {
-          heading: "Solar Power — 1MW",
-          body: [
-            "We have invested in a 1MW rooftop solar power installation — one of the largest among garment manufacturers in Bangladesh.",
-            "This renewable energy infrastructure significantly reduces our grid power dependency, lowers production costs, and demonstrates our commitment to environmental responsibility.",
-          ],
-        },
-        {
-          heading: "Sewing & Cutting",
-          body: [
-            "1,350+ sewing machines across specialized lines — each calibrated for specific garment types and stitch operations.",
-            "Computer-assisted cutting systems minimize fabric waste and ensure consistent pattern sizing across all production runs.",
-          ],
-        },
-        {
-          heading: "Workforce",
-          body: [
-            "Hundreds of trained sewing operators, supervisors, quality controllers, and support staff work across our facilities.",
-            "We invest in training, workplace safety, and employee welfare — maintaining a productive and loyal workforce.",
-          ],
-        },
-        {
-          heading: "Quality & Compliance",
-          body: [
-            "Inline and end-line quality inspection systems ensure that defect rates are minimized before garments leave our floor.",
-            "We comply with international buyer standards for safety, labor, and environmental practices — supporting our clients' compliance requirements.",
-          ],
-        },
-        {
-          heading: "Infrastructure",
-          body: [
-            "Five modern production buildings with proper ventilation, lighting, fire safety systems, and emergency exits.",
-            "Dedicated logistics and packing areas allow for efficient order consolidation and shipment preparation.",
-          ],
-        },
-      ]}
-      highlights={[
-        "1.2 million garment pieces produced every month",
-        "1,350+ industrial sewing machines across 5 production buildings",
-        "1MW solar power — reducing costs and carbon footprint",
-        "Computer-assisted cutting for precision and waste reduction",
-        "Inline quality inspection and end-line QA at every stage",
-        "Compliant with international labor and environmental standards",
-        "Reliable high-volume delivery for global apparel buyers",
-        "Modern, safe, and well-equipped production infrastructure",
-      ]}
-    />
+    <>
+      {/* HERO */}
+      <section style={{ position: "relative", minHeight: "70vh", display: "flex", alignItems: "center", overflow: "hidden" }}>
+        <Image src="/images/stitch-factory-1.png" alt="Supreme Outfit Factory" fill priority style={{ objectFit: "cover" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(10,22,40,0.9) 0%, rgba(10,22,40,0.6) 100%)" }} />
+        <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px" }}>
+          <div style={{ fontSize: "0.75rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
+            Garment Manufacturing
+          </div>
+          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700, color: "white", marginBottom: "20px" }}>
+            Supreme Outfit Ltd.
+          </h1>
+          <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.75)", maxWidth: "560px", lineHeight: 1.8 }}>
+            High-capacity garment manufacturing with green energy infrastructure for sustainable large-scale production.
+          </p>
+        </div>
+      </section>
+
+      {/* STATS — PROMINENT */}
+      <section style={{ background: "#0A1628", padding: "80px 0" }}>
+        <div className="container">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "32px" }}>
+            {[
+              { num: "5", label: "Buildings" },
+              { num: "1,350+", label: "Sewing Machines" },
+              { num: "1.2M", label: "PCS / Month" },
+              { num: "1 MW", label: "Solar Power" },
+            ].map((s) => (
+              <div key={s.label} style={{ textAlign: "center", padding: "40px 24px", background: "#112240", borderRadius: "4px", border: "1px solid rgba(201,168,76,0.2)" }}>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "3.5rem", fontWeight: 700, color: "#C9A84C", lineHeight: 1 }}>
+                  {s.num}
+                </div>
+                <div style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.65)", marginTop: "12px", fontWeight: 500, letterSpacing: "1px", textTransform: "uppercase" }}>
+                  {s.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <style>{`@media(max-width:768px){.container > div{grid-template-columns:repeat(2,1fr)!important;}}`}</style>
+      </section>
+
+      {/* CONTENT */}
+      <section className="section-pad">
+        <div className="container" style={{ maxWidth: "800px", textAlign: "center" }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 700, color: "#0A1628", marginBottom: "16px" }}>
+            Scale Meets <span style={{ color: "#C9A84C" }}>Sustainability</span>
+          </h2>
+          <div style={{ width: "60px", height: "3px", background: "#C9A84C", margin: "0 auto 24px" }} />
+          <p style={{ color: "#374151", lineHeight: 1.8, marginBottom: "20px", fontSize: "1.05rem" }}>
+            Supreme Outfit Ltd. operates one of the largest garment manufacturing setups in the Supreme Group portfolio. With 5 purpose-built factory buildings housing over 1,350 sewing machines, we deliver a production capacity of 1.2 million pieces per month.
+          </p>
+          <p style={{ color: "#374151", lineHeight: 1.8, marginBottom: "32px", fontSize: "1.05rem" }}>
+            Our commitment to sustainability is powered by a 1 MW solar installation, reducing our carbon footprint while maintaining the production capacity that global brands demand.
+          </p>
+          <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+            <Link href="/contact" className="btn-gold">Partner With Us</Link>
+            <Link href="/stitch" className="btn-outline-gold" style={{ borderColor: "#0A1628", color: "#0A1628" }}>See Supreme Stitch →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section style={{ background: "#f8f6f1", padding: "60px 0" }}>
+        <div className="container" style={{ textAlign: "center" }}>
+          <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.5rem", fontWeight: 600, color: "#0A1628", marginBottom: "16px" }}>Contact Supreme Outfit</h3>
+          <p style={{ color: "#374151", fontSize: "1rem" }}>
+            Email: <a href="mailto:office@supremegroupbd.com" style={{ color: "#C9A84C", fontWeight: 600 }}>office@supremegroupbd.com</a>
+            {" · "}
+            Phone: <span style={{ fontWeight: 600 }}>+8801678038802</span>
+          </p>
+        </div>
+      </section>
+    </>
   );
 }
