@@ -276,10 +276,11 @@ export default function StitchPage() {
                 As a vertically integrated manufacturer, we oversee the entire supply chain — from fabric production to final packaging. Our state-of-the-art facilities and in-house accessory manufacturing allow us to maintain the highest quality standards while reducing lead times and costs.
               </p>
               <a
-                href="mailto:office@supremegroupbd.com?subject=Company%20Profile%20Request"
+                href="/supreme-stitch-company-profile.pdf"
+                download
                 className="btn-gold"
               >
-                Request Company Profile
+                Download Company Profile
               </a>
               <Link href="/contact" className="btn-outline-gold" style={{ marginLeft: "16px" }}>
                 Get in Touch
