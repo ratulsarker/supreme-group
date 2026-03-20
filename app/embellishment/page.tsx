@@ -28,12 +28,15 @@ export default function EmbellishmentPage() {
       </section>
 
       {/* INFO BAR */}
-      <section style={{ background: "#C9A84C", padding: "20px 0" }}>
-        <div className="container" style={{ display: "flex", justifyContent: "center", gap: "40px", flexWrap: "wrap", fontSize: "0.85rem", color: "#0A1628", fontWeight: 600 }}>
-          <span>📍 140/1, East Baghbari, Kashimpur, Gazipur Sadar, Gazipur</span>
-          <span>📞 01678-038802</span>
-          <span>✉️ admin@supremegroupbd.com</span>
-          <span>🕐 Mon-Thu, Sat-Sun: 8:30 AM – 5:30 PM | Fri: Closed</span>
+      <section style={{ background: "#112240", borderBottom: "1px solid rgba(201,168,76,0.15)", padding: "18px 0" }}>
+        <div className="container" style={{ display: "flex", justifyContent: "center", gap: "40px", flexWrap: "wrap", fontSize: "0.8rem", color: "rgba(255,255,255,0.6)", fontWeight: 500, letterSpacing: "0.3px" }}>
+          <span>140/1, East Baghbari, Kashimpur, Gazipur</span>
+          <span style={{ color: "rgba(201,168,76,0.4)" }}>|</span>
+          <span>+8801678-038802</span>
+          <span style={{ color: "rgba(201,168,76,0.4)" }}>|</span>
+          <span><a href="mailto:admin@supremegroupbd.com" style={{ color: "#C9A84C", textDecoration: "none" }}>admin@supremegroupbd.com</a></span>
+          <span style={{ color: "rgba(201,168,76,0.4)" }}>|</span>
+          <span>Mon–Thu, Sat–Sun: 8:30 AM – 5:30 PM</span>
         </div>
       </section>
 
@@ -121,17 +124,18 @@ export default function EmbellishmentPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ background: "linear-gradient(135deg, #C9A84C 0%, #a8832e 100%)", padding: "60px 0", textAlign: "center" }}>
+      <section style={{ background: "#0A1628", padding: "80px 0", textAlign: "center", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
         <div className="container">
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#0A1628", marginBottom: "16px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+            Work With Us
+          </p>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "white", marginBottom: "16px" }}>
             Need Printing or Embroidery Services?
           </h2>
-          <p style={{ color: "rgba(10,22,40,0.72)", fontSize: "1rem", marginBottom: "32px", maxWidth: "500px", margin: "0 auto 32px" }}>
+          <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "1rem", marginBottom: "36px", maxWidth: "480px", margin: "0 auto 36px", lineHeight: 1.8 }}>
             80,000 pcs/day capacity with 520 skilled professionals ready to deliver excellence.
           </p>
-          <Link href="/contact" style={{ display: "inline-block", background: "#0A1628", color: "#C9A84C", fontWeight: 700, padding: "14px 36px", borderRadius: "2px", textDecoration: "none", fontSize: "0.95rem" }}>
-            Get In Touch
-          </Link>
+          <Link href="/contact" className="btn-gold">Get In Touch</Link>
         </div>
       </section>
     </>

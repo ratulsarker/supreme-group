@@ -139,18 +139,22 @@ export default function Home() {
             </div>
 
             {/* Mini stats */}
-            <div style={{ display: "flex", gap: "40px", marginTop: "64px", flexWrap: "wrap" }}>
+            <div style={{ display: "flex", gap: "0", marginTop: "64px", flexWrap: "wrap", borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: "32px" }}>
               {[
                 { number: "6", label: "Sister Concerns" },
                 { number: "4,000+", label: "Employees" },
                 { number: "1.2M+", label: "Pcs / Month" },
                 { number: "1MW+", label: "Solar Power" },
-              ].map((s) => (
-                <div key={s.label}>
-                  <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 700, color: "#C9A84C", lineHeight: 1 }}>
+              ].map((s, i) => (
+                <div key={s.label} style={{
+                  paddingRight: "40px",
+                  marginRight: "40px",
+                  borderRight: i < 3 ? "1px solid rgba(255,255,255,0.1)" : "none",
+                }}>
+                  <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#C9A84C", lineHeight: 1 }}>
                     {s.number}
                   </div>
-                  <div style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.5)", marginTop: "4px", letterSpacing: "0.5px" }}>
+                  <div style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.45)", marginTop: "6px", letterSpacing: "1px", textTransform: "uppercase" }}>
                     {s.label}
                   </div>
                 </div>
@@ -278,31 +282,35 @@ export default function Home() {
 
       {/* CTA SECTION */}
       <section style={{
-        background: "linear-gradient(135deg, #C9A84C 0%, #a8832e 100%)",
-        padding: "80px 0",
+        background: "#0A1628",
+        padding: "100px 0",
         textAlign: "center",
+        borderTop: "1px solid rgba(201,168,76,0.15)",
+        position: "relative",
+        overflow: "hidden",
       }}>
-        <div className="container">
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.6rem", fontWeight: 700, color: "#0A1628", marginBottom: "16px" }}>
-            Partner with a Leader in Garment Manufacturing
-          </h2>
-          <p style={{ color: "rgba(10,22,40,0.72)", fontSize: "1.05rem", marginBottom: "36px", maxWidth: "560px", margin: "0 auto 36px" }}>
-            Join global brands like Fanatics, Hanes, and Walmart who trust us for high-quality, sustainable apparel. Let&apos;s build something together.
+        {/* Subtle radial glow */}
+        <div style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "600px",
+          height: "300px",
+          background: "radial-gradient(ellipse, rgba(201,168,76,0.06) 0%, transparent 70%)",
+          pointerEvents: "none",
+        }} />
+        <div className="container" style={{ position: "relative", zIndex: 1 }}>
+          <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+            Work With Us
           </p>
-          <Link href="/contact" style={{
-            display: "inline-block",
-            background: "#0A1628",
-            color: "#C9A84C",
-            fontWeight: 700,
-            fontFamily: "'Inter', sans-serif",
-            padding: "16px 40px",
-            borderRadius: "2px",
-            textDecoration: "none",
-            fontSize: "0.95rem",
-            letterSpacing: "0.5px",
-          }}>
-            Get In Touch
-          </Link>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.9rem, 4vw, 3rem)", fontWeight: 700, color: "white", marginBottom: "20px", lineHeight: 1.2 }}>
+            Partner with a Leader in<br />Garment Manufacturing
+          </h2>
+          <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "1.05rem", marginBottom: "40px", maxWidth: "520px", margin: "0 auto 40px", lineHeight: 1.85 }}>
+            Join global brands like Fanatics, Hanes, and Walmart who trust us for high-quality, sustainable apparel from Bangladesh.
+          </p>
+          <Link href="/contact" className="btn-gold">Get In Touch</Link>
         </div>
       </section>
     </>

@@ -110,19 +110,33 @@ export default function AboutPage() {
       {/* VALUES */}
       <section className="section-pad" style={{ background: "#f8f6f1" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 700, color: "#0A1628", marginBottom: "48px" }}>
-            Our Values
+          <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+            What We Stand For
+          </p>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 700, color: "#0A1628", marginBottom: "56px" }}>
+            Our Core Values
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "24px" }}>
             {[
-              { title: "Quality", desc: "AQL 1.0 standards, in-house testing, and multi-stage inspections across all operations." },
-              { title: "Sustainability", desc: "1.5 MW+ combined solar power, biogas generation, ETP systems, and 94% renewable energy." },
-              { title: "Innovation", desc: "CAD-CAM systems, automated printing, and continuous investment in cutting-edge technology." },
-              { title: "People", desc: "Medical care, childcare, transport, insurance, and welfare programs for 4,000+ employees." },
+              { number: "I", title: "Quality", desc: "AQL 1.0 standards, in-house testing, and multi-stage inspections across all operations." },
+              { number: "II", title: "Sustainability", desc: "1.5 MW+ combined solar power, biogas generation, ETP systems, and 94% renewable energy." },
+              { number: "III", title: "Innovation", desc: "CAD-CAM systems, automated printing, and continuous investment in cutting-edge technology." },
+              { number: "IV", title: "People", desc: "Medical care, childcare, transport, insurance, and welfare programs for 4,000+ employees." },
             ].map((v) => (
-              <div key={v.title} className="card-hover" style={{ background: "white", border: "1px solid #e8e8e0", borderRadius: "4px", padding: "32px 24px" }}>
-                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.15rem", fontWeight: 600, color: "#0A1628", marginBottom: "12px" }}>{v.title}</h3>
-                <p style={{ fontSize: "0.85rem", color: "#6b7280", lineHeight: 1.7 }}>{v.desc}</p>
+              <div key={v.title} className="card-hover" style={{
+                background: "white",
+                border: "1px solid #e8e8e0",
+                borderRadius: "4px",
+                padding: "36px 28px",
+                textAlign: "left",
+                transition: "border-color 0.2s, box-shadow 0.2s",
+              }}>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "0.75rem", color: "#C9A84C", fontWeight: 600, letterSpacing: "2px", marginBottom: "16px" }}>
+                  {v.number}
+                </div>
+                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.2rem", fontWeight: 600, color: "#0A1628", marginBottom: "12px" }}>{v.title}</h3>
+                <div style={{ width: "32px", height: "1px", background: "#C9A84C", marginBottom: "14px", opacity: 0.5 }} />
+                <p style={{ fontSize: "0.855rem", color: "#6b7280", lineHeight: 1.75 }}>{v.desc}</p>
               </div>
             ))}
           </div>
@@ -131,14 +145,18 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ background: "linear-gradient(135deg, #C9A84C 0%, #a8832e 100%)", padding: "60px 0", textAlign: "center" }}>
+      <section style={{ background: "#0A1628", padding: "80px 0", textAlign: "center", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
         <div className="container">
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#0A1628", marginBottom: "16px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+            Let&apos;s Build Together
+          </p>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 700, color: "white", marginBottom: "24px" }}>
             Ready to Work With Us?
           </h2>
-          <Link href="/contact" style={{ display: "inline-block", background: "#0A1628", color: "#C9A84C", fontWeight: 700, padding: "14px 36px", borderRadius: "2px", textDecoration: "none", fontSize: "0.95rem" }}>
-            Get In Touch
-          </Link>
+          <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "1rem", marginBottom: "36px", maxWidth: "480px", margin: "0 auto 36px", lineHeight: 1.8 }}>
+            Trusted by global brands across sportswear, retail, and fashion. Let&apos;s start a conversation.
+          </p>
+          <Link href="/contact" className="btn-gold">Get In Touch</Link>
         </div>
       </section>
     </>

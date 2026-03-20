@@ -36,12 +36,15 @@ export default function AccessoriesPage() {
       </section>
 
       {/* CONTACT BAR */}
-      <section style={{ background: "#C9A84C", padding: "20px 0" }}>
-        <div className="container" style={{ display: "flex", justifyContent: "center", gap: "40px", flexWrap: "wrap", fontSize: "0.85rem", color: "#0A1628", fontWeight: 600 }}>
-          <span>📍 358 West Shaildube, Kashimpur Gazipur – 1700</span>
-          <span>📞 01678-038802</span>
-          <span>✉️ admin@supremegroupbd.com</span>
-          <span>🕐 Mon-Thu, Sat-Sun: 8:30 AM – 5:30 PM | Fri: Closed</span>
+      <section style={{ background: "#112240", borderBottom: "1px solid rgba(201,168,76,0.15)", padding: "18px 0" }}>
+        <div className="container" style={{ display: "flex", justifyContent: "center", gap: "40px", flexWrap: "wrap", fontSize: "0.8rem", color: "rgba(255,255,255,0.6)", fontWeight: 500, letterSpacing: "0.3px" }}>
+          <span>358 West Shaildube, Kashimpur Gazipur – 1700</span>
+          <span style={{ color: "rgba(201,168,76,0.4)" }}>|</span>
+          <span>+8801678-038802</span>
+          <span style={{ color: "rgba(201,168,76,0.4)" }}>|</span>
+          <span><a href="mailto:admin@supremegroupbd.com" style={{ color: "#C9A84C", textDecoration: "none" }}>admin@supremegroupbd.com</a></span>
+          <span style={{ color: "rgba(201,168,76,0.4)" }}>|</span>
+          <span>Mon–Thu, Sat–Sun: 8:30 AM – 5:30 PM</span>
         </div>
       </section>
 
@@ -103,40 +106,53 @@ export default function AccessoriesPage() {
       {/* PRODUCTS LIST */}
       <section className="section-pad" style={{ background: "#f8f6f1" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#0A1628", marginBottom: "40px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+            What We Make
+          </p>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "#0A1628", marginBottom: "48px" }}>
             Our Products
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px", maxWidth: "800px", margin: "0 auto" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px", maxWidth: "860px", margin: "0 auto" }}>
             {["Poly Bags", "Printed Labels", "Offset Prints", "Sewing Threads", "Elastic", "Twill Tape", "BOPP Cutting", "Draw Cords", "Drawstrings", "Interlinings", "Neck Boards", "Cartons"].map((product) => (
-              <div key={product} style={{
-                background: "white",
-                border: "1px solid #e8e8e0",
-                borderRadius: "4px",
-                padding: "16px",
-                fontSize: "0.875rem",
-                fontWeight: 500,
-                color: "#0A1628",
-              }}>
+              <div key={product} className="product-tag">
                 {product}
               </div>
             ))}
           </div>
+          <style>{`
+            .product-tag {
+              background: white;
+              border: 1px solid #e8e8e0;
+              border-top: 2px solid transparent;
+              border-radius: 3px;
+              padding: 18px 16px;
+              font-size: 0.845rem;
+              font-weight: 500;
+              color: #0A1628;
+              letter-spacing: 0.3px;
+              transition: border-top-color 0.2s;
+            }
+            .product-tag:hover {
+              border-top-color: #C9A84C;
+            }
+          `}</style>
         </div>
         <style>{`@media(max-width:600px){.container > div:last-child{grid-template-columns:repeat(2,1fr)!important;}}`}</style>
       </section>
 
       {/* CTA */}
-      <section style={{ background: "linear-gradient(135deg, #C9A84C 0%, #a8832e 100%)", padding: "60px 0", textAlign: "center" }}>
+      <section style={{ background: "#0A1628", padding: "80px 0", textAlign: "center", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
         <div className="container">
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#0A1628", marginBottom: "16px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+            Work With Us
+          </p>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "white", marginBottom: "16px" }}>
             Need Garment Accessories?
           </h2>
-          <p style={{ color: "rgba(10,22,40,0.72)", fontSize: "1rem", marginBottom: "32px", maxWidth: "500px", margin: "0 auto 32px" }}>
+          <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "1rem", marginBottom: "36px", maxWidth: "480px", margin: "0 auto 36px", lineHeight: 1.8 }}>
             12 production lines, 80+ machines, and the capacity to deliver at scale. Get in touch today.
           </p>
-          <Link href="/contact" style={{ display: "inline-block", background: "#0A1628", color: "#C9A84C", fontWeight: 700, padding: "14px 36px", borderRadius: "2px", textDecoration: "none", fontSize: "0.95rem" }}>
-            Contact Us
-          </Link>
+          <Link href="/contact" className="btn-gold">Contact Us</Link>
         </div>
       </section>
     </>
