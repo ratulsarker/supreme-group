@@ -161,13 +161,13 @@ export default function Home() {
       </section>
 
       {/* CLIENTS MARQUEE */}
-      <section style={{ background: "#C9A84C", padding: "24px 0", overflow: "hidden" }}>
-        <div style={{ textAlign: "center", marginBottom: "12px" }}>
-          <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "#0A1628", letterSpacing: "2px", textTransform: "uppercase" }}>Trusted by Global Brands</span>
+      <section style={{ background: "#C9A84C", padding: "32px 0", overflow: "hidden" }}>
+        <div style={{ textAlign: "center", marginBottom: "16px" }}>
+          <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "#0A1628", letterSpacing: "3px", textTransform: "uppercase" }}>Trusted by Global Brands</span>
         </div>
         <div className="marquee-container">
           <div className="marquee-track">
-            {[...Array(3)].map((_, setIdx) => (
+            {[...Array(6)].map((_, setIdx) => (
               [
                 { src: "/images/walmart-logo.png", alt: "Walmart" },
                 { src: "/images/fanatics-logo.png", alt: "Fanatics" },
