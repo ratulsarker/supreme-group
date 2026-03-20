@@ -150,18 +150,18 @@ h1, h2, h3, h4, h5, h6 {
 .marquee-track {
   display: flex;
   align-items: center;
-  gap: 120px;
-  animation: marquee-scroll 12s linear infinite;
+  gap: 80px;
+  animation: marquee-scroll 14s linear infinite;
   width: max-content;
-  padding: 20px 0;
+  padding: 16px 0;
 }
 
 .marquee-logo {
-  height: 100px;
+  height: 72px;
   width: auto;
   flex-shrink: 0;
   transition: filter 0.3s ease, opacity 0.3s ease;
-  filter: grayscale(100%) opacity(0.5);
+  filter: grayscale(100%) opacity(0.45);
 }
 
 .marquee-logo:hover {
@@ -179,10 +179,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .marquee-logo {
-    height: 100px;
+    height: 56px;
   }
   .marquee-track {
-    gap: 80px;
+    gap: 64px;
   }
 }
 
