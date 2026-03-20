@@ -161,10 +161,12 @@ export default function Home() {
       </section>
 
       {/* CLIENTS BAR */}
-      <section style={{ background: "#C9A84C", padding: "24px 0" }}>
+      <section style={{ background: "#C9A84C", padding: "20px 0" }}>
         <div className="container">
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "60px", flexWrap: "wrap" }}>
-            <span style={{ fontSize: "0.75rem", fontWeight: 700, color: "#0A1628", letterSpacing: "2px", textTransform: "uppercase" }}>Trusted by</span>
+          <div style={{ textAlign: "center", marginBottom: "8px" }}>
+            <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "#0A1628", letterSpacing: "2px", textTransform: "uppercase" }}>Trusted by</span>
+          </div>
+          <div className="trusted-logos" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "40px" }}>
             {[
               { src: "/images/walmart-logo.png", alt: "Walmart" },
               { src: "/images/fanatics-logo.png", alt: "Fanatics" },
@@ -174,7 +176,7 @@ export default function Home() {
                 key={logo.alt}
                 src={logo.src}
                 alt={logo.alt}
-                style={{ height: "60px", width: "auto", filter: "brightness(0) opacity(0.8)" }}
+                style={{ height: "50px", width: "auto", filter: "brightness(0) opacity(0.8)" }}
               />
             ))}
           </div>

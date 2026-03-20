@@ -306,6 +306,14 @@ h1, h2, h3, h4, h5, h6 {
     gap: 8px !important;
   }
   
+  /* Trusted logos: stay in one row on mobile */
+  .trusted-logos {
+    gap: 20px !important;
+  }
+  .trusted-logos img {
+    height: 35px !important;
+  }
+  
   /* Prevent horizontal overflow */
   body {
     overflow-x: hidden;
