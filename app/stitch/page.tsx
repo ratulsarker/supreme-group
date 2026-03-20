@@ -238,7 +238,7 @@ export default function StitchPage() {
       </section>
 
       {/* CLIENTS MARQUEE */}
-      <section className="section-pad" style={{ background: "white", overflow: "hidden" }}>
+      <section className="section-pad" style={{ background: "#f8f6f1", borderTop: "1px solid #e8e8e0", borderBottom: "1px solid #e8e8e0", overflow: "hidden" }}>
         <div style={{ textAlign: "center", marginBottom: "40px" }}>
           <p className="section-eyebrow">Our Clients</p>
           <h2 className="section-h2-dark">Trusted by Global Brands</h2>
@@ -252,7 +252,6 @@ export default function StitchPage() {
                   src={logo.src}
                   alt={logo.alt}
                   className="marquee-logo"
-                  style={{ filter: "none", opacity: 0.85 }}
                 />
               ))
             ))}

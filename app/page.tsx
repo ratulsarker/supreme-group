@@ -175,9 +175,9 @@ export default function Home() {
       </section>
 
       {/* CLIENTS MARQUEE */}
-      <section style={{ background: "#C9A84C", padding: "32px 0", overflow: "hidden" }}>
-        <div style={{ textAlign: "center", marginBottom: "16px" }}>
-          <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "#0A1628", letterSpacing: "3px", textTransform: "uppercase" }}>Trusted by Global Brands</span>
+      <section style={{ background: "#f8f6f1", borderTop: "1px solid #e8e8e0", borderBottom: "1px solid #e8e8e0", padding: "40px 0", overflow: "hidden" }}>
+        <div style={{ textAlign: "center", marginBottom: "20px" }}>
+          <span style={{ fontSize: "0.68rem", fontWeight: 700, color: "#9a8a6a", letterSpacing: "3px", textTransform: "uppercase" }}>Trusted by Global Brands</span>
         </div>
         <div className="marquee-container">
           <div className="marquee-track">
@@ -195,11 +195,68 @@ export default function Home() {
                   src={logo.src}
                   alt={logo.alt}
                   className="marquee-logo"
+                  style={{ filter: "grayscale(100%) opacity(0.5)" }}
                 />
               ))
             ))}
           </div>
         </div>
+      </section>
+
+      {/* INTRO SECTION */}
+      <section className="section-pad" style={{ background: "white" }}>
+        <div className="container">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
+            <div>
+              <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+                Who We Are
+              </p>
+              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 700, color: "#0A1628", marginBottom: "16px", lineHeight: 1.15 }}>
+                Bangladesh&apos;s Trusted<br />Garments Conglomerate
+              </h2>
+              <div className="gold-divider" />
+              <p style={{ color: "#4a5568", lineHeight: 1.85, marginBottom: "20px", fontSize: "1rem" }}>
+                Supreme Group Bangladesh was founded with a singular vision: to build world-class businesses rooted in Bangladesh that create lasting value for the global economy.
+              </p>
+              <p style={{ color: "#4a5568", lineHeight: 1.85, marginBottom: "32px", fontSize: "1rem" }}>
+                Starting with garment manufacturing, the group has grown into a diversified conglomerate with six sister concerns spanning manufacturing, accessories, embellishment, sustainable agriculture, and food retail.
+              </p>
+              <div style={{ display: "flex", gap: "32px" }}>
+                <div>
+                  <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#C9A84C" }}>6</div>
+                  <div style={{ fontSize: "0.72rem", color: "#6b7280", letterSpacing: "1px", textTransform: "uppercase", marginTop: "4px" }}>Companies</div>
+                </div>
+                <div>
+                  <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#C9A84C" }}>16+</div>
+                  <div style={{ fontSize: "0.72rem", color: "#6b7280", letterSpacing: "1px", textTransform: "uppercase", marginTop: "4px" }}>Years</div>
+                </div>
+                <div>
+                  <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#C9A84C" }}>4,000+</div>
+                  <div style={{ fontSize: "0.72rem", color: "#6b7280", letterSpacing: "1px", textTransform: "uppercase", marginTop: "4px" }}>Employees</div>
+                </div>
+              </div>
+            </div>
+            <div style={{ position: "relative" }}>
+              <div style={{ position: "relative", height: "500px", borderRadius: "4px", overflow: "hidden" }}>
+                <Image src="/images/factory-pro-2.jpg" alt="Supreme Group operations" fill style={{ objectFit: "cover" }} sizes="600px" />
+              </div>
+              {/* Floating badge */}
+              <div style={{
+                position: "absolute",
+                bottom: "-16px",
+                left: "-16px",
+                background: "#0A1628",
+                padding: "20px 28px",
+                borderRadius: "4px",
+                borderTop: "3px solid #C9A84C",
+              }}>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.6rem", fontWeight: 700, color: "#C9A84C" }}>$70M+</div>
+                <div style={{ fontSize: "0.68rem", color: "rgba(255,255,255,0.55)", marginTop: "4px", letterSpacing: "1.5px", textTransform: "uppercase" }}>Annual Revenue</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <style>{`@media(max-width:768px){.container > div{grid-template-columns:1fr!important;}}`}</style>
       </section>
 
       {/* SISTER CONCERNS */}
