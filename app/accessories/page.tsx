@@ -81,26 +81,31 @@ export default function AccessoriesPage() {
       </section>
 
       {/* PRODUCTION STATS */}
-      <section style={{ background: "#0A1628", padding: "60px 0" }}>
+      <section style={{ background: "#C9A84C", padding: "36px 0" }}>
         <div className="container">
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "white", textAlign: "center", marginBottom: "40px" }}>
-            Daily Production Capacity
-          </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "24px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "0" }}>
             {[
-              { num: "3,20,000", label: "Poly Bags" },
-              { num: "1,60,000", label: "Printed Labels" },
-              { num: "1,00,000", label: "Offset Prints" },
+              { num: "3,20,000", label: "Poly Bags / Day" },
+              { num: "1,60,000", label: "Labels / Day" },
+              { num: "1,00,000", label: "Offset Prints / Day" },
               { num: "80+", label: "Machines" },
-            ].map((s) => (
-              <div key={s.label} style={{ textAlign: "center", padding: "24px", background: "#112240", borderRadius: "4px", border: "1px solid rgba(201,168,76,0.15)" }}>
-                <div className="stat-number">{s.num}</div>
-                <div style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.6)", marginTop: "8px", fontWeight: 500, letterSpacing: "0.5px" }}>{s.label}</div>
+            ].map((s, i) => (
+              <div key={s.label} style={{
+                textAlign: "center",
+                padding: "8px 24px",
+                borderRight: i < 3 ? "1px solid rgba(10,22,40,0.15)" : "none",
+              }}>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#0A1628", lineHeight: 1 }}>
+                  {s.num}
+                </div>
+                <div style={{ fontSize: "0.65rem", color: "rgba(10,22,40,0.65)", fontWeight: 600, letterSpacing: "1.5px", textTransform: "uppercase", marginTop: "6px" }}>
+                  {s.label}
+                </div>
               </div>
             ))}
           </div>
         </div>
-        <style>{`@media(max-width:768px){.container > div:last-child{grid-template-columns:repeat(2,1fr)!important;}}`}</style>
+        <style>{`@media(max-width:600px){.container > div{grid-template-columns:repeat(2,1fr)!important;} .container > div > div{border-right:none!important; padding:16px!important;}}`}</style>
       </section>
 
       {/* PRODUCTS LIST */}

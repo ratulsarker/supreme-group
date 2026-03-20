@@ -95,23 +95,31 @@ export default function EcoBricksPage() {
       </section>
 
       {/* STATS */}
-      <section style={{ background: "#0A1628", padding: "60px 0" }}>
+      <section style={{ background: "#C9A84C", padding: "36px 0" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "24px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "0" }}>
             {[
               { num: "400+", label: "Cows" },
               { num: "150", label: "Sheep" },
               { num: "100+", label: "Ducks & Geese" },
               { num: "100%", label: "Natural Farming" },
-            ].map((s) => (
-              <div key={s.label} style={{ textAlign: "center", padding: "24px", background: "#112240", borderRadius: "4px", border: "1px solid rgba(201,168,76,0.15)" }}>
-                <div className="stat-number">{s.num}</div>
-                <div style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.6)", marginTop: "8px", fontWeight: 500 }}>{s.label}</div>
+            ].map((s, i) => (
+              <div key={s.label} style={{
+                textAlign: "center",
+                padding: "8px 24px",
+                borderRight: i < 3 ? "1px solid rgba(10,22,40,0.15)" : "none",
+              }}>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 700, color: "#0A1628", lineHeight: 1 }}>
+                  {s.num}
+                </div>
+                <div style={{ fontSize: "0.68rem", color: "rgba(10,22,40,0.65)", fontWeight: 600, letterSpacing: "2px", textTransform: "uppercase", marginTop: "6px" }}>
+                  {s.label}
+                </div>
               </div>
             ))}
           </div>
         </div>
-        <style>{`@media(max-width:768px){.container > div{grid-template-columns:repeat(2,1fr)!important;}}`}</style>
+        <style>{`@media(max-width:600px){.container > div{grid-template-columns:repeat(2,1fr)!important;} .container > div > div{border-right:none!important; padding:16px!important;}}`}</style>
       </section>
 
       {/* MORE IMAGES */}
