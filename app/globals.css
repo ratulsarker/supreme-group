@@ -1,6 +1,6 @@
-@import "tailwindcss";
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@import "tailwindcss";
 
 :root {
   --navy: #0A1628;
@@ -333,6 +333,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 140px 0 80px;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid rgba(201,168,76,0.1);
 }
 
 .page-hero::before {
@@ -342,7 +343,17 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   width: 50%;
   height: 100%;
-  background: radial-gradient(ellipse at center, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(201, 168, 76, 0.05) 0%, transparent 70%);
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
 /* Quote/highlight block */
@@ -362,7 +373,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .concern-card:hover {
-  border-color: rgba(201,168,76,0.5) !important;
+  border-color: rgba(201,168,76,0.4) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important;
 }
 
 .footer-link:hover {
