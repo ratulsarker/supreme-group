@@ -282,13 +282,13 @@ export default function StitchPage() {
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
               <div style={{ position: "relative", height: "280px", borderRadius: "4px", overflow: "hidden" }}>
-                <Image src="/images/stitch-2.png" alt="Supreme Stitch production" fill style={{ objectFit: "cover" }} sizes="300px" />
+                <Image src="/images/stitch-bg-2.jpg" alt="Supreme Stitch production" fill style={{ objectFit: "cover" }} sizes="300px" />
               </div>
               <div style={{ position: "relative", height: "280px", borderRadius: "4px", overflow: "hidden", marginTop: "40px" }}>
-                <Image src="/images/stitch-3.png" alt="Supreme Stitch quality" fill style={{ objectFit: "cover" }} sizes="300px" />
+                <Image src="/images/stitch-bg-slideshow.jpg" alt="Supreme Stitch quality" fill style={{ objectFit: "cover" }} sizes="300px" />
               </div>
               <div style={{ position: "relative", height: "280px", borderRadius: "4px", overflow: "hidden", gridColumn: "span 2" }}>
-                <Image src="/images/stitch-factory-2.png" alt="Supreme Stitch factory floor" fill style={{ objectFit: "cover" }} sizes="600px" />
+                <Image src="/images/stitch-cta-bg.jpg" alt="Supreme Stitch factory floor" fill style={{ objectFit: "cover" }} sizes="600px" />
               </div>
             </div>
           </div>
@@ -348,23 +348,23 @@ export default function StitchPage() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: "16px" }}>
             <div style={{ position: "relative", height: "400px", borderRadius: "4px", overflow: "hidden" }}>
-              <Image src="/images/stitch-factory-1.png" alt="Factory overview" fill style={{ objectFit: "cover" }} sizes="800px" />
+              <Image src="/images/stitch-building.jpg" alt="Factory overview" fill style={{ objectFit: "cover" }} sizes="800px" />
             </div>
             <div style={{ display: "grid", gap: "16px" }}>
               <div style={{ position: "relative", height: "192px", borderRadius: "4px", overflow: "hidden" }}>
-                <Image src="/images/stitch-factory-2.png" alt="Factory sewing floor" fill style={{ objectFit: "cover" }} sizes="400px" />
+                <Image src="/images/stitch-cta-bg.jpg" alt="Factory sewing floor" fill style={{ objectFit: "cover" }} sizes="400px" />
               </div>
               <div style={{ position: "relative", height: "192px", borderRadius: "4px", overflow: "hidden" }}>
-                <Image src="/images/stitch-hero.png" alt="Supreme Stitch" fill style={{ objectFit: "cover" }} sizes="400px" />
+                <Image src="/images/stitch-building.jpg" alt="Supreme Stitch" fill style={{ objectFit: "cover" }} sizes="400px" />
               </div>
             </div>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginTop: "16px" }}>
             <div style={{ position: "relative", height: "260px", borderRadius: "4px", overflow: "hidden" }}>
-              <Image src="/images/stitch-2.png" alt="Production line" fill style={{ objectFit: "cover" }} sizes="600px" />
+              <Image src="/images/stitch-bg-2.jpg" alt="Production line" fill style={{ objectFit: "cover" }} sizes="600px" />
             </div>
             <div style={{ position: "relative", height: "260px", borderRadius: "4px", overflow: "hidden" }}>
-              <Image src="/images/stitch-3.png" alt="Quality control" fill style={{ objectFit: "cover" }} sizes="600px" />
+              <Image src="/images/stitch-bg-slideshow.jpg" alt="Quality control" fill style={{ objectFit: "cover" }} sizes="600px" />
             </div>
           </div>
         </div>

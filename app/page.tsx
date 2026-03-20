@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const companies = [
   {
     href: "/stitch",
-    image: "/images/stitch-hero.png",
+    image: "/images/stitch-building.jpg",
     name: "Supreme Stitch Ltd.",
     category: "Garment Manufacturing",
     description: "100% export oriented garment manufacturer. Vertically integrated — from fabric to finished product. Trusted by Fanatics, Hanes, Walmart & Champion.",
@@ -41,7 +41,7 @@ const companies = [
   },
   {
     href: "/outfit",
-    image: "/images/stitch-factory-1.png",
+    image: "/images/stitch-bg-slideshow.jpg",
     name: "Supreme Outfit Ltd.",
     category: "Garment Manufacturing",
     description: "High-capacity garment manufacturer with 5 buildings, 1,350+ sewing machines, and 1 MW solar power infrastructure.",
@@ -170,13 +170,11 @@ export default function Home() {
               { src: "/images/fanatics-logo.png", alt: "Fanatics" },
               { src: "/images/champion-logo.png", alt: "Champion" },
             ].map((logo) => (
-              <Image
+              <img
                 key={logo.alt}
                 src={logo.src}
                 alt={logo.alt}
-                width={120}
-                height={50}
-                style={{ height: "36px", width: "auto", filter: "brightness(0) opacity(0.7)" }}
+                style={{ height: "60px", width: "auto", filter: "brightness(0) opacity(0.8)" }}
               />
             ))}
           </div>
