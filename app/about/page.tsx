@@ -29,7 +29,7 @@ export default function AboutPage() {
         background: "#0A1628",
       }}>
         <Image
-          src="/images/factory-pro-10.jpg"
+          src="/images/stitch-building.jpg"
           alt="Supreme Group Bangladesh"
           fill
           priority

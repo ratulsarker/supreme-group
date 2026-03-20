@@ -41,7 +41,7 @@ const companies = [
   },
   {
     href: "/outfit",
-    image: "/images/stitch-cta-bg.jpg",
+    image: "/images/outfit.jpg",
     name: "Supreme Outfit Ltd.",
     category: "Garment Manufacturing",
     description: "High-capacity garment manufacturer with 5 buildings, 1,350+ sewing machines, and 1 MW solar power infrastructure.",
@@ -238,7 +238,7 @@ export default function Home() {
             </div>
             <div style={{ position: "relative" }}>
               <div style={{ position: "relative", height: "500px", borderRadius: "4px", overflow: "hidden" }}>
-                <Image src="/images/factory-pro-2.jpg" alt="Supreme Group operations" fill style={{ objectFit: "cover" }} sizes="600px" />
+                <Image src="/images/stitch-building.jpg" alt="Supreme Group factory" fill style={{ objectFit: "cover" }} sizes="600px" />
               </div>
               {/* Floating badge */}
               <div style={{

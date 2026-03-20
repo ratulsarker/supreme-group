@@ -108,6 +108,30 @@ export default function ContactPage() {
         </div>
         <style>{`@media(max-width:768px){.container > div{grid-template-columns:1fr!important;}}`}</style>
       </section>
+
+      {/* GOOGLE MAPS - Head Office & Factory */}
+      <section style={{ background: "#f8f6f1", padding: "60px 0" }}>
+        <div className="container">
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#0A1628", textAlign: "center", marginBottom: "32px" }}>Our Locations</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", maxWidth: "1000px", margin: "0 auto" }}>
+            <div style={{ borderRadius: "8px", overflow: "hidden", border: "2px solid rgba(201,168,76,0.3)" }}>
+              <iframe src="https://maps.google.com/maps?q=49%2F1%20Purana%20Paltan%20Line%20Dhaka%201000%20Bangladesh&t=m&z=17&output=embed&iwloc=near" width="100%" height="300" style={{ border: "none", display: "block" }} allowFullScreen loading="lazy" title="Supreme Group Head Office" />
+              <div style={{ background: "white", padding: "14px 18px" }}>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, color: "#0A1628" }}>Head Office</div>
+                <div style={{ fontSize: "0.8rem", color: "#6b7280", marginTop: "2px" }}>49/1 Purana Paltan Line, Dhaka-1000</div>
+              </div>
+            </div>
+            <div style={{ borderRadius: "8px", overflow: "hidden", border: "2px solid rgba(201,168,76,0.3)" }}>
+              <iframe src="https://maps.google.com/maps?q=Supreme%20Stitch%20Ltd%20358%20West%20Shaildube%20Kashimpur%20Gazipur%20Bangladesh&t=m&z=17&output=embed&iwloc=near" width="100%" height="300" style={{ border: "none", display: "block" }} allowFullScreen loading="lazy" title="Supreme Group Factory" />
+              <div style={{ background: "white", padding: "14px 18px" }}>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, color: "#0A1628" }}>Factory Complex</div>
+                <div style={{ fontSize: "0.8rem", color: "#6b7280", marginTop: "2px" }}>358 West Shaildube, Kashimpur Gazipur – 1700</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <style>{`@media(max-width:768px){.container > div:nth-child(2){grid-template-columns:1fr!important;}}`}</style>
+      </section>
     </>
   );
 }

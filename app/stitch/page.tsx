@@ -355,9 +355,9 @@ export default function StitchPage() {
           {/* Grid of 4 */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px" }}>
             {[
-              { src: "/images/factory-pro-1.jpg", alt: "Factory floor" },
-              { src: "/images/factory-pro-3.jpg", alt: "Production line" },
-              { src: "/images/factory-pro-5.jpg", alt: "Sewing operations" },
+              { src: "/images/stitch-building.jpg", alt: "Factory building" },
+              { src: "/images/stitch-cta-bg.jpg", alt: "Production machinery" },
+              { src: "/images/stitch-bg-slideshow.jpg", alt: "Sewing operations" },
               { src: "/images/stitch-bg-2.jpg", alt: "Quality control" },
             ].map((img) => (
               <div key={img.src} style={{ position: "relative", height: "200px", borderRadius: "4px", overflow: "hidden" }}>
@@ -414,7 +414,7 @@ export default function StitchPage() {
             margin: "0 auto",
           }}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.8977698763977!2d90.3554741!3d24.0185944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c1e5a57e1b1d%3A0x6c4c3e4e0e7b2a0d!2sKashimpur%2C%20Gazipur!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+              src="https://maps.google.com/maps?q=Supreme%20Stitch%20Ltd.%20Kashimpur%20Gazipur&t=m&z=17&output=embed&iwloc=near"
               width="100%"
               height="400"
               style={{ border: "none", display: "block" }}

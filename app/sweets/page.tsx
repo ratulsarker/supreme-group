@@ -105,6 +105,35 @@ export default function SweetsPage() {
         </div>
         <style>{`@media(max-width:768px){.container > div:last-child{grid-template-columns:1fr!important;}}`}</style>
       </section>
+
+      {/* GOOGLE MAPS - All Outlets */}
+      <section style={{ background: "#f8f6f1", padding: "60px 0" }}>
+        <div className="container" style={{ textAlign: "center" }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#0A1628", marginBottom: "32px" }}>Find Us</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px", maxWidth: "1000px", margin: "0 auto" }}>
+            {locations.map((loc) => (
+              <div key={loc.name} style={{ borderRadius: "8px", overflow: "hidden", border: "2px solid rgba(201,168,76,0.3)" }}>
+                <iframe
+                  src={`https://maps.google.com/maps?q=Supreme%20Sweets%20${encodeURIComponent(loc.name)}%20${encodeURIComponent(loc.address)}&t=m&z=16&output=embed&iwloc=near`}
+                  width="100%"
+                  height="250"
+                  style={{ border: "none", display: "block" }}
+                  allowFullScreen
+                  loading="lazy"
+                  title={`Supreme Sweets ${loc.name}`}
+                />
+                <div style={{ background: "white", padding: "12px 16px", textAlign: "left" }}>
+                  <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, color: "#0A1628", fontSize: "0.95rem" }}>
+                    {loc.name}
+                  </div>
+                  <div style={{ fontSize: "0.8rem", color: "#6b7280", marginTop: "2px" }}>{loc.address}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <style>{`@media(max-width:768px){.container > div:nth-child(2){grid-template-columns:1fr!important;}}`}</style>
+      </section>
     </>
   );
 }

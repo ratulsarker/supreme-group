@@ -12,7 +12,7 @@ export default function OutfitPage() {
     <>
       {/* HERO */}
       <section style={{ position: "relative", minHeight: "70vh", display: "flex", alignItems: "center", overflow: "hidden" }}>
-        <Image src="/images/stitch-cta-bg.jpg" alt="Supreme Outfit Factory" fill priority style={{ objectFit: "cover" }} />
+        <Image src="/images/wa-factory-0020.jpg" alt="Supreme Outfit Factory Campus" fill priority style={{ objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(10,22,40,0.9) 0%, rgba(10,22,40,0.6) 100%)" }} />
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px" }}>
           <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
@@ -107,6 +107,26 @@ export default function OutfitPage() {
                 height: "100%",
                 border: "none",
               }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* GOOGLE MAP */}
+      <section style={{ background: "#f8f6f1", padding: "60px 0" }}>
+        <div className="container" style={{ textAlign: "center" }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#0A1628", marginBottom: "32px" }}>
+            Our Location
+          </h2>
+          <div style={{ borderRadius: "8px", overflow: "hidden", border: "2px solid rgba(201,168,76,0.3)", maxWidth: "900px", margin: "0 auto" }}>
+            <iframe
+              src="https://maps.google.com/maps?q=Supreme%20Outfit%20Ltd%20Kashimpur%20Gazipur%20Bangladesh&t=m&z=17&output=embed&iwloc=near"
+              width="100%"
+              height="400"
+              style={{ border: "none" }}
+              allowFullScreen
+              loading="lazy"
+              title="Supreme Outfit Ltd. Location"
             />
           </div>
         </div>

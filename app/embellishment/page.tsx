@@ -148,6 +148,16 @@ export default function EmbellishmentPage() {
         <style>{`@media(max-width:768px){.container > div:last-child{grid-template-columns:1fr!important;}}@media(min-width:769px) and (max-width:1023px){.container > div:last-child{grid-template-columns:repeat(2,1fr)!important;}}`}</style>
       </section>
 
+      {/* GOOGLE MAP */}
+      <section style={{ background: "#f8f6f1", padding: "60px 0" }}>
+        <div className="container" style={{ textAlign: "center" }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#0A1628", marginBottom: "32px" }}>Our Location</h2>
+          <div style={{ borderRadius: "8px", overflow: "hidden", border: "2px solid rgba(201,168,76,0.3)", maxWidth: "900px", margin: "0 auto" }}>
+            <iframe src="https://maps.google.com/maps?q=Supreme%20Embellishment%20Ltd%20Kashimpur%20Gazipur%20Bangladesh&t=m&z=17&output=embed&iwloc=near" width="100%" height="400" style={{ border: "none" }} allowFullScreen loading="lazy" title="Supreme Embellishment Ltd. Location" />
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section style={{ background: "#0A1628", padding: "80px 0", textAlign: "center", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
         <div className="container">
