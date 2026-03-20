@@ -160,24 +160,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CLIENTS BAR */}
-      <section style={{ background: "#C9A84C", padding: "20px 0" }}>
-        <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "8px" }}>
-            <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "#0A1628", letterSpacing: "2px", textTransform: "uppercase" }}>Trusted by</span>
-          </div>
-          <div className="trusted-logos" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "40px" }}>
-            {[
-              { src: "/images/walmart-logo.png", alt: "Walmart" },
-              { src: "/images/fanatics-logo.png", alt: "Fanatics" },
-              { src: "/images/champion-logo.png", alt: "Champion" },
-            ].map((logo) => (
-              <img
-                key={logo.alt}
-                src={logo.src}
-                alt={logo.alt}
-                style={{ height: "50px", width: "auto", filter: "brightness(0) opacity(0.8)" }}
-              />
+      {/* CLIENTS MARQUEE */}
+      <section style={{ background: "#C9A84C", padding: "24px 0", overflow: "hidden" }}>
+        <div style={{ textAlign: "center", marginBottom: "12px" }}>
+          <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "#0A1628", letterSpacing: "2px", textTransform: "uppercase" }}>Trusted by Global Brands</span>
+        </div>
+        <div className="marquee-container">
+          <div className="marquee-track">
+            {[...Array(3)].map((_, setIdx) => (
+              [
+                { src: "/images/walmart-logo.png", alt: "Walmart" },
+                { src: "/images/fanatics-logo.png", alt: "Fanatics" },
+                { src: "/images/champion-logo.png", alt: "Champion" },
+              ].map((logo, i) => (
+                <img
+                  key={`${setIdx}-${i}`}
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="marquee-logo"
+                />
+              ))
             ))}
           </div>
         </div>

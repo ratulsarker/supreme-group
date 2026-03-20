@@ -141,6 +141,50 @@ h1, h2, h3, h4, h5, h6 {
   margin: 16px 0 24px;
 }
 
+/* Marquee / rolling logos */
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  animation: marquee-scroll 15s linear infinite;
+  width: max-content;
+}
+
+.marquee-logo {
+  height: 80px;
+  width: auto;
+  filter: brightness(0) opacity(0.7);
+  flex-shrink: 0;
+  transition: filter 0.3s ease;
+}
+
+.marquee-logo:hover {
+  filter: brightness(0) opacity(1);
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-logo {
+    height: 60px;
+  }
+  .marquee-track {
+    gap: 50px;
+  }
+}
+
 /* Fade in animation */
 @keyframes fadeInUp {
   from {

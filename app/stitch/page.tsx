@@ -227,25 +227,28 @@ export default function StitchPage() {
         </div>
       </section>
 
-      {/* CLIENTS */}
-      <section className="section-pad" style={{ background: "white" }}>
-        <div className="container" style={{ textAlign: "center" }}>
+      {/* CLIENTS MARQUEE */}
+      <section className="section-pad" style={{ background: "white", overflow: "hidden" }}>
+        <div style={{ textAlign: "center", marginBottom: "32px" }}>
           <div style={{ fontSize: "0.75rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
             Our Clients
           </div>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.4rem", fontWeight: 700, color: "#0A1628", marginBottom: "48px" }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.4rem", fontWeight: 700, color: "#0A1628" }}>
             Trusted by Global Brands
           </h2>
-          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "80px", flexWrap: "wrap" }}>
-            {clients.map((logo) => (
-              <div key={logo.alt} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
+        </div>
+        <div className="marquee-container">
+          <div className="marquee-track">
+            {[...Array(3)].map((_, setIdx) => (
+              clients.map((logo, i) => (
                 <img
+                  key={`${setIdx}-${i}`}
                   src={logo.src}
                   alt={logo.alt}
-                  style={{ height: "80px", width: "auto", objectFit: "contain" }}
+                  className="marquee-logo"
+                  style={{ filter: "none", opacity: 0.85 }}
                 />
-                <span style={{ fontSize: "0.8rem", color: "#6b7280", fontWeight: 500 }}>{logo.alt}</span>
-              </div>
+              ))
             ))}
           </div>
         </div>
