@@ -19,15 +19,30 @@ export default function SweetsPage() {
   return (
     <>
       {/* HERO */}
-      <section className="page-hero" style={{ paddingBottom: "100px" }}>
-        <div className="container" style={{ position: "relative", zIndex: 1 }}>
-          <div style={{ fontSize: "0.75rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
-            Food & Retail
-          </div>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700, color: "white", marginBottom: "20px" }}>
+      <section style={{
+        position: "relative",
+        minHeight: "55vh",
+        display: "flex",
+        alignItems: "center",
+        overflow: "hidden",
+      }}>
+        <Image
+          src="/images/sweets-1.jpg"
+          alt="Supreme Sweets"
+          fill
+          priority
+          style={{ objectFit: "cover" }}
+        />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.6) 60%, transparent 100%)" }} />
+        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, transparent, #C9A84C, transparent)" }} />
+        <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px", paddingBottom: "80px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+            Food &amp; Retail
+          </p>
+          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700, color: "white", marginBottom: "20px", lineHeight: 1.1 }}>
             Supreme Sweets
           </h1>
-          <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.7)", maxWidth: "560px", lineHeight: 1.8 }}>
+          <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.75)", maxWidth: "560px", lineHeight: 1.85 }}>
             Authentic Bengali confectionery bringing traditional sweets and treats to communities across Dhaka — with 6 outlets and growing.
           </p>
         </div>

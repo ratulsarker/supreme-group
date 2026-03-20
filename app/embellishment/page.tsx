@@ -102,25 +102,42 @@ export default function EmbellishmentPage() {
 
       {/* SERVICES */}
       <section className="section-pad" style={{ background: "#f8f6f1" }}>
-        <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#0A1628", marginBottom: "40px" }}>Our Capabilities</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px", maxWidth: "900px", margin: "0 auto" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "56px" }}>
+            <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+              What We Do
+            </p>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "#0A1628" }}>
+              Our Capabilities
+            </h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>
             {[
-              { title: "Screen Printing", desc: "High-volume screen printing with precision color matching" },
-              { title: "Embroidery", desc: "Multi-head machines for intricate designs on all garment types" },
-              { title: "Heat Transfer", desc: "Advanced heat transfer printing for detailed graphics" },
-              { title: "Sublimation", desc: "Full-color sublimation for vibrant, lasting prints" },
-              { title: "Fashion Applications", desc: "Custom embellishments for fashion and promotional use" },
-              { title: "Sustainable Operations", desc: "In-house ETP ensuring eco-friendly production" },
+              { num: "01", title: "Screen Printing", desc: "High-volume screen printing with precision color matching for large production runs." },
+              { num: "02", title: "Embroidery", desc: "Multi-head machines for intricate designs on all garment types with precise reproduction." },
+              { num: "03", title: "Heat Transfer", desc: "Advanced heat transfer printing for detailed, photo-quality graphics on any fabric." },
+              { num: "04", title: "Sublimation", desc: "Full-color sublimation for vibrant, wash-permanent prints on synthetic fabrics." },
+              { num: "05", title: "Fashion Applications", desc: "Custom embellishments for fashion, promotional, and industrial applications." },
+              { num: "06", title: "Sustainable ETP", desc: "In-house Effluent Treatment Plant at 3 m³/hr ensuring fully eco-friendly operations." },
             ].map((s) => (
-              <div key={s.title} className="card-hover" style={{ background: "white", border: "1px solid #e8e8e0", borderRadius: "4px", padding: "28px 24px" }}>
-                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.05rem", fontWeight: 600, color: "#0A1628", marginBottom: "8px" }}>{s.title}</h3>
-                <p style={{ fontSize: "0.85rem", color: "#6b7280", lineHeight: 1.6 }}>{s.desc}</p>
+              <div key={s.title} className="card-hover" style={{
+                background: "white",
+                border: "1px solid #e8e8e0",
+                borderRadius: "4px",
+                padding: "32px 28px",
+                transition: "border-color 0.2s, box-shadow 0.2s",
+              }}>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "0.7rem", color: "#C9A84C", letterSpacing: "2px", marginBottom: "16px", fontWeight: 600 }}>
+                  {s.num}
+                </div>
+                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.05rem", fontWeight: 600, color: "#0A1628", marginBottom: "10px" }}>{s.title}</h3>
+                <div style={{ width: "24px", height: "1px", background: "#C9A84C", marginBottom: "12px", opacity: 0.5 }} />
+                <p style={{ fontSize: "0.845rem", color: "#6b7280", lineHeight: 1.75 }}>{s.desc}</p>
               </div>
             ))}
           </div>
         </div>
-        <style>{`@media(max-width:768px){.container > div:last-child{grid-template-columns:1fr!important;}}`}</style>
+        <style>{`@media(max-width:768px){.container > div:last-child{grid-template-columns:1fr!important;}}@media(min-width:769px) and (max-width:1023px){.container > div:last-child{grid-template-columns:repeat(2,1fr)!important;}}`}</style>
       </section>
 
       {/* CTA */}
