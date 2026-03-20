@@ -11,7 +11,17 @@ export default function AccessoriesPage() {
   return (
     <>
       {/* HERO */}
-      <section className="page-hero">
+      <section style={{
+        position: "relative",
+        minHeight: "70vh",
+        display: "flex",
+        alignItems: "center",
+        backgroundImage: "url('/images/accessories-front.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        paddingTop: "72px",
+      }}>
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.6) 100%)" }} />
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <div style={{ fontSize: "0.75rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
             Garment Accessories
