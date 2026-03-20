@@ -255,7 +255,84 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
-  .section-pad { padding: 60px 0; }
-  .stat-number { font-size: 2.2rem; }
-  .page-hero { padding: 120px 0 60px; }
+  .section-pad { padding: 40px 0; }
+  .stat-number { font-size: 2rem; }
+  .page-hero { padding: 100px 0 50px; }
+  
+  /* Force all 2-column grid layouts to stack on mobile */
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns: repeat(2"],
+  [style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Force 3-column grids to stack */
+  [style*="grid-template-columns: repeat(3"],
+  [style*="gridTemplateColumns: \"repeat(3"] {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Fix stats grids - 2 columns on mobile instead of 4 */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+  
+  /* Fix flex layouts that overflow */
+  [style*="display: flex"][style*="gap"] {
+    flex-wrap: wrap !important;
+  }
+  
+  /* Container padding */
+  .container {
+    padding: 0 16px;
+  }
+  
+  /* Fix hero text sizing */
+  h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem) !important;
+  }
+  
+  h2 {
+    font-size: clamp(1.5rem, 5vw, 2.2rem) !important;
+  }
+  
+  /* Fix contact bar stacking */
+  [style*="display: flex"][style*="justifyContent: \"center\""],
+  [style*="display: flex"][style*="justify-content: center"] {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+  
+  /* Prevent horizontal overflow */
+  body {
+    overflow-x: hidden;
+  }
+  
+  section {
+    overflow-x: hidden;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Fix iframe embeds */
+  iframe {
+    max-width: 100% !important;
+  }
+  
+  /* Make feature cards full width */
+  .card-hover {
+    min-width: 0 !important;
+  }
+  
+  /* Fix the hero min-height on mobile */
+  [style*="minHeight: \"100vh\""],
+  [style*="min-height: 100vh"] {
+    min-height: 80vh !important;
+  }
 }

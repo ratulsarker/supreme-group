@@ -144,7 +144,7 @@ export default function StitchPage() {
       {/* STATS BAR */}
       <section style={{ background: "#C9A84C", padding: "28px 0" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px" }}>
+          <div className="stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px" }}>
             {[
               { num: "$50M+", label: "ANNUAL REVENUE" },
               { num: "2,500+", label: "SKILLED WORKERS" },
