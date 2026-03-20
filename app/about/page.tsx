@@ -118,7 +118,7 @@ export default function AboutPage() {
               { title: "Quality", desc: "AQL 1.0 standards, in-house testing, and multi-stage inspections across all operations." },
               { title: "Sustainability", desc: "1.5 MW+ combined solar power, biogas generation, ETP systems, and 94% renewable energy." },
               { title: "Innovation", desc: "CAD-CAM systems, automated printing, and continuous investment in cutting-edge technology." },
-              { title: "People", desc: "Medical care, childcare, transport, insurance, and welfare programs for 3,000+ employees." },
+              { title: "People", desc: "Medical care, childcare, transport, insurance, and welfare programs for 4,000+ employees." },
             ].map((v) => (
               <div key={v.title} className="card-hover" style={{ background: "white", border: "1px solid #e8e8e0", borderRadius: "4px", padding: "32px 24px" }}>
                 <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.15rem", fontWeight: 600, color: "#0A1628", marginBottom: "12px" }}>{v.title}</h3>

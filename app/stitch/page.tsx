@@ -41,7 +41,7 @@ const features = [
   {
     icon: "❤️",
     title: "Employee Support",
-    stat: "2,500+ Workers",
+    stat: "4,000+ Workers",
     description: "On-site medical care, childcare facilities, free worker transport, group insurance, and comprehensive welfare programs for all employees.",
   },
 ];
@@ -147,7 +147,7 @@ export default function StitchPage() {
           <div className="stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px" }}>
             {[
               { num: "$50M+", label: "ANNUAL REVENUE" },
-              { num: "2,500+", label: "SKILLED WORKERS" },
+              { num: "4,000+", label: "SKILLED WORKERS" },
               { num: "60,000+", label: "DAILY PRODUCTION" },
               { num: "20+", label: "YEARS ON MARKET" },
             ].map((item) => (
