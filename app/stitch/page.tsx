@@ -65,6 +65,9 @@ const clients = [
   { src: "/images/walmart-logo.png", alt: "Walmart" },
   { src: "/images/fanatics-logo.png", alt: "Fanatics" },
   { src: "/images/champion-logo.png", alt: "Champion" },
+  { src: "/images/costco-logo.png", alt: "Costco" },
+  { src: "/images/hanes-logo.png", alt: "Hanes" },
+  { src: "/images/madengine-logo.png", alt: "Mad Engine" },
 ];
 
 export default function StitchPage() {

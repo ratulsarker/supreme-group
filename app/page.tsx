@@ -167,11 +167,14 @@ export default function Home() {
         </div>
         <div className="marquee-container">
           <div className="marquee-track">
-            {[...Array(6)].map((_, setIdx) => (
+            {[...Array(3)].map((_, setIdx) => (
               [
                 { src: "/images/walmart-logo.png", alt: "Walmart" },
                 { src: "/images/fanatics-logo.png", alt: "Fanatics" },
                 { src: "/images/champion-logo.png", alt: "Champion" },
+                { src: "/images/costco-logo.png", alt: "Costco" },
+                { src: "/images/hanes-logo.png", alt: "Hanes" },
+                { src: "/images/madengine-logo.png", alt: "Mad Engine" },
               ].map((logo, i) => (
                 <img
                   key={`${setIdx}-${i}`}

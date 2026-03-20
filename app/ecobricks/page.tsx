@@ -71,6 +71,27 @@ export default function EcoBricksPage() {
         <style>{`@media(max-width:768px){.container > div{grid-template-columns:1fr!important;}}`}</style>
       </section>
 
+      {/* VIDEO */}
+      <section className="section-pad" style={{ background: "#0A1628" }}>
+        <div className="container" style={{ textAlign: "center" }}>
+          <div style={{ fontSize: "0.75rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
+            Watch
+          </div>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 700, color: "white", marginBottom: "32px" }}>
+            Life at the Farm
+          </h2>
+          <div style={{ position: "relative", width: "100%", maxWidth: "800px", margin: "0 auto", paddingBottom: "56.25%", height: 0 }}>
+            <iframe
+              src="https://www.youtube.com/embed/YXaeAF1uvhE"
+              title="Supreme Eco Bricks & Agro"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none", borderRadius: "4px" }}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* STATS */}
       <section style={{ background: "#0A1628", padding: "60px 0" }}>
         <div className="container">
