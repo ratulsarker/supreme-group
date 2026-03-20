@@ -142,7 +142,7 @@ export default function Home() {
             <div style={{ display: "flex", gap: "40px", marginTop: "64px", flexWrap: "wrap" }}>
               {[
                 { number: "6", label: "Sister Concerns" },
-                { number: "3,000+", label: "Employees" },
+                { number: "4,000+", label: "Employees" },
                 { number: "1.2M+", label: "Pcs / Month" },
                 { number: "1MW+", label: "Solar Power" },
               ].map((s) => (

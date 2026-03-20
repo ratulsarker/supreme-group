@@ -48,7 +48,7 @@ function AnimatedNumber({ target, duration = 2000, prefix = "", suffix = "" }: {
 
 const stats = [
   { target: 70, prefix: "$", suffix: "M+", label: "ANNUAL REVENUE" },
-  { target: 3000, prefix: "", suffix: "+", label: "SKILLED WORKERS" },
+  { target: 2500, prefix: "", suffix: "+", label: "SKILLED WORKERS" },
   { target: 60000, prefix: "", suffix: "+", label: "DAILY PRODUCTION" },
   { target: 16, prefix: "", suffix: "+", label: "YEARS ON MARKET" },
 ];
