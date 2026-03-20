@@ -239,12 +239,10 @@ export default function StitchPage() {
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "80px", flexWrap: "wrap" }}>
             {clients.map((logo) => (
               <div key={logo.alt} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
-                <Image
+                <img
                   src={logo.src}
                   alt={logo.alt}
-                  width={160}
-                  height={80}
-                  style={{ height: "60px", width: "auto", objectFit: "contain" }}
+                  style={{ height: "80px", width: "auto", objectFit: "contain" }}
                 />
                 <span style={{ fontSize: "0.8rem", color: "#6b7280", fontWeight: 500 }}>{logo.alt}</span>
               </div>
