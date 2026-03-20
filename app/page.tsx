@@ -41,7 +41,7 @@ const companies = [
   },
   {
     href: "/outfit",
-    image: "/images/stitch-bg-slideshow.jpg",
+    image: "/images/stitch-cta-bg.jpg",
     name: "Supreme Outfit Ltd.",
     category: "Garment Manufacturing",
     description: "High-capacity garment manufacturer with 5 buildings, 1,350+ sewing machines, and 1 MW solar power infrastructure.",
