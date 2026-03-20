@@ -273,12 +273,11 @@ export default function StitchPage() {
                 As a vertically integrated manufacturer, Supreme Stitch Ltd. oversees the entire supply chain, from fabric production to final packaging. Our state-of-the-art knitting, cutting, sewing, printing, and finishing facilities, combined with in-house accessory manufacturing, allow us to maintain the highest quality standards while reducing lead times and costs.
               </p>
               <a
-                href="/images/company-profile-thumb.jpg"
-                target="_blank"
+                href="mailto:office@supremegroupbd.com?subject=Company%20Profile%20Request"
                 className="btn-gold"
                 style={{ marginTop: "16px" }}
               >
-                📄 Download Company Profile
+                📧 Request Company Profile
               </a>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
