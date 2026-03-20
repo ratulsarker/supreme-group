@@ -156,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .marquee-logo {
-  height: 80px;
+  height: 120px;
   width: auto;
   filter: brightness(0) opacity(0.7);
   flex-shrink: 0;
@@ -178,10 +178,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .marquee-logo {
-    height: 60px;
+    height: 80px;
   }
   .marquee-track {
-    gap: 50px;
+    gap: 60px;
   }
 }
 
