@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import CountUpStats from "@/components/CountUpStats";
 
 export const metadata: Metadata = {
   title: "Supreme Stitch Ltd. — 100% Export Oriented Garments Manufacturer",
@@ -145,28 +146,7 @@ export default function StitchPage() {
       </section>
 
       {/* STATS BAR */}
-      <section style={{ background: "#C9A84C", padding: "28px 0" }}>
-        <div className="container">
-          <div className="stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px" }}>
-            {[
-              { num: "$50M+", label: "ANNUAL REVENUE" },
-              { num: "4,000+", label: "SKILLED WORKERS" },
-              { num: "60,000+", label: "DAILY PRODUCTION" },
-              { num: "20+", label: "YEARS ON MARKET" },
-            ].map((item) => (
-              <div key={item.label} style={{ textAlign: "center" }}>
-                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#0A1628" }}>
-                  {item.num}
-                </div>
-                <div style={{ fontSize: "0.7rem", color: "#0A1628", fontWeight: 700, letterSpacing: "2px", marginTop: "2px" }}>
-                  {item.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <style>{`@media(max-width:600px){section > .container > div{grid-template-columns:repeat(2,1fr)!important;}}`}</style>
-      </section>
+      <CountUpStats />
 
       {/* OFFICE INFO */}
       <section style={{ background: "#f8f6f1", padding: "48px 0" }}>
