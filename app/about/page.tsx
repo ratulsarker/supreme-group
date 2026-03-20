@@ -78,28 +78,45 @@ export default function AboutPage() {
       {/* COMPANIES */}
       <section className="section-pad" style={{ background: "#0A1628" }}>
         <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "48px" }}>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.4rem", fontWeight: 700, color: "white" }}>
+          <div style={{ textAlign: "center", marginBottom: "56px" }}>
+            <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+              The Group
+            </p>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 700, color: "white" }}>
               Our Sister Concerns
             </h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "24px" }}>
-            {companies.map((c) => (
-              <Link key={c.href} href={c.href} className="card-hover" style={{
+            {companies.map((c, i) => (
+              <Link key={c.href} href={c.href} className="card-hover concern-card" style={{
                 background: "#112240",
-                border: "1px solid rgba(201,168,76,0.15)",
+                border: "1px solid rgba(201,168,76,0.12)",
                 borderRadius: "4px",
-                padding: "32px 28px",
+                padding: "36px 32px",
                 textDecoration: "none",
                 display: "block",
+                position: "relative",
               }}>
-                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.15rem", fontWeight: 600, color: "#C9A84C", marginBottom: "12px" }}>
+                <div style={{
+                  position: "absolute",
+                  top: "36px",
+                  right: "32px",
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: "0.7rem",
+                  color: "rgba(201,168,76,0.3)",
+                  letterSpacing: "2px",
+                  fontWeight: 600,
+                }}>
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.15rem", fontWeight: 600, color: "white", marginBottom: "4px" }}>
                   {c.name}
                 </h3>
-                <p style={{ fontSize: "0.875rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.7 }}>
+                <div style={{ width: "28px", height: "1px", background: "#C9A84C", marginBottom: "14px", opacity: 0.5 }} />
+                <p style={{ fontSize: "0.865rem", color: "rgba(255,255,255,0.55)", lineHeight: 1.78 }}>
                   {c.desc}
                 </p>
-                <span style={{ display: "inline-block", marginTop: "12px", color: "#C9A84C", fontSize: "0.8rem", fontWeight: 600 }}>Learn more →</span>
+                <span style={{ display: "inline-block", marginTop: "16px", color: "#C9A84C", fontSize: "0.78rem", fontWeight: 600, letterSpacing: "0.5px" }}>View Company →</span>
               </Link>
             ))}
           </div>

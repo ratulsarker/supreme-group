@@ -63,7 +63,7 @@ export default function Home() {
       {/* HERO */}
       <section
         style={{
-          background: "linear-gradient(135deg, #0A1628 0%, #1a3a5c 60%, #112240 100%)",
+          background: "linear-gradient(135deg, #0A1628 0%, #0e1e35 60%, #112240 100%)",
           minHeight: "100vh",
           display: "flex",
           alignItems: "center",
@@ -72,14 +72,24 @@ export default function Home() {
           paddingTop: "72px",
         }}
       >
+        {/* Subtle background texture overlay */}
         <div style={{
           position: "absolute",
-          top: "20%",
-          right: "5%",
-          width: "500px",
-          height: "500px",
+          inset: 0,
+          backgroundImage: "url('/images/stitch-building.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.07,
+          pointerEvents: "none",
+        }} />
+        <div style={{
+          position: "absolute",
+          top: "15%",
+          right: "-5%",
+          width: "600px",
+          height: "600px",
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%)",
           pointerEvents: "none",
         }} />
         <div style={{
@@ -87,7 +97,7 @@ export default function Home() {
           top: 0,
           left: 0,
           right: 0,
-          height: "3px",
+          height: "2px",
           background: "linear-gradient(90deg, transparent, #C9A84C, transparent)",
         }} />
 

@@ -81,9 +81,9 @@ export default function SweetsPage() {
                 <p style={{ fontSize: "0.875rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.7, marginBottom: "12px" }}>
                   {loc.address}
                 </p>
-                <p style={{ fontSize: "0.875rem", color: "rgba(255,255,255,0.7)" }}>
-                  📞 {loc.phone}
-                </p>
+                <a href={`tel:${loc.phone}`} style={{ fontSize: "0.845rem", color: "#C9A84C", textDecoration: "none" }}>
+                  {loc.phone}
+                </a>
               </div>
             ))}
           </div>
