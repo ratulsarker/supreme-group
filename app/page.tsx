@@ -238,7 +238,7 @@ export default function Home() {
             </div>
             <div style={{ position: "relative" }}>
               <div style={{ position: "relative", height: "500px", borderRadius: "4px", overflow: "hidden" }}>
-                <Image src="/images/stitch-building.jpg" alt="Supreme Group factory" fill style={{ objectFit: "cover" }} sizes="600px" />
+                <Image src="/images/outfit.jpg" alt="Supreme Group factory" fill style={{ objectFit: "cover" }} sizes="600px" />
               </div>
               {/* Floating badge */}
               <div style={{
