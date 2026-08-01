@@ -22,7 +22,7 @@ const flagships = [
     name: "Supreme Outfit Ltd.",
     category: "Flagship · Garment Manufacturing",
     description:
-      "High-capacity garment manufacturer with 5 buildings, 1,350+ sewing machines and 1 MW of rooftop solar power.",
+      "High-capacity garment manufacturer with 5 buildings, 1,350 sewing machines and 1.4 MW of rooftop solar power.",
     highlight: "1.2M pcs/month production",
   },
 ];
@@ -158,7 +158,7 @@ export default function Home() {
                 { number: "6", label: "Companies" },
                 { number: "4,000+", label: "Employees" },
                 { number: "1.2M+", label: "Pcs / Month" },
-                { number: "1MW+", label: "Solar Power" },
+                { number: "1.4MW+", label: "Solar Power" },
               ].map((s, i) => (
                 <div key={s.label} style={{
                   paddingRight: "40px",

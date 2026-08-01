@@ -4,129 +4,474 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Supreme Outfit Ltd.",
-  description: "High-capacity garment manufacturer with 5 buildings, 1,350+ sewing machines, 1.2M pcs/month, and 1 MW solar power.",
+  description:
+    "A state-of-the-art knitwear factory in Dhamrai, Dhaka. 15 hectares, four six-storied blocks, 60,000 pieces a day, 1,350 sewing machines and 1.4 MW of rooftop solar.",
 };
+
+const heroStats = [
+  { num: "15", unit: "Hectares", label: "Total project area" },
+  { num: "60,000", unit: "Pcs / Day", label: "Phase 1 knitwear capacity" },
+  { num: "1,350", unit: "Machines", label: "Sewing workstations" },
+  { num: "1.4", unit: "MW Solar", label: "Rooftop PV, Buildings 1 & 2" },
+];
+
+const groupTimeline = [
+  { year: "2009", name: "Supreme Accessories Industries Ltd." },
+  { year: "2009", name: "Supreme Stitch Ltd." },
+  { year: "2015", name: "Supreme Embellishment Ltd." },
+  { year: "2019", name: "Supreme Eco Bricks & Agro Ltd." },
+  { year: "2025", name: "Supreme Outfit Ltd.", current: true },
+];
+
+const buildingOne = [
+  { floor: "Ground", use: "Finished Goods Store" },
+  { floor: "1st", use: "Finishing & C-TPAT" },
+  { floor: "2nd", use: "Sewing Section" },
+  { floor: "3rd", use: "Sewing Section" },
+  { floor: "4th", use: "Cut Panel Store" },
+  { floor: "5th", use: "Office, CAD & Sample" },
+];
+
+const buildingTwo = [
+  { floor: "Ground", use: "Yarn & Knitting" },
+  { floor: "1st", use: "Screen Printing" },
+  { floor: "2nd", use: "Auto Printing" },
+  { floor: "3rd", use: "Proposed for Outerwear", proposed: true },
+  { floor: "4th", use: "Cutting Section" },
+  { floor: "5th", use: "Proposed for Outerwear", proposed: true },
+];
+
+const sections = [
+  {
+    eyebrow: "Building 2 · Ground Floor",
+    title: "Knitting",
+    image: "/images/outfit-knitting.jpg",
+    alt: "Circular knitting machines on the knitting floor",
+    capacity: "12 tons of fabric per day",
+    specs: [
+      "26 × circular knitting machines, single jersey (Gong Li)",
+      "4 × circular knitting machines, fleece (Gong Li)",
+      "2 × circular knitting machines, rib (Gong Li)",
+      "2 × fabric inspection machines",
+    ],
+  },
+  {
+    eyebrow: "Building 2 · 1st & 2nd Floor",
+    title: "Printing",
+    image: "/images/outfit-printing.jpg",
+    alt: "Automatic oval printing machines",
+    capacity: "Screen, automatic and oval printing in-house",
+    specs: [
+      "18 × 80 ft screen printing tables",
+      "3 × automatic oval printing machines",
+      "18 × auto-run dryers",
+      "2 × curing machines",
+      "Well-equipped colour and quality lab",
+    ],
+  },
+  {
+    eyebrow: "Building 2 · 4th Floor",
+    title: "Cutting",
+    image: "/images/hero-building.jpg",
+    alt: "Supreme Outfit factory building",
+    capacity: "CAD-linked automated cutting",
+    specs: [
+      "6 × 80 ft cutting tables",
+      "6 × automatic fabric spreaders",
+      "2 × CAD-linked auto cutters",
+      "1 × steam fabric relaxer",
+      "2 × fabric inspection machines",
+    ],
+  },
+];
+
+const sustainability = [
+  { stat: "1.4 MW", label: "Rooftop PV across Buildings 1 & 2" },
+  { stat: "≈ 70%", label: "Of the Phase 1 electricity load supplied by solar" },
+  { stat: "2.2 GWh", label: "Generated per year" },
+  { stat: "1,700 t", label: "CO₂e offset per year" },
+];
 
 export default function OutfitPage() {
   return (
     <>
       {/* HERO */}
-      <section style={{ position: "relative", minHeight: "70vh", display: "flex", alignItems: "center", overflow: "hidden" }}>
-        <Image src="/images/hero-building.jpg" alt="Supreme Outfit Factory Campus" fill preload style={{ objectFit: "cover" }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(10,22,40,0.9) 0%, rgba(10,22,40,0.6) 100%)" }} />
-        <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px" }}>
-          <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
-            Garment Manufacturing
-          </p>
-          <h1 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700, color: "white", marginBottom: "20px" }}>
-            Supreme Outfit Ltd.
-          </h1>
-          <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.75)", maxWidth: "560px", lineHeight: 1.8 }}>
-            High-capacity garment manufacturing with green energy infrastructure for sustainable large-scale production.
-          </p>
+      <section style={{ position: "relative", minHeight: "88vh", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
+        <Image
+          src="/images/hero-building.jpg"
+          alt="Supreme Outfit factory campus"
+          fill
+          priority
+          style={{ objectFit: "cover", objectPosition: "center 45%" }}
+          sizes="100vw"
+        />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(105deg, rgba(7,22,36,0.94) 0%, rgba(7,22,36,0.7) 45%, rgba(9,40,64,0.25) 100%)" }} />
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: "50%", background: "linear-gradient(transparent, rgba(7,22,36,0.88))" }} />
+        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, transparent, #C9A84C, transparent)" }} />
+
+        <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "150px", paddingBottom: "64px" }}>
+          <div style={{ maxWidth: "780px" }}>
+            <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "16px" }}>
+              Company Profile · Garment Manufacturing
+            </p>
+            <h1 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(2.4rem, 5.5vw, 4.2rem)", fontWeight: 800, color: "white", marginBottom: "18px", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
+              Supreme Outfit Ltd.
+            </h1>
+            <p style={{ fontSize: "1.05rem", color: "rgba(255,255,255,0.75)", maxWidth: "620px", lineHeight: 1.85, marginBottom: "34px" }}>
+              A state-of-the-art knitwear factory in Dhamrai, Dhaka. Fifteen hectares, four
+              six-storied production blocks and a dedicated welfare building, purpose-built for
+              high-volume export manufacturing.
+            </p>
+            <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
+              <a href="/supreme-outfit-company-profile.pdf" download className="btn-gold">
+                Download Company Profile
+              </a>
+              <Link href="/contact" className="btn-outline-gold" style={{ borderColor: "rgba(255,255,255,0.5)", color: "#fff" }}>
+                Partner With Us
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* STATS BAR */}
-      <section style={{ background: "#38B6FF", padding: "36px 0" }}>
+      {/* KEY FIGURES */}
+      <section style={{ background: "#38B6FF", padding: "40px 0" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "0" }}>
-            {[
-              { num: "5", label: "Buildings" },
-              { num: "1,350+", label: "Sewing Machines" },
-              { num: "1.2M", label: "PCS / Month" },
-              { num: "1 MW", label: "Solar Power" },
-            ].map((s, i) => (
-              <div key={s.label} style={{
-                textAlign: "center",
-                padding: "8px 24px",
-                borderRight: i < 3 ? "1px solid rgba(10,22,40,0.15)" : "none",
-              }}>
-                <div style={{ fontFamily: "var(--font-head)", fontSize: "2.2rem", fontWeight: 700, color: "#0B1D2E", lineHeight: 1 }}>
-                  {s.num}
+          <div className="outfit-stats">
+            {heroStats.map((s, i) => (
+              <div key={s.unit} style={{ padding: "6px 22px", borderRight: i < heroStats.length - 1 ? "1px solid rgba(6,38,60,0.2)" : "none" }}>
+                <div style={{ display: "flex", alignItems: "baseline", gap: "7px", justifyContent: "center" }}>
+                  <span style={{ fontFamily: "var(--font-head)", fontSize: "2.3rem", fontWeight: 800, color: "#06263C", lineHeight: 1, fontVariantNumeric: "tabular-nums" }}>
+                    {s.num}
+                  </span>
+                  <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "rgba(6,38,60,0.75)", textTransform: "uppercase", letterSpacing: "1px" }}>
+                    {s.unit}
+                  </span>
                 </div>
-                <div style={{ fontSize: "0.68rem", color: "rgba(10,22,40,0.65)", fontWeight: 600, letterSpacing: "2px", textTransform: "uppercase", marginTop: "6px" }}>
+                <div style={{ fontSize: "0.7rem", color: "rgba(6,38,60,0.68)", marginTop: "8px", textAlign: "center", lineHeight: 1.5 }}>
                   {s.label}
                 </div>
               </div>
             ))}
           </div>
         </div>
-        <style>{`@media(max-width:600px){.container > div{grid-template-columns:repeat(2,1fr)!important;} .container > div > div{border-right:none!important; border-bottom:1px solid rgba(10,22,40,0.1); padding:16px!important;}}`}</style>
       </section>
 
-      {/* CONTENT */}
-      <section className="section-pad">
-        <div className="container" style={{ maxWidth: "800px", textAlign: "center" }}>
-          <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2.2rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "16px" }}>
-            Scale Meets <span style={{ color: "#0E86D4" }}>Sustainability</span>
-          </h2>
-          <div style={{ width: "60px", height: "3px", background: "#38B6FF", margin: "0 auto 24px" }} />
-          <p style={{ color: "#374151", lineHeight: 1.8, marginBottom: "20px", fontSize: "1.05rem" }}>
-            Supreme Outfit Ltd. operates one of the largest garment manufacturing setups in the Supreme Group portfolio. With 5 purpose-built factory buildings housing over 1,350 sewing machines, we deliver a production capacity of 1.2 million pieces per month.
+      {/* VISION */}
+      <section className="section-pad" style={{ background: "white" }}>
+        <div className="container reveal" style={{ maxWidth: "860px", textAlign: "center" }}>
+          <p className="section-eyebrow">Corporate Vision</p>
+          <blockquote style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.3rem, 2.6vw, 1.85rem)", fontWeight: 600, color: "#0B1D2E", lineHeight: 1.5, letterSpacing: "-0.01em", margin: 0 }}>
+            To become a leading global apparel manufacturer, recognised for our commitment to
+            quality, sustainability and ethical business practices.
+          </blockquote>
+          <div className="gold-rule" />
+          <p style={{ color: "#52697C", lineHeight: 1.9, marginTop: "26px", fontSize: "1.02rem" }}>
+            We strive to build long-lasting relationships with our customers, partners and employees,
+            while creating a positive impact on the communities in which we operate.
           </p>
-          <p style={{ color: "#374151", lineHeight: 1.8, marginBottom: "32px", fontSize: "1.05rem" }}>
-            Our commitment to sustainability is powered by a 1 MW solar installation, reducing our carbon footprint while maintaining the production capacity that global brands demand.
-          </p>
-          <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/contact" className="btn-gold">Partner With Us</Link>
-            <Link href="/stitch" className="btn-outline-gold" style={{ borderColor: "#0B1D2E", color: "#0B1D2E" }}>See Supreme Stitch →</Link>
+        </div>
+      </section>
+
+      {/* INTRODUCTION + GROUP TIMELINE */}
+      <section className="section-pad" style={{ background: "#F6F4EE", borderTop: "1px solid #E8E2D4", borderBottom: "1px solid #E8E2D4" }}>
+        <div className="container">
+          <div className="outfit-split reveal">
+            <div>
+              <p className="section-eyebrow">Introduction</p>
+              <h2 className="section-h2-dark" style={{ marginBottom: "22px" }}>
+                The group&apos;s newest<br />manufacturing venture
+              </h2>
+              <p style={{ color: "#52697C", lineHeight: 1.9, marginBottom: "18px" }}>
+                Supreme Outfit Ltd. is a state-of-the-art garment factory specialising in knitwear
+                production, owned by Supreme Stitch Ltd., a leading garment exporter with years of
+                experience in high-quality apparel.
+              </p>
+              <p style={{ color: "#52697C", lineHeight: 1.9, marginBottom: "26px" }}>
+                Built on a 15-hectare site in Dhamrai, the project brings knitting, printing, cutting,
+                sewing and finishing onto a single campus, so an order can move from yarn to finished
+                garment without leaving the site.
+              </p>
+              <Link href="/stitch" style={{ color: "#0E86D4", fontWeight: 600, fontSize: "0.9rem", textDecoration: "none" }}>
+                Visit Supreme Stitch, our parent company →
+              </Link>
+            </div>
+
+            <div>
+              <p className="section-eyebrow">Group Timeline</p>
+              <div className="outfit-timeline">
+                {groupTimeline.map((c) => (
+                  <div key={c.name} className={`timeline-row${c.current ? " is-current" : ""}`}>
+                    <span className="timeline-year">{c.year}</span>
+                    <span className="timeline-name">{c.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CANVA PRESENTATION */}
-      <section className="section-pad" style={{ background: "#F6F4EE" }}>
-        <div className="container" style={{ textAlign: "center" }}>
-          <div style={{ fontSize: "0.75rem", color: "#A8832E", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
-            Company Presentation
+      {/* FACTORY LAYOUT */}
+      <section className="section-pad" style={{ background: "#0B1D2E" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "54px" }} className="reveal">
+            <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+              Factory Layout
+            </p>
+            <h2 className="section-h2-light">Building Overview</h2>
+            <div className="gold-rule" />
           </div>
-          <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2.2rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "40px" }}>
-            Supreme Outfit Ltd. Overview
-          </h2>
-          <div style={{
-            position: "relative",
-            paddingBottom: "56.25%",
-            height: 0,
-            overflow: "hidden",
-            borderRadius: "8px",
-            border: "2px solid rgba(56,182,255,0.3)",
-            maxWidth: "960px",
-            margin: "0 auto",
-            background: "#0B1D2E",
-          }}>
-            <iframe
-              src="https://www.canva.com/design/DAGtAg3WIzc/gs9zClswhra_ETd4f1kP5Q/view?embed"
-              title="Supreme Outfit Ltd. Presentation"
-              allowFullScreen
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                border: "none",
-              }}
-            />
+
+          <div className="outfit-split reveal" style={{ alignItems: "start" }}>
+            <div className="layout-cards">
+              <div className="layout-card">
+                <h3>4 × Six-Storied Blocks</h3>
+                <ul>
+                  <li><strong>Phase 1</strong> Buildings 1 &amp; 2</li>
+                  <li><strong>Phase 2</strong> Buildings 3 &amp; 4</li>
+                </ul>
+              </div>
+              <div className="layout-card">
+                <h3>Worker Welfare &amp; Support</h3>
+                <ul>
+                  <li><strong>Building 5, Ground</strong> Childcare &amp; medical services</li>
+                  <li><strong>Building 5, 1st Floor</strong> Worker&apos;s canteen</li>
+                </ul>
+              </div>
+              <div className="layout-card">
+                <h3>Utilities &amp; Compliance</h3>
+                <ul>
+                  <li>Effluent treatment plant (ETP)</li>
+                  <li>Fire-pump house</li>
+                  <li>Dual septic-tank system with hygienic zoning</li>
+                </ul>
+              </div>
+              <div className="layout-card">
+                <h3>Site &amp; Environment</h3>
+                <ul>
+                  <li>100-car dedicated parking zone</li>
+                  <li>Large pond for rainwater harvesting</li>
+                  <li>30% landscaped green buffer</li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 10", borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(56,182,255,0.25)" }}>
+                <Image src="/images/wa-factory-0005.jpg" alt="CAD model of the Supreme Outfit campus" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 560px" />
+              </div>
+              <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.45)", marginTop: "12px", textAlign: "center" }}>
+                Proposed CAD model of Supreme Outfit Ltd.
+              </p>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginTop: "16px" }}>
+                {[
+                  { src: "/images/outfit-welfare.jpg", cap: "Welfare block" },
+                  { src: "/images/outfit-pond.jpg", cap: "Rainwater pond" },
+                ].map((im) => (
+                  <div key={im.src}>
+                    <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 10", borderRadius: "6px", overflow: "hidden", border: "1px solid rgba(56,182,255,0.2)" }}>
+                      <Image src={im.src} alt={im.cap} fill style={{ objectFit: "cover" }} sizes="280px" />
+                    </div>
+                    <p style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.4)", marginTop: "8px", textAlign: "center" }}>{im.cap}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* GOOGLE MAP */}
-      <section style={{ background: "#F6F4EE", padding: "60px 0" }}>
+      {/* FLOOR PLANS */}
+      <section className="section-pad" style={{ background: "white" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "50px" }} className="reveal">
+            <p className="section-eyebrow">Phase 1</p>
+            <h2 className="section-h2-dark">What sits on every floor</h2>
+            <div className="gold-rule" />
+          </div>
+
+          <div className="floorplan-grid reveal">
+            {[
+              { name: "Building 1", sub: "Sewing, finishing & dispatch", floors: buildingOne },
+              { name: "Building 2", sub: "Fabric, print & cutting", floors: buildingTwo },
+            ].map((b) => (
+              <div key={b.name} className="floorplan">
+                <div className="floorplan-head">
+                  <h3>{b.name}</h3>
+                  <span>{b.sub}</span>
+                </div>
+                {[...b.floors].reverse().map((f) => (
+                  <div key={f.floor} className={`floor-row${"proposed" in f && f.proposed ? " is-proposed" : ""}`}>
+                    <span className="floor-label">{f.floor}</span>
+                    <span className="floor-use">{f.use}</span>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PHASE 1 TARGETS */}
+      <section className="section-pad" style={{ background: "#0E2438" }}>
+        <div className="container">
+          <div className="outfit-split reveal">
+            <div>
+              <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+                Targets &amp; Timeline · Buildings 1 &amp; 2
+              </p>
+              <h2 className="section-h2-light" style={{ marginBottom: "26px" }}>Phase 1 capacity</h2>
+
+              <div className="target-list">
+                <div className="target-row">
+                  <span className="target-num">60,000</span>
+                  <span className="target-txt">Knitwear pieces per day</span>
+                </div>
+                <div className="target-row">
+                  <span className="target-num">30</span>
+                  <span className="target-txt">Production lines, two sewing floors of 15 lines each</span>
+                </div>
+                <div className="target-row">
+                  <span className="target-num">45</span>
+                  <span className="target-txt">Sewing workstations per line, 1,350 machines in total</span>
+                </div>
+                <div className="target-row">
+                  <span className="target-num">3</span>
+                  <span className="target-txt">Double-headed needle detectors</span>
+                </div>
+              </div>
+
+              <div style={{ marginTop: "34px", padding: "20px 24px", background: "rgba(56,182,255,0.08)", border: "1px solid rgba(56,182,255,0.28)", borderRadius: "6px" }}>
+                <div style={{ fontSize: "0.68rem", color: "#6FCBFF", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", marginBottom: "6px" }}>
+                  Trial Production Start Target
+                </div>
+                <div style={{ fontFamily: "var(--font-head)", fontSize: "1.5rem", fontWeight: 800, color: "white" }}>
+                  September 2025
+                </div>
+              </div>
+            </div>
+
+            <div style={{ position: "relative", width: "100%", minHeight: "420px", borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(56,182,255,0.25)" }}>
+              <Image src="/images/wa-factory-0011.jpg" alt="Supreme Outfit production blocks and skybridges" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 560px" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PRODUCTION SECTIONS */}
+      <section className="section-pad" style={{ background: "#F6F4EE", borderTop: "1px solid #E8E2D4" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "54px" }} className="reveal">
+            <p className="section-eyebrow">Inside Phase 1</p>
+            <h2 className="section-h2-dark">Production sections</h2>
+            <div className="gold-rule" />
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: "26px" }}>
+            {sections.map((s, i) => (
+              <div key={s.title} className={`spec-block reveal${i % 2 === 1 ? " is-flipped" : ""}`}>
+                <div style={{ position: "relative", minHeight: "300px" }}>
+                  <Image src={s.image} alt={s.alt} fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 520px" />
+                </div>
+                <div className="spec-body">
+                  <p style={{ fontSize: "0.68rem", color: "#A8832E", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", marginBottom: "10px" }}>
+                    {s.eyebrow}
+                  </p>
+                  <h3 style={{ fontFamily: "var(--font-head)", fontSize: "1.75rem", fontWeight: 800, color: "#0B1D2E", marginBottom: "8px" }}>
+                    {s.title}
+                  </h3>
+                  <p style={{ color: "#0E86D4", fontWeight: 600, fontSize: "0.92rem", marginBottom: "20px" }}>
+                    {s.capacity}
+                  </p>
+                  <ul className="spec-list">
+                    {s.specs.map((sp) => <li key={sp}>{sp}</li>)}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SOLAR & SUSTAINABILITY */}
+      <section style={{ position: "relative", padding: "110px 0", overflow: "hidden" }}>
+        <Image src="/images/outfit-solar.jpg" alt="Rooftop solar array at sunset" fill style={{ objectFit: "cover" }} sizes="100vw" />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(100deg, rgba(7,22,36,0.95) 0%, rgba(7,22,36,0.8) 55%, rgba(7,22,36,0.55) 100%)" }} />
+        <div className="container" style={{ position: "relative", zIndex: 1 }}>
+          <div className="reveal" style={{ maxWidth: "760px" }}>
+            <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+              Solar Power &amp; Sustainability · Buildings 1 &amp; 2
+            </p>
+            <h2 className="section-h2-light" style={{ marginBottom: "20px" }}>
+              Powered mostly by the roof above it
+            </h2>
+            <p style={{ color: "rgba(255,255,255,0.72)", lineHeight: 1.9, maxWidth: "620px", marginBottom: "44px" }}>
+              Phase 1 runs largely on its own rooftop generation, with a zero-discharge water system
+              handling every wastewater stream on site.
+            </p>
+
+            <div className="sustain-grid">
+              {sustainability.map((s) => (
+                <div key={s.stat} className="sustain-card">
+                  <div className="sustain-stat">{s.stat}</div>
+                  <div className="sustain-label">{s.label}</div>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ marginTop: "28px", display: "inline-flex", alignItems: "center", gap: "12px", padding: "14px 22px", background: "rgba(201,168,76,0.12)", border: "1px solid rgba(201,168,76,0.4)", borderRadius: "6px" }}>
+              <span style={{ color: "#D9BC6B", fontWeight: 700, fontSize: "0.9rem" }}>Zero discharge</span>
+              <span style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.88rem" }}>
+                15 m³/h ETP + HTP for all wastewater streams
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DOWNLOAD + CTA */}
+      <section className="section-pad" style={{ background: "white" }}>
+        <div className="container reveal">
+          <div className="download-band">
+            <div>
+              <p className="section-eyebrow" style={{ marginBottom: "10px" }}>Company Profile</p>
+              <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.5rem, 3vw, 2.1rem)", fontWeight: 800, color: "#0B1D2E", marginBottom: "12px" }}>
+                Take the full profile with you
+              </h2>
+              <p style={{ color: "#52697C", lineHeight: 1.8, maxWidth: "480px" }}>
+                Layout, floor plans, machinery lists, capacity targets and sustainability figures,
+                in a print-ready PDF.
+              </p>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: "12px", alignItems: "flex-start" }}>
+              <a href="/supreme-outfit-company-profile.pdf" download className="btn-gold">
+                Download PDF
+              </a>
+              <Link href="/contact" className="btn-outline-gold" style={{ borderColor: "#A8832E", color: "#A8832E" }}>
+                Talk to our team
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LOCATION */}
+      <section style={{ background: "#F6F4EE", padding: "70px 0", borderTop: "1px solid #E8E2D4" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "32px" }}>
+          <p className="section-eyebrow">Dhamrai, Dhaka, Bangladesh</p>
+          <h2 style={{ fontFamily: "var(--font-head)", fontSize: "1.9rem", fontWeight: 800, color: "#0B1D2E", marginBottom: "32px" }}>
             Our Location
           </h2>
-          <div style={{ borderRadius: "8px", overflow: "hidden", border: "2px solid rgba(56,182,255,0.3)", maxWidth: "900px", margin: "0 auto" }}>
+          <div style={{ borderRadius: "8px", overflow: "hidden", border: "1px solid #E8E2D4", maxWidth: "900px", margin: "0 auto" }}>
             <iframe
-              src="https://maps.google.com/maps?q=Supreme%20Outfit%20Ltd%20Kashimpur%20Gazipur%20Bangladesh&t=m&z=17&output=embed&iwloc=near"
+              src="https://maps.google.com/maps?q=Dhamrai%2C%20Dhaka%2C%20Bangladesh&t=m&z=13&output=embed&iwloc=near"
               width="100%"
               height="400"
-              style={{ border: "none" }}
+              style={{ border: "none", display: "block" }}
               allowFullScreen
               loading="lazy"
-              title="Supreme Outfit Ltd. Location"
+              title="Supreme Outfit Ltd. location, Dhamrai, Dhaka"
             />
           </div>
         </div>
@@ -135,7 +480,9 @@ export default function OutfitPage() {
       {/* CONTACT */}
       <section style={{ background: "#0B1D2E", padding: "60px 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h3 style={{ fontFamily: "var(--font-head)", fontSize: "1.5rem", fontWeight: 600, color: "white", marginBottom: "16px" }}>Contact Supreme Outfit</h3>
+          <h3 style={{ fontFamily: "var(--font-head)", fontSize: "1.5rem", fontWeight: 700, color: "white", marginBottom: "16px" }}>
+            Contact Supreme Outfit
+          </h3>
           <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "1rem" }}>
             Email: <a href="mailto:office@supremegroupbd.com" style={{ color: "#38B6FF", fontWeight: 600 }}>office@supremegroupbd.com</a>
             {" · "}
