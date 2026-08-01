@@ -62,10 +62,10 @@ export default function AccessoriesPage() {
             </div>
             <div style={{ display: "grid", gap: "16px" }}>
               <div style={{ position: "relative", height: "300px", borderRadius: "4px", overflow: "hidden" }}>
-                <Image src="/images/accessories-front.jpg" alt="Accessories facility" fill style={{ objectFit: "cover" }} sizes="600px" />
+                <Image src="/images/accessories-ground.jpg" alt="Factory entrance with raw materials" fill style={{ objectFit: "cover" }} sizes="600px" />
               </div>
               <div style={{ position: "relative", height: "250px", borderRadius: "4px", overflow: "hidden" }}>
-                <Image src="/images/accessories-table.jpg" alt="Accessories production" fill style={{ objectFit: "cover" }} sizes="600px" />
+                <Image src="/images/accessories-facade.jpg" alt="Supreme Accessories facility facade" fill style={{ objectFit: "cover" }} sizes="600px" />
               </div>
             </div>
           </div>

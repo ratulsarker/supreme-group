@@ -97,10 +97,10 @@ export default function EmbellishmentPage() {
             </div>
             <div style={{ display: "grid", gap: "16px" }}>
               <div style={{ position: "relative", height: "300px", borderRadius: "4px", overflow: "hidden" }}>
-                <Image src="/images/embellishment-printing.jpg" alt="Printing section" fill style={{ objectFit: "cover" }} sizes="600px" />
+                <Image src="/images/printing-floor.jpg" alt="Printing floor with automated lines" fill style={{ objectFit: "cover" }} sizes="600px" />
               </div>
               <div style={{ position: "relative", height: "300px", borderRadius: "4px", overflow: "hidden" }}>
-                <Image src="/images/embellishment-embroidery.jpg" alt="Embroidery section" fill style={{ objectFit: "cover" }} sizes="600px" />
+                <Image src="/images/embroidery-machines.jpg" alt="Multi-head embroidery machines" fill style={{ objectFit: "cover" }} sizes="600px" />
               </div>
             </div>
           </div>
