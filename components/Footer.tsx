@@ -12,7 +12,7 @@ const companies = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: "#060e1a", color: "rgba(255,255,255,0.7)", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+    <footer style={{ background: "#081521", color: "rgba(255,255,255,0.7)", borderTop: "1px solid rgba(56,182,255,0.18)" }}>
       <div className="container" style={{ padding: "64px 24px 0" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "48px", paddingBottom: "48px" }}>
           
@@ -34,7 +34,7 @@ export default function Footer() {
 
           {/* Our Companies */}
           <div>
-            <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1rem", color: "#C9A84C", marginBottom: "20px", fontWeight: 600 }}>
+            <h4 style={{ fontFamily: "var(--font-head)", fontSize: "1rem", color: "#38B6FF", marginBottom: "20px", fontWeight: 600 }}>
               Our Companies
             </h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -55,7 +55,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1rem", color: "#C9A84C", marginBottom: "20px", fontWeight: 600 }}>
+            <h4 style={{ fontFamily: "var(--font-head)", fontSize: "1rem", color: "#38B6FF", marginBottom: "20px", fontWeight: 600 }}>
               Quick Links
             </h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -81,12 +81,12 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1rem", color: "#C9A84C", marginBottom: "20px", fontWeight: 600 }}>
+            <h4 style={{ fontFamily: "var(--font-head)", fontSize: "1rem", color: "#38B6FF", marginBottom: "20px", fontWeight: 600 }}>
               Head Office
             </h4>
             <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
               <div style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
-                <svg style={{ marginTop: "2px", flexShrink: 0 }} width="14" height="14" fill="none" stroke="#C9A84C" strokeWidth="2" viewBox="0 0 24 24">
+                <svg style={{ marginTop: "2px", flexShrink: 0 }} width="14" height="14" fill="none" stroke="#38B6FF" strokeWidth="2" viewBox="0 0 24 24">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
                 </svg>
                 <span style={{ fontSize: "0.8rem", lineHeight: "1.6", color: "rgba(255,255,255,0.55)" }}>
@@ -94,13 +94,13 @@ export default function Footer() {
                 </span>
               </div>
               <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
-                <svg style={{ flexShrink: 0 }} width="14" height="14" fill="none" stroke="#C9A84C" strokeWidth="2" viewBox="0 0 24 24">
+                <svg style={{ flexShrink: 0 }} width="14" height="14" fill="none" stroke="#38B6FF" strokeWidth="2" viewBox="0 0 24 24">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.56 2 2 0 0 1 3.58 1.38h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.14a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
                 </svg>
                 <span style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.55)" }}>+88-02-9359825</span>
               </div>
               <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
-                <svg style={{ flexShrink: 0 }} width="14" height="14" fill="none" stroke="#C9A84C" strokeWidth="2" viewBox="0 0 24 24">
+                <svg style={{ flexShrink: 0 }} width="14" height="14" fill="none" stroke="#38B6FF" strokeWidth="2" viewBox="0 0 24 24">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                   <polyline points="22,6 12,13 2,6"/>
                 </svg>

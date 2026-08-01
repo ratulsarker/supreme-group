@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Supreme Embellishment Ltd.",
-  description: "High-capacity embellishment facility specializing in advanced printing and embroidery — 62,000 sq ft, 520 professionals, 80,000 pcs/day.",
+  description: "High-capacity embellishment facility specializing in advanced printing and embroidery. 62,000 sq ft, 520 professionals, 80,000 pcs/day.",
 };
 
 export default function EmbellishmentPage() {
@@ -15,33 +15,33 @@ export default function EmbellishmentPage() {
         <Image src="/images/embellishment-hero.jpg" alt="Supreme Embellishment Facility" fill priority style={{ objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(10,22,40,0.88) 0%, rgba(10,22,40,0.5) 100%)" }} />
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px" }}>
-          <div style={{ fontSize: "0.75rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
+          <div style={{ fontSize: "0.75rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
             Printing & Embroidery
           </div>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700, color: "white", marginBottom: "20px" }}>
+          <h1 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700, color: "white", marginBottom: "20px" }}>
             Supreme Embellishment Ltd.
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.75)", maxWidth: "580px", lineHeight: 1.8 }}>
-            A sister concern of Supreme Stitch Ltd. — a fully integrated, high-capacity embellishment facility specializing in advanced printing and embroidery services.
+            A sister concern of Supreme Stitch Ltd. and a fully integrated, high-capacity embellishment facility specializing in advanced printing and embroidery services.
           </p>
         </div>
       </section>
 
       {/* INFO BAR */}
-      <section style={{ background: "#112240", borderBottom: "1px solid rgba(201,168,76,0.15)", padding: "18px 0" }}>
+      <section style={{ background: "#123049", borderBottom: "1px solid rgba(56,182,255,0.15)", padding: "18px 0" }}>
         <div className="container" style={{ display: "flex", justifyContent: "center", gap: "40px", flexWrap: "wrap", fontSize: "0.8rem", color: "rgba(255,255,255,0.6)", fontWeight: 500, letterSpacing: "0.3px" }}>
           <span>140/1, East Baghbari, Kashimpur, Gazipur</span>
-          <span style={{ color: "rgba(201,168,76,0.4)" }}>|</span>
+          <span style={{ color: "rgba(56,182,255,0.4)" }}>|</span>
           <span>+8801678-038802</span>
-          <span style={{ color: "rgba(201,168,76,0.4)" }}>|</span>
-          <span><a href="mailto:admin@supremegroupbd.com" style={{ color: "#C9A84C", textDecoration: "none" }}>admin@supremegroupbd.com</a></span>
-          <span style={{ color: "rgba(201,168,76,0.4)" }}>|</span>
+          <span style={{ color: "rgba(56,182,255,0.4)" }}>|</span>
+          <span><a href="mailto:admin@supremegroupbd.com" style={{ color: "#38B6FF", textDecoration: "none" }}>admin@supremegroupbd.com</a></span>
+          <span style={{ color: "rgba(56,182,255,0.4)" }}>|</span>
           <span>Mon–Thu, Sat–Sun: 8:30 AM – 5:30 PM</span>
         </div>
       </section>
 
       {/* STATS */}
-      <section style={{ background: "#C9A84C", padding: "36px 0" }}>
+      <section style={{ background: "#38B6FF", padding: "36px 0" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "0" }}>
             {[
@@ -55,7 +55,7 @@ export default function EmbellishmentPage() {
                 padding: "8px 24px",
                 borderRight: i < 3 ? "1px solid rgba(10,22,40,0.15)" : "none",
               }}>
-                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 700, color: "#0A1628", lineHeight: 1 }}>
+                <div style={{ fontFamily: "var(--font-head)", fontSize: "2.2rem", fontWeight: 700, color: "#0B1D2E", lineHeight: 1 }}>
                   {s.num}
                 </div>
                 <div style={{ fontSize: "0.68rem", color: "rgba(10,22,40,0.65)", fontWeight: 600, letterSpacing: "2px", textTransform: "uppercase", marginTop: "6px" }}>
@@ -73,8 +73,8 @@ export default function EmbellishmentPage() {
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "start" }}>
             <div>
-              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 700, color: "#0A1628", marginBottom: "16px" }}>
-                We Don&apos;t Just Embellish Garments — <span style={{ color: "#C9A84C" }}>We Elevate Them</span>
+              <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2.2rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "16px" }}>
+                We Don&apos;t Just Embellish Garments, <span style={{ color: "#0E86D4" }}>We Elevate Them</span>
               </h2>
               <div className="gold-divider" />
               <p style={{ color: "#374151", lineHeight: 1.8, marginBottom: "20px" }}>
@@ -87,10 +87,10 @@ export default function EmbellishmentPage() {
                 On the embroidery side, we are equipped with a comprehensive range of multi-head embroidery machines, capable of producing intricate and high-quality designs across a wide variety of garments. Our advanced setups allow for speed, precision, and consistency, catering to diverse client needs including fashion, promotional, and industrial applications.
               </p>
               <p style={{ color: "#374151", lineHeight: 1.8, marginBottom: "20px" }}>
-                Our workforce is our greatest strength — a team of 520 highly skilled professionals trained to maintain top-tier quality standards and optimize production efficiency. Whether it&apos;s a complex embroidery pattern or a large-scale print run, we combine craftsmanship and technology to deliver excellence at every stage.
+                Our workforce is our greatest strength: a team of 520 highly skilled professionals trained to maintain top-tier quality standards and optimize production efficiency. Whether it&apos;s a complex embroidery pattern or a large-scale print run, we combine craftsmanship and technology to deliver excellence at every stage.
               </p>
               <div className="highlight-block">
-                <p style={{ color: "#0A1628", fontStyle: "italic", fontWeight: 500, lineHeight: 1.7 }}>
+                <p style={{ color: "#0B1D2E", fontStyle: "italic", fontWeight: 500, lineHeight: 1.7 }}>
                   &ldquo;At Supreme Embellishment Ltd., we don&apos;t just embellish garments; we elevate them.&rdquo;
                 </p>
               </div>
@@ -109,13 +109,13 @@ export default function EmbellishmentPage() {
       </section>
 
       {/* SERVICES */}
-      <section className="section-pad" style={{ background: "#f8f6f1" }}>
+      <section className="section-pad" style={{ background: "#F2F8FC" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "56px" }}>
-            <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+            <p style={{ fontSize: "0.72rem", color: "#0E86D4", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
               What We Do
             </p>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "#0A1628" }}>
+            <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.8rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "#0B1D2E" }}>
               Our Capabilities
             </h2>
           </div>
@@ -130,16 +130,16 @@ export default function EmbellishmentPage() {
             ].map((s) => (
               <div key={s.title} className="card-hover" style={{
                 background: "white",
-                border: "1px solid #e8e8e0",
+                border: "1px solid #DCE8F0",
                 borderRadius: "4px",
                 padding: "32px 28px",
                 transition: "border-color 0.2s, box-shadow 0.2s",
               }}>
-                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "0.7rem", color: "#C9A84C", letterSpacing: "2px", marginBottom: "16px", fontWeight: 600 }}>
+                <div style={{ fontFamily: "var(--font-head)", fontSize: "0.7rem", color: "#38B6FF", letterSpacing: "2px", marginBottom: "16px", fontWeight: 600 }}>
                   {s.num}
                 </div>
-                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.05rem", fontWeight: 600, color: "#0A1628", marginBottom: "10px" }}>{s.title}</h3>
-                <div style={{ width: "24px", height: "1px", background: "#C9A84C", marginBottom: "12px", opacity: 0.5 }} />
+                <h3 style={{ fontFamily: "var(--font-head)", fontSize: "1.05rem", fontWeight: 600, color: "#0B1D2E", marginBottom: "10px" }}>{s.title}</h3>
+                <div style={{ width: "24px", height: "1px", background: "#38B6FF", marginBottom: "12px", opacity: 0.5 }} />
                 <p style={{ fontSize: "0.845rem", color: "#6b7280", lineHeight: 1.75 }}>{s.desc}</p>
               </div>
             ))}
@@ -149,22 +149,22 @@ export default function EmbellishmentPage() {
       </section>
 
       {/* GOOGLE MAP */}
-      <section style={{ background: "#f8f6f1", padding: "60px 0" }}>
+      <section style={{ background: "#F2F8FC", padding: "60px 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#0A1628", marginBottom: "32px" }}>Our Location</h2>
-          <div style={{ borderRadius: "8px", overflow: "hidden", border: "2px solid rgba(201,168,76,0.3)", maxWidth: "900px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "32px" }}>Our Location</h2>
+          <div style={{ borderRadius: "8px", overflow: "hidden", border: "2px solid rgba(56,182,255,0.3)", maxWidth: "900px", margin: "0 auto" }}>
             <iframe src="https://maps.google.com/maps?q=Supreme%20Embellishment%20Ltd%20Kashimpur%20Gazipur%20Bangladesh&t=m&z=17&output=embed&iwloc=near" width="100%" height="400" style={{ border: "none" }} allowFullScreen loading="lazy" title="Supreme Embellishment Ltd. Location" />
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section style={{ background: "#0A1628", padding: "80px 0", textAlign: "center", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+      <section style={{ background: "#0B1D2E", padding: "80px 0", textAlign: "center", borderTop: "1px solid rgba(56,182,255,0.15)" }}>
         <div className="container">
-          <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
             Work With Us
           </p>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "white", marginBottom: "16px" }}>
+          <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.8rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "white", marginBottom: "16px" }}>
             Need Printing or Embroidery Services?
           </h2>
           <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "1rem", marginBottom: "36px", maxWidth: "480px", margin: "0 auto 36px", lineHeight: 1.8 }}>

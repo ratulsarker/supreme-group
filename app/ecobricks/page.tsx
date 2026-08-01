@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Supreme Eco Bricks & Agro Ltd.",
-  description: "Sustainable agricultural enterprise in Dhamrai, Dhaka — eco-friendly livestock, dairy, and egg production with biogas generation.",
+  description: "Sustainable agricultural enterprise in Dhamrai, Dhaka with eco-friendly livestock, dairy, and egg production plus biogas generation.",
 };
 
 export default function EcoBricksPage() {
@@ -15,25 +15,25 @@ export default function EcoBricksPage() {
         <Image src="/images/eco-wide.jpg" alt="Supreme Eco Bricks & Agro Farm" fill priority style={{ objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(10,22,40,0.88) 0%, rgba(10,22,40,0.5) 100%)" }} />
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px" }}>
-          <div style={{ fontSize: "0.75rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
+          <div style={{ fontSize: "0.75rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
             Sustainable Agriculture
           </div>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700, color: "white", marginBottom: "20px" }}>
+          <h1 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700, color: "white", marginBottom: "20px" }}>
             Supreme Eco Bricks & Agro Ltd.
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.75)", maxWidth: "560px", lineHeight: 1.8 }}>
-            A sustainable agricultural enterprise based in Dhamrai, Dhaka — practicing 100% natural and sustainable farming.
+            A sustainable agricultural enterprise based in Dhamrai, Dhaka, practicing 100% natural and sustainable farming.
           </p>
         </div>
       </section>
 
       {/* INFO BAR */}
-      <section style={{ background: "#112240", borderBottom: "1px solid rgba(201,168,76,0.15)", padding: "18px 0" }}>
+      <section style={{ background: "#123049", borderBottom: "1px solid rgba(56,182,255,0.15)", padding: "18px 0" }}>
         <div className="container" style={{ display: "flex", justifyContent: "center", gap: "40px", flexWrap: "wrap", fontSize: "0.8rem", color: "rgba(255,255,255,0.6)", fontWeight: 500, letterSpacing: "0.3px" }}>
           <span>Khagail, Berosh, Dhamrai, Dhaka – 1345</span>
-          <span style={{ color: "rgba(201,168,76,0.4)" }}>|</span>
+          <span style={{ color: "rgba(56,182,255,0.4)" }}>|</span>
           <span>+8801678-038802</span>
-          <span style={{ color: "rgba(201,168,76,0.4)" }}>|</span>
+          <span style={{ color: "rgba(56,182,255,0.4)" }}>|</span>
           <span>Open 24 Hours</span>
         </div>
       </section>
@@ -43,8 +43,8 @@ export default function EcoBricksPage() {
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "center" }}>
             <div>
-              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 700, color: "#0A1628", marginBottom: "16px" }}>
-                100% Natural & <span style={{ color: "#C9A84C" }}>Sustainable</span> Farming
+              <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2.2rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "16px" }}>
+                100% Natural & <span style={{ color: "#0E86D4" }}>Sustainable</span> Farming
               </h2>
               <div className="gold-divider" />
               <p style={{ color: "#374151", lineHeight: 1.8, marginBottom: "20px" }}>
@@ -74,12 +74,12 @@ export default function EcoBricksPage() {
       </section>
 
       {/* VIDEO */}
-      <section className="section-pad" style={{ background: "#0A1628" }}>
+      <section className="section-pad" style={{ background: "#0B1D2E" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <div style={{ fontSize: "0.75rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
+          <div style={{ fontSize: "0.75rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
             Watch
           </div>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 700, color: "white", marginBottom: "32px" }}>
+          <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2.2rem", fontWeight: 700, color: "white", marginBottom: "32px" }}>
             Life at the Farm
           </h2>
           <div style={{ position: "relative", width: "100%", maxWidth: "800px", margin: "0 auto", paddingBottom: "56.25%", height: 0 }}>
@@ -95,7 +95,7 @@ export default function EcoBricksPage() {
       </section>
 
       {/* STATS */}
-      <section style={{ background: "#C9A84C", padding: "36px 0" }}>
+      <section style={{ background: "#38B6FF", padding: "36px 0" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "0" }}>
             {[
@@ -109,7 +109,7 @@ export default function EcoBricksPage() {
                 padding: "8px 24px",
                 borderRight: i < 3 ? "1px solid rgba(10,22,40,0.15)" : "none",
               }}>
-                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 700, color: "#0A1628", lineHeight: 1 }}>
+                <div style={{ fontFamily: "var(--font-head)", fontSize: "2.2rem", fontWeight: 700, color: "#0B1D2E", lineHeight: 1 }}>
                   {s.num}
                 </div>
                 <div style={{ fontSize: "0.68rem", color: "rgba(10,22,40,0.65)", fontWeight: 600, letterSpacing: "2px", textTransform: "uppercase", marginTop: "6px" }}>
@@ -123,9 +123,9 @@ export default function EcoBricksPage() {
       </section>
 
       {/* MORE IMAGES */}
-      <section className="section-pad" style={{ background: "#f8f6f1" }}>
+      <section className="section-pad" style={{ background: "#F2F8FC" }}>
         <div className="container">
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#0A1628", textAlign: "center", marginBottom: "40px" }}>
+          <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2rem", fontWeight: 700, color: "#0B1D2E", textAlign: "center", marginBottom: "40px" }}>
             Life at the Farm
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "16px" }}>
@@ -140,22 +140,22 @@ export default function EcoBricksPage() {
       </section>
 
       {/* GOOGLE MAP */}
-      <section style={{ background: "#f8f6f1", padding: "60px 0" }}>
+      <section style={{ background: "#F2F8FC", padding: "60px 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#0A1628", marginBottom: "32px" }}>Our Location</h2>
-          <div style={{ borderRadius: "8px", overflow: "hidden", border: "2px solid rgba(201,168,76,0.3)", maxWidth: "900px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "32px" }}>Our Location</h2>
+          <div style={{ borderRadius: "8px", overflow: "hidden", border: "2px solid rgba(56,182,255,0.3)", maxWidth: "900px", margin: "0 auto" }}>
             <iframe src="https://maps.google.com/maps?q=Supreme%20Eco%20Bricks%20Dhamrai%20Dhaka%20Bangladesh&t=m&z=15&output=embed&iwloc=near" width="100%" height="400" style={{ border: "none" }} allowFullScreen loading="lazy" title="Supreme Eco Bricks & Agro Ltd. Location" />
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section style={{ background: "#0A1628", padding: "80px 0", textAlign: "center", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+      <section style={{ background: "#0B1D2E", padding: "80px 0", textAlign: "center", borderTop: "1px solid rgba(56,182,255,0.15)" }}>
         <div className="container">
-          <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
             Get In Touch
           </p>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "white", marginBottom: "36px" }}>
+          <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.8rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "white", marginBottom: "36px" }}>
             Interested in Sustainable Agriculture?
           </h2>
           <Link href="/contact" className="btn-gold">Contact Us</Link>

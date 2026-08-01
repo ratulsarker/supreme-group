@@ -1,8 +1,21 @@
 import type { Metadata } from "next";
+import { Archivo, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollInit from "@/components/ScrollInit";
+
+const archivo = Archivo({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-archivo",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -10,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Supreme Group Bangladesh",
   },
   description:
-    "Supreme Group Bangladesh — a diversified garments conglomerate with six sister concerns spanning garment manufacturing, accessories, sustainable agriculture, embellishment, retail, and food.",
+    "Supreme Group Bangladesh is a diversified garments conglomerate with six sister concerns spanning garment manufacturing, accessories, sustainable agriculture, embellishment, retail, and food.",
   keywords: [
     "Supreme Group Bangladesh",
     "garment manufacturer Bangladesh",
@@ -35,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${archivo.variable} ${inter.variable}`}>
       <body>
         <Navbar />
         <main>{children}</main>

@@ -60,8 +60,8 @@ export default function Navbar() {
                   left: "50%",
                   transform: "translateX(-50%)",
                   marginTop: "8px",
-                  background: "#0A1628",
-                  border: "1px solid rgba(201,168,76,0.2)",
+                  background: "#0B1D2E",
+                  border: "1px solid rgba(56,182,255,0.25)",
                   borderRadius: "4px",
                   minWidth: "280px",
                   padding: "8px 0",
@@ -81,7 +81,7 @@ export default function Navbar() {
                         transition: "color 0.2s, padding-left 0.2s",
                       }}
                       onMouseEnter={(e) => {
-                        (e.target as HTMLElement).style.color = "#C9A84C";
+                        (e.target as HTMLElement).style.color = "#38B6FF";
                         (e.target as HTMLElement).style.paddingLeft = "26px";
                       }}
                       onMouseLeave={(e) => {
@@ -122,8 +122,8 @@ export default function Navbar() {
         {/* Mobile menu */}
         {menuOpen && (
           <div style={{
-            background: "#112240",
-            borderTop: "1px solid rgba(201,168,76,0.2)",
+            background: "#123049",
+            borderTop: "1px solid rgba(56,182,255,0.25)",
             padding: "16px 0 24px",
           }}>
             {[

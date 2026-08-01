@@ -40,10 +40,10 @@ function AnimatedNumber({ target, duration = 2000, prefix = "", suffix = "" }: {
 
   return (
     <div ref={ref} style={{
-      fontFamily: "'Playfair Display', serif",
+      fontFamily: "var(--font-head)",
       fontSize: "2.2rem",
-      fontWeight: 700,
-      color: "#0A1628",
+      fontWeight: 800,
+      color: "#06263C",
       lineHeight: 1,
     }}>
       {prefix}{formatted}{suffix}
@@ -60,19 +60,19 @@ const stats = [
 
 export default function CountUpStats() {
   return (
-    <section style={{ background: "#C9A84C", padding: "36px 0" }}>
+    <section style={{ background: "#38B6FF", padding: "36px 0" }}>
       <div className="container">
         <div className="stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "0" }}>
           {stats.map((item, i) => (
             <div key={item.label} style={{
               textAlign: "center",
               padding: "8px 24px",
-              borderRight: i < 3 ? "1px solid rgba(10,22,40,0.15)" : "none",
+              borderRight: i < 3 ? "1px solid rgba(6,38,60,0.18)" : "none",
             }}>
               <AnimatedNumber target={item.target} prefix={item.prefix} suffix={item.suffix} />
               <div style={{
                 fontSize: "0.68rem",
-                color: "rgba(10,22,40,0.65)",
+                color: "rgba(6,38,60,0.7)",
                 fontWeight: 600,
                 letterSpacing: "2px",
                 textTransform: "uppercase",
@@ -84,7 +84,7 @@ export default function CountUpStats() {
           ))}
         </div>
       </div>
-      <style>{`@media(max-width:600px){.stats-grid{grid-template-columns:repeat(2,1fr)!important;} .stats-grid > div{border-right:none!important; border-bottom:1px solid rgba(10,22,40,0.1); padding:16px!important;}}`}</style>
+      <style>{`@media(max-width:600px){.stats-grid{grid-template-columns:repeat(2,1fr)!important;} .stats-grid > div{border-right:none!important; border-bottom:1px solid rgba(6,38,60,0.14); padding:16px!important;}}`}</style>
     </section>
   );
 }

@@ -6,53 +6,54 @@ export const metadata: Metadata = {
   title: "Supreme Group Bangladesh | Garments Conglomerate",
 };
 
-const companies = [
+const flagships = [
   {
     href: "/stitch",
     image: "/images/stitch-building.jpg",
     name: "Supreme Stitch Ltd.",
-    category: "Garment Manufacturing",
-    description: "100% export oriented garment manufacturer. Vertically integrated — from fabric to finished product. Trusted by Fanatics, Hanes, Walmart & Champion.",
+    category: "Flagship · Garment Manufacturing",
+    description:
+      "100% export oriented knitwear manufacturer, vertically integrated from fabric to finished product. Trusted by Fanatics, Hanes, Walmart and Champion.",
     highlight: "60,000 knitwear items/day",
-  },
-  {
-    href: "/accessories",
-    image: "/images/accessories-front.jpg",
-    name: "Supreme Accessories Industries Ltd.",
-    category: "Garment Accessories",
-    description: "Complete garment accessories manufacturer — poly bags, labels, threads, elastic, twill tape, draw cords, and interlinings at scale.",
-    highlight: "3,20,000 poly bags/day · 12 production lines",
-  },
-  {
-    href: "/ecobricks",
-    image: "/images/eco-wide.jpg",
-    name: "Supreme Eco Bricks & Agro Ltd.",
-    category: "Sustainable Agriculture",
-    description: "Sustainable farm in Dhamrai with 400+ cows, 150 sheep, 100+ ducks & geese. 100% natural farming with biogas generation.",
-    highlight: "100% sustainable & eco-friendly",
-  },
-  {
-    href: "/embellishment",
-    image: "/images/embellishment-hero.jpg",
-    name: "Supreme Embellishment Ltd.",
-    category: "Printing & Embroidery",
-    description: "62,000 sq ft embellishment facility with 520 skilled professionals. Advanced printing & multi-head embroidery machines.",
-    highlight: "80,000 pcs/day print capacity",
   },
   {
     href: "/outfit",
     image: "/images/outfit.jpg",
     name: "Supreme Outfit Ltd.",
-    category: "Garment Manufacturing",
-    description: "High-capacity garment manufacturer with 5 buildings, 1,350+ sewing machines, and 1 MW solar power infrastructure.",
+    category: "Flagship · Garment Manufacturing",
+    description:
+      "High-capacity garment manufacturer with 5 buildings, 1,350+ sewing machines and 1 MW of rooftop solar power.",
     highlight: "1.2M pcs/month production",
+  },
+];
+
+const supporting = [
+  {
+    href: "/accessories",
+    name: "Supreme Accessories",
+    category: "Garment Accessories",
+    description: "Poly bags, labels, threads, elastic and interlinings at scale.",
+    highlight: "3,20,000 poly bags/day",
+  },
+  {
+    href: "/embellishment",
+    name: "Supreme Embellishment",
+    category: "Printing & Embroidery",
+    description: "62,000 sq ft facility with 520 skilled professionals.",
+    highlight: "80,000 pcs/day prints",
+  },
+  {
+    href: "/ecobricks",
+    name: "Supreme Eco Bricks & Agro",
+    category: "Sustainable Agriculture",
+    description: "Natural farming in Dhamrai with 400+ cows and biogas generation.",
+    highlight: "100% eco-friendly",
   },
   {
     href: "/sweets",
-    image: "/images/sweets-1.jpg",
     name: "Supreme Sweets",
     category: "Food & Retail",
-    description: "Authentic Bengali confectionery chain serving communities across Dhaka — Uttara, Kalampur, Rajabazar, Ashulia, Gazipur & Dhamrai.",
+    description: "Authentic Bengali confectionery serving communities across Dhaka.",
     highlight: "6 outlets across Dhaka",
   },
 ];
@@ -63,34 +64,34 @@ export default function Home() {
       {/* HERO */}
       <section
         style={{
-          background: "linear-gradient(135deg, #0A1628 0%, #0e1e35 60%, #112240 100%)",
           minHeight: "100vh",
           display: "flex",
-          alignItems: "center",
+          alignItems: "flex-end",
           position: "relative",
           overflow: "hidden",
-          paddingTop: "72px",
         }}
       >
-        {/* Subtle background texture overlay */}
+        <Image
+          src="/images/wa-special.jpg"
+          alt="Supreme Group manufacturing campus"
+          fill
+          priority
+          style={{ objectFit: "cover", objectPosition: "center 35%" }}
+          sizes="100vw"
+        />
+        {/* Scrim: readable text over the rendering */}
         <div style={{
           position: "absolute",
           inset: 0,
-          backgroundImage: "url('/images/stitch-building.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          opacity: 0.07,
-          pointerEvents: "none",
+          background: "linear-gradient(100deg, rgba(7,22,36,0.92) 0%, rgba(7,22,36,0.68) 42%, rgba(9,40,64,0.22) 100%)",
         }} />
         <div style={{
           position: "absolute",
-          top: "15%",
-          right: "-5%",
-          width: "600px",
-          height: "600px",
-          borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%)",
-          pointerEvents: "none",
+          left: 0,
+          right: 0,
+          bottom: 0,
+          height: "45%",
+          background: "linear-gradient(transparent, rgba(7,22,36,0.85))",
         }} />
         <div style={{
           position: "absolute",
@@ -98,60 +99,63 @@ export default function Home() {
           left: 0,
           right: 0,
           height: "2px",
-          background: "linear-gradient(90deg, transparent, #C9A84C, transparent)",
+          background: "linear-gradient(90deg, transparent, #38B6FF, transparent)",
         }} />
 
-        <div className="container" style={{ position: "relative", zIndex: 1 }}>
-          <div style={{ maxWidth: "760px" }}>
+        <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "140px", paddingBottom: "72px" }}>
+          <div style={{ maxWidth: "780px" }}>
             <div style={{
               display: "inline-block",
-              background: "rgba(201,168,76,0.1)",
-              border: "1px solid rgba(201,168,76,0.3)",
-              borderRadius: "2px",
+              background: "rgba(56,182,255,0.12)",
+              border: "1px solid rgba(56,182,255,0.35)",
+              borderRadius: "4px",
               padding: "6px 16px",
               marginBottom: "28px",
+              backdropFilter: "blur(4px)",
             }}>
-              <span style={{ color: "#C9A84C", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "2px", textTransform: "uppercase" }}>
+              <span style={{ color: "#6FCBFF", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "2px", textTransform: "uppercase" }}>
                 Bangladesh&apos;s Trusted Garments Conglomerate
               </span>
             </div>
 
             <h1 style={{
-              fontFamily: "'Playfair Display', serif",
-              fontSize: "clamp(2.8rem, 6vw, 5rem)",
-              fontWeight: 700,
+              fontFamily: "var(--font-head)",
+              fontSize: "clamp(2.6rem, 6vw, 4.6rem)",
+              fontWeight: 800,
               color: "#ffffff",
-              lineHeight: 1.1,
-              marginBottom: "28px",
+              lineHeight: 1.08,
+              marginBottom: "26px",
+              letterSpacing: "-0.02em",
             }}>
-              Building Tomorrow&apos;s{" "}
-              <span style={{ color: "#C9A84C" }}>Industries</span>{" "}
-              Today
+              World-Class Manufacturing,{" "}
+              <span style={{ color: "#38B6FF" }}>Made in Bangladesh</span>
             </h1>
 
             <p style={{
-              fontSize: "1.15rem",
-              color: "rgba(255,255,255,0.72)",
+              fontSize: "1.12rem",
+              color: "rgba(255,255,255,0.78)",
               lineHeight: 1.8,
-              marginBottom: "40px",
+              marginBottom: "38px",
               maxWidth: "600px",
             }}>
-              Supreme Group Bangladesh is a diversified garments conglomerate operating across garment manufacturing, sustainable agriculture, accessories, embellishment, and food retail — driving growth and innovation from Bangladesh to the world.
+              Supreme Group is a diversified conglomerate of six companies spanning garment
+              manufacturing, accessories, embellishment, sustainable agriculture and food retail,
+              serving global brands from Bangladesh.
             </p>
 
             <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
               <Link href="/stitch" className="btn-gold">
-                Our Flagship — Supreme Stitch
+                Explore the Group
               </Link>
-              <Link href="/contact" className="btn-outline-gold">
+              <Link href="/contact" className="btn-outline-gold" style={{ borderColor: "rgba(255,255,255,0.5)", color: "#fff" }}>
                 Partner With Us
               </Link>
             </div>
 
             {/* Mini stats */}
-            <div style={{ display: "flex", gap: "0", marginTop: "64px", flexWrap: "wrap", borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: "32px" }}>
+            <div style={{ display: "flex", gap: "0", marginTop: "56px", flexWrap: "wrap", borderTop: "1px solid rgba(255,255,255,0.14)", paddingTop: "30px" }}>
               {[
-                { number: "6", label: "Sister Concerns" },
+                { number: "6", label: "Companies" },
                 { number: "4,000+", label: "Employees" },
                 { number: "1.2M+", label: "Pcs / Month" },
                 { number: "1MW+", label: "Solar Power" },
@@ -159,12 +163,12 @@ export default function Home() {
                 <div key={s.label} style={{
                   paddingRight: "40px",
                   marginRight: "40px",
-                  borderRight: i < 3 ? "1px solid rgba(255,255,255,0.1)" : "none",
+                  borderRight: i < 3 ? "1px solid rgba(255,255,255,0.14)" : "none",
                 }}>
-                  <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#C9A84C", lineHeight: 1 }}>
+                  <div style={{ fontFamily: "var(--font-head)", fontSize: "2rem", fontWeight: 800, color: "#38B6FF", lineHeight: 1 }}>
                     {s.number}
                   </div>
-                  <div style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.45)", marginTop: "6px", letterSpacing: "1px", textTransform: "uppercase" }}>
+                  <div style={{ fontSize: "0.72rem", color: "rgba(255,255,255,0.55)", marginTop: "6px", letterSpacing: "1px", textTransform: "uppercase" }}>
                     {s.label}
                   </div>
                 </div>
@@ -175,9 +179,9 @@ export default function Home() {
       </section>
 
       {/* CLIENTS MARQUEE */}
-      <section style={{ background: "#f8f6f1", borderTop: "1px solid #e8e8e0", borderBottom: "1px solid #e8e8e0", padding: "40px 0", overflow: "hidden" }}>
+      <section style={{ background: "#F2F8FC", borderTop: "1px solid #DCE8F0", borderBottom: "1px solid #DCE8F0", padding: "40px 0", overflow: "hidden" }}>
         <div style={{ textAlign: "center", marginBottom: "20px" }}>
-          <span style={{ fontSize: "0.68rem", fontWeight: 700, color: "#9a8a6a", letterSpacing: "3px", textTransform: "uppercase" }}>Trusted by Global Brands</span>
+          <span style={{ fontSize: "0.68rem", fontWeight: 700, color: "#52697C", letterSpacing: "3px", textTransform: "uppercase" }}>Trusted by Global Brands</span>
         </div>
         <div className="marquee-container">
           <div className="marquee-track">
@@ -195,7 +199,6 @@ export default function Home() {
                   src={logo.src}
                   alt={logo.alt}
                   className="marquee-logo"
-                  style={{ filter: "grayscale(100%) opacity(0.5)" }}
                 />
               ))
             ))}
@@ -208,36 +211,35 @@ export default function Home() {
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
             <div>
-              <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
-                Who We Are
-              </p>
-              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 700, color: "#0A1628", marginBottom: "16px", lineHeight: 1.15 }}>
+              <p className="section-eyebrow">Who We Are</p>
+              <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 800, color: "#0B1D2E", marginBottom: "16px", lineHeight: 1.12 }}>
                 Bangladesh&apos;s Trusted<br />Garments Conglomerate
               </h2>
               <div className="gold-divider" />
-              <p style={{ color: "#4a5568", lineHeight: 1.85, marginBottom: "20px", fontSize: "1rem" }}>
-                Supreme Group Bangladesh was founded with a singular vision: to build world-class businesses rooted in Bangladesh that create lasting value for the global economy.
+              <p style={{ color: "#52697C", lineHeight: 1.85, marginBottom: "20px", fontSize: "1rem" }}>
+                Supreme Group Bangladesh was founded with a singular vision: to build world-class
+                businesses rooted in Bangladesh that create lasting value for the global economy.
               </p>
-              <p style={{ color: "#4a5568", lineHeight: 1.85, marginBottom: "32px", fontSize: "1rem" }}>
-                Starting with garment manufacturing, the group has grown into a diversified conglomerate with six sister concerns spanning manufacturing, accessories, embellishment, sustainable agriculture, and food retail.
+              <p style={{ color: "#52697C", lineHeight: 1.85, marginBottom: "32px", fontSize: "1rem" }}>
+                Starting with garment manufacturing, the group has grown into a diversified
+                conglomerate with six sister concerns spanning manufacturing, accessories,
+                embellishment, sustainable agriculture and food retail.
               </p>
               <div style={{ display: "flex", gap: "32px" }}>
-                <div>
-                  <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#C9A84C" }}>6</div>
-                  <div style={{ fontSize: "0.72rem", color: "#6b7280", letterSpacing: "1px", textTransform: "uppercase", marginTop: "4px" }}>Companies</div>
-                </div>
-                <div>
-                  <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#C9A84C" }}>16+</div>
-                  <div style={{ fontSize: "0.72rem", color: "#6b7280", letterSpacing: "1px", textTransform: "uppercase", marginTop: "4px" }}>Years</div>
-                </div>
-                <div>
-                  <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#C9A84C" }}>4,000+</div>
-                  <div style={{ fontSize: "0.72rem", color: "#6b7280", letterSpacing: "1px", textTransform: "uppercase", marginTop: "4px" }}>Employees</div>
-                </div>
+                {[
+                  { number: "6", label: "Companies" },
+                  { number: "16+", label: "Years" },
+                  { number: "4,000+", label: "Employees" },
+                ].map((s) => (
+                  <div key={s.label}>
+                    <div style={{ fontFamily: "var(--font-head)", fontSize: "2rem", fontWeight: 800, color: "#0E86D4" }}>{s.number}</div>
+                    <div style={{ fontSize: "0.72rem", color: "#64748b", letterSpacing: "1px", textTransform: "uppercase", marginTop: "4px" }}>{s.label}</div>
+                  </div>
+                ))}
               </div>
             </div>
             <div style={{ position: "relative" }}>
-              <div style={{ position: "relative", height: "500px", borderRadius: "4px", overflow: "hidden" }}>
+              <div style={{ position: "relative", height: "500px", borderRadius: "6px", overflow: "hidden" }}>
                 <Image src="/images/outfit.jpg" alt="Supreme Group factory" fill style={{ objectFit: "cover" }} sizes="600px" />
               </div>
               {/* Floating badge */}
@@ -245,12 +247,12 @@ export default function Home() {
                 position: "absolute",
                 bottom: "-16px",
                 left: "-16px",
-                background: "#0A1628",
+                background: "#0B1D2E",
                 padding: "20px 28px",
-                borderRadius: "4px",
-                borderTop: "3px solid #C9A84C",
+                borderRadius: "6px",
+                borderTop: "3px solid #38B6FF",
               }}>
-                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.6rem", fontWeight: 700, color: "#C9A84C" }}>$70M+</div>
+                <div style={{ fontFamily: "var(--font-head)", fontSize: "1.6rem", fontWeight: 800, color: "#38B6FF" }}>$70M+</div>
                 <div style={{ fontSize: "0.68rem", color: "rgba(255,255,255,0.55)", marginTop: "4px", letterSpacing: "1.5px", textTransform: "uppercase" }}>Annual Revenue</div>
               </div>
             </div>
@@ -259,43 +261,55 @@ export default function Home() {
         <style>{`@media(max-width:768px){.container > div{grid-template-columns:1fr!important;}}`}</style>
       </section>
 
-      {/* SISTER CONCERNS */}
-      <section className="section-pad" style={{ background: "#0A1628" }}>
+      {/* GROUP STRUCTURE TREE */}
+      <section className="section-pad" style={{ background: "#0B1D2E" }}>
         <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "56px" }}>
-            <div style={{ fontSize: "0.75rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
-              Our Sister Concerns
+          <div style={{ textAlign: "center", marginBottom: "48px" }}>
+            <div style={{ fontSize: "0.75rem", color: "#6FCBFF", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
+              The Group at a Glance
             </div>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.6rem", fontWeight: 700, color: "white", marginBottom: "16px" }}>
+            <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.9rem, 4vw, 2.6rem)", fontWeight: 800, color: "white", marginBottom: "16px" }}>
               Six Companies. One Vision.
             </h2>
-            <p style={{ color: "rgba(255,255,255,0.55)", maxWidth: "520px", margin: "0 auto", lineHeight: 1.8 }}>
-              Each entity in our group operates with specialized expertise, united by Supreme Group&apos;s unwavering standards of quality and sustainability.
+            <p style={{ color: "rgba(255,255,255,0.55)", maxWidth: "560px", margin: "0 auto", lineHeight: 1.8 }}>
+              Two flagship manufacturers lead the group, backed by four specialized companies.
+              Every entity is united by Supreme Group&apos;s standards of quality and sustainability.
             </p>
           </div>
 
-          <div className="grid-3" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px" }}>
-            {companies.map((company) => (
-              <Link
-                key={company.href}
-                href={company.href}
-                className="card-hover concern-card"
-                style={{
-                  background: "#112240",
-                  border: "1px solid rgba(201,168,76,0.15)",
-                  borderRadius: "4px",
-                  textDecoration: "none",
-                  display: "block",
-                  overflow: "hidden",
-                }}
-              >
-                <div style={{ position: "relative", width: "100%", height: "200px", overflow: "hidden" }}>
+          {/* Root node */}
+          <div style={{ textAlign: "center" }}>
+            <div style={{
+              display: "inline-block",
+              background: "#123049",
+              border: "1px solid rgba(56,182,255,0.35)",
+              borderBottom: "3px solid #38B6FF",
+              borderRadius: "8px",
+              padding: "16px 40px",
+            }}>
+              <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", color: "#6FCBFF", marginBottom: "4px" }}>
+                The Group
+              </div>
+              <div style={{ fontFamily: "var(--font-head)", fontSize: "1.25rem", fontWeight: 800, color: "white" }}>
+                Supreme Group Bangladesh
+              </div>
+            </div>
+          </div>
+
+          <div className="tree-stem" />
+          <div className="tree-rail" />
+
+          {/* Flagship branches */}
+          <div className="tree-flagships">
+            {flagships.map((company) => (
+              <Link key={company.href} href={company.href} className="tree-card flagship">
+                <div style={{ position: "relative", width: "100%", height: "210px", overflow: "hidden" }}>
                   <Image
                     src={company.image}
                     alt={company.name}
                     fill
                     style={{ objectFit: "cover" }}
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                   <div style={{
                     position: "absolute",
@@ -303,79 +317,92 @@ export default function Home() {
                     left: 0,
                     right: 0,
                     height: "60%",
-                    background: "linear-gradient(transparent, rgba(17,34,64,0.9))",
+                    background: "linear-gradient(transparent, rgba(18,48,73,0.92))",
                   }} />
                 </div>
-                <div style={{ padding: "24px 24px 28px" }}>
-                  <div style={{ fontSize: "0.7rem", color: "#C9A84C", fontWeight: 600, letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "8px" }}>
+                <div style={{ padding: "24px 26px 28px" }}>
+                  <div style={{ fontSize: "0.68rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "8px" }}>
                     {company.category}
                   </div>
-                  <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.15rem", fontWeight: 600, color: "white", marginBottom: "12px", lineHeight: 1.3 }}>
+                  <h3 style={{ fontFamily: "var(--font-head)", fontSize: "1.3rem", fontWeight: 700, color: "white", marginBottom: "10px", lineHeight: 1.25 }}>
                     {company.name}
                   </h3>
-                  <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.55)", lineHeight: 1.7, marginBottom: "16px" }}>
+                  <p style={{ fontSize: "0.88rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.7, marginBottom: "16px" }}>
                     {company.description}
                   </p>
                   <div style={{
                     display: "inline-block",
-                    background: "rgba(201,168,76,0.1)",
-                    border: "1px solid rgba(201,168,76,0.25)",
-                    borderRadius: "2px",
+                    background: "rgba(56,182,255,0.1)",
+                    border: "1px solid rgba(56,182,255,0.3)",
+                    borderRadius: "4px",
                     padding: "5px 12px",
-                    fontSize: "0.75rem",
-                    color: "#C9A84C",
-                    fontWeight: 500,
+                    fontSize: "0.76rem",
+                    color: "#6FCBFF",
+                    fontWeight: 600,
                   }}>
                     {company.highlight}
                   </div>
-                  <div style={{
-                    marginTop: "16px",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "6px",
-                    color: "#C9A84C",
-                    fontSize: "0.8rem",
-                    fontWeight: 600,
-                  }}>
+                  <div style={{ marginTop: "16px", color: "#38B6FF", fontSize: "0.82rem", fontWeight: 600 }}>
                     Learn more →
                   </div>
                 </div>
               </Link>
             ))}
           </div>
+
+          {/* Supporting branches */}
+          <div className="tree-others">
+            {supporting.map((company) => (
+              <Link key={company.href} href={company.href} className="tree-card">
+                <div style={{ padding: "20px 20px 22px" }}>
+                  <div style={{ fontSize: "0.62rem", color: "#6FCBFF", fontWeight: 700, letterSpacing: "1.4px", textTransform: "uppercase", marginBottom: "8px" }}>
+                    {company.category}
+                  </div>
+                  <h3 style={{ fontFamily: "var(--font-head)", fontSize: "1rem", fontWeight: 700, color: "white", marginBottom: "8px", lineHeight: 1.3 }}>
+                    {company.name}
+                  </h3>
+                  <p style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.55)", lineHeight: 1.65, marginBottom: "12px" }}>
+                    {company.description}
+                  </p>
+                  <div style={{ fontSize: "0.72rem", color: "#38B6FF", fontWeight: 600 }}>
+                    {company.highlight} →
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
-        <style>{`@media(max-width:1024px){.container > div:last-child{grid-template-columns:repeat(2,1fr)!important;}}@media(max-width:600px){.container > div:last-child{grid-template-columns:1fr!important;}}`}</style>
       </section>
 
       {/* CTA SECTION */}
       <section style={{
-        background: "#0A1628",
+        background: "#0E2438",
         padding: "100px 0",
         textAlign: "center",
-        borderTop: "1px solid rgba(201,168,76,0.15)",
+        borderTop: "1px solid rgba(56,182,255,0.15)",
         position: "relative",
         overflow: "hidden",
       }}>
-        {/* Subtle radial glow */}
         <div style={{
           position: "absolute",
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          width: "600px",
-          height: "300px",
-          background: "radial-gradient(ellipse, rgba(201,168,76,0.06) 0%, transparent 70%)",
+          width: "700px",
+          height: "340px",
+          background: "radial-gradient(ellipse, rgba(56,182,255,0.08) 0%, transparent 70%)",
           pointerEvents: "none",
         }} />
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
-          <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#6FCBFF", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
             Work With Us
           </p>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.9rem, 4vw, 3rem)", fontWeight: 700, color: "white", marginBottom: "20px", lineHeight: 1.2 }}>
+          <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.9rem, 4vw, 3rem)", fontWeight: 800, color: "white", marginBottom: "20px", lineHeight: 1.15 }}>
             Partner with a Leader in<br />Garment Manufacturing
           </h2>
-          <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "1.05rem", marginBottom: "40px", maxWidth: "520px", margin: "0 auto 40px", lineHeight: 1.85 }}>
-            Join global brands like Fanatics, Hanes, and Walmart who trust us for high-quality, sustainable apparel from Bangladesh.
+          <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "1.05rem", maxWidth: "540px", margin: "0 auto 40px", lineHeight: 1.85 }}>
+            Join global brands like Fanatics, Hanes and Walmart who trust us for high-quality,
+            sustainable apparel from Bangladesh.
           </p>
           <Link href="/contact" className="btn-gold">Get In Touch</Link>
         </div>

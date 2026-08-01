@@ -2,11 +2,11 @@
 
 export default function ContactForm() {
   return (
-    <div style={{ background: "white", borderRadius: "4px", padding: "40px 36px", border: "1px solid #e8e8e0" }}>
-      <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.7rem", fontWeight: 700, color: "#0A1628", marginBottom: "8px" }}>
+    <div style={{ background: "white", borderRadius: "4px", padding: "40px 36px", border: "1px solid #DCE8F0" }}>
+      <h2 style={{ fontFamily: "var(--font-head)", fontSize: "1.7rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "8px" }}>
         Send Us a Message
       </h2>
-      <div style={{ width: "40px", height: "2px", background: "#C9A84C", marginBottom: "12px" }} />
+      <div style={{ width: "40px", height: "2px", background: "#38B6FF", marginBottom: "12px" }} />
       <p style={{ fontSize: "0.875rem", color: "#6b7280", marginBottom: "32px", lineHeight: 1.7 }}>
         Fill out the form below and we&apos;ll get back to you as soon as possible.
       </p>
@@ -53,19 +53,19 @@ export default function ContactForm() {
         .form-input {
           width: 100%;
           padding: 12px 16px;
-          border: 1px solid #e8e8e0;
-          border-bottom: 2px solid #e8e8e0;
+          border: 1px solid #DCE8F0;
+          border-bottom: 2px solid #DCE8F0;
           border-radius: 3px;
           font-size: 0.9rem;
           background: #fafaf8;
           outline: none;
-          color: #0A1628;
+          color: #0B1D2E;
           transition: border-color 0.2s, background 0.2s;
           font-family: 'Inter', sans-serif;
           box-sizing: border-box;
         }
         .form-input:focus {
-          border-bottom-color: #C9A84C;
+          border-bottom-color: #38B6FF;
           background: white;
         }
         .form-input::placeholder {

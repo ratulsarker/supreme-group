@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Supreme Outfit Ltd.",
-  description: "High-capacity garment manufacturer — 5 buildings, 1,350+ sewing machines, 1.2M pcs/month, 1 MW solar power.",
+  description: "High-capacity garment manufacturer with 5 buildings, 1,350+ sewing machines, 1.2M pcs/month, and 1 MW solar power.",
 };
 
 export default function OutfitPage() {
@@ -15,10 +15,10 @@ export default function OutfitPage() {
         <Image src="/images/wa-factory-0020.jpg" alt="Supreme Outfit Factory Campus" fill priority style={{ objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(10,22,40,0.9) 0%, rgba(10,22,40,0.6) 100%)" }} />
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px" }}>
-          <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
             Garment Manufacturing
           </p>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700, color: "white", marginBottom: "20px" }}>
+          <h1 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700, color: "white", marginBottom: "20px" }}>
             Supreme Outfit Ltd.
           </h1>
           <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.75)", maxWidth: "560px", lineHeight: 1.8 }}>
@@ -28,7 +28,7 @@ export default function OutfitPage() {
       </section>
 
       {/* STATS BAR */}
-      <section style={{ background: "#C9A84C", padding: "36px 0" }}>
+      <section style={{ background: "#38B6FF", padding: "36px 0" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "0" }}>
             {[
@@ -42,7 +42,7 @@ export default function OutfitPage() {
                 padding: "8px 24px",
                 borderRight: i < 3 ? "1px solid rgba(10,22,40,0.15)" : "none",
               }}>
-                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 700, color: "#0A1628", lineHeight: 1 }}>
+                <div style={{ fontFamily: "var(--font-head)", fontSize: "2.2rem", fontWeight: 700, color: "#0B1D2E", lineHeight: 1 }}>
                   {s.num}
                 </div>
                 <div style={{ fontSize: "0.68rem", color: "rgba(10,22,40,0.65)", fontWeight: 600, letterSpacing: "2px", textTransform: "uppercase", marginTop: "6px" }}>
@@ -58,10 +58,10 @@ export default function OutfitPage() {
       {/* CONTENT */}
       <section className="section-pad">
         <div className="container" style={{ maxWidth: "800px", textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 700, color: "#0A1628", marginBottom: "16px" }}>
-            Scale Meets <span style={{ color: "#C9A84C" }}>Sustainability</span>
+          <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2.2rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "16px" }}>
+            Scale Meets <span style={{ color: "#0E86D4" }}>Sustainability</span>
           </h2>
-          <div style={{ width: "60px", height: "3px", background: "#C9A84C", margin: "0 auto 24px" }} />
+          <div style={{ width: "60px", height: "3px", background: "#38B6FF", margin: "0 auto 24px" }} />
           <p style={{ color: "#374151", lineHeight: 1.8, marginBottom: "20px", fontSize: "1.05rem" }}>
             Supreme Outfit Ltd. operates one of the largest garment manufacturing setups in the Supreme Group portfolio. With 5 purpose-built factory buildings housing over 1,350 sewing machines, we deliver a production capacity of 1.2 million pieces per month.
           </p>
@@ -70,18 +70,18 @@ export default function OutfitPage() {
           </p>
           <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/contact" className="btn-gold">Partner With Us</Link>
-            <Link href="/stitch" className="btn-outline-gold" style={{ borderColor: "#0A1628", color: "#0A1628" }}>See Supreme Stitch →</Link>
+            <Link href="/stitch" className="btn-outline-gold" style={{ borderColor: "#0B1D2E", color: "#0B1D2E" }}>See Supreme Stitch →</Link>
           </div>
         </div>
       </section>
 
       {/* CANVA PRESENTATION */}
-      <section className="section-pad" style={{ background: "#f8f6f1" }}>
+      <section className="section-pad" style={{ background: "#F2F8FC" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <div style={{ fontSize: "0.75rem", color: "#C9A84C", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
+          <div style={{ fontSize: "0.75rem", color: "#0E86D4", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
             Company Presentation
           </div>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 700, color: "#0A1628", marginBottom: "40px" }}>
+          <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2.2rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "40px" }}>
             Supreme Outfit Ltd. Overview
           </h2>
           <div style={{
@@ -90,10 +90,10 @@ export default function OutfitPage() {
             height: 0,
             overflow: "hidden",
             borderRadius: "8px",
-            border: "2px solid rgba(201,168,76,0.3)",
+            border: "2px solid rgba(56,182,255,0.3)",
             maxWidth: "960px",
             margin: "0 auto",
-            background: "#0A1628",
+            background: "#0B1D2E",
           }}>
             <iframe
               src="https://www.canva.com/design/DAGtAg3WIzc/gs9zClswhra_ETd4f1kP5Q/view?embed"
@@ -113,12 +113,12 @@ export default function OutfitPage() {
       </section>
 
       {/* GOOGLE MAP */}
-      <section style={{ background: "#f8f6f1", padding: "60px 0" }}>
+      <section style={{ background: "#F2F8FC", padding: "60px 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "#0A1628", marginBottom: "32px" }}>
+          <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "32px" }}>
             Our Location
           </h2>
-          <div style={{ borderRadius: "8px", overflow: "hidden", border: "2px solid rgba(201,168,76,0.3)", maxWidth: "900px", margin: "0 auto" }}>
+          <div style={{ borderRadius: "8px", overflow: "hidden", border: "2px solid rgba(56,182,255,0.3)", maxWidth: "900px", margin: "0 auto" }}>
             <iframe
               src="https://maps.google.com/maps?q=Supreme%20Outfit%20Ltd%20Kashimpur%20Gazipur%20Bangladesh&t=m&z=17&output=embed&iwloc=near"
               width="100%"
@@ -133,11 +133,11 @@ export default function OutfitPage() {
       </section>
 
       {/* CONTACT */}
-      <section style={{ background: "#0A1628", padding: "60px 0" }}>
+      <section style={{ background: "#0B1D2E", padding: "60px 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.5rem", fontWeight: 600, color: "white", marginBottom: "16px" }}>Contact Supreme Outfit</h3>
+          <h3 style={{ fontFamily: "var(--font-head)", fontSize: "1.5rem", fontWeight: 600, color: "white", marginBottom: "16px" }}>Contact Supreme Outfit</h3>
           <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "1rem" }}>
-            Email: <a href="mailto:office@supremegroupbd.com" style={{ color: "#C9A84C", fontWeight: 600 }}>office@supremegroupbd.com</a>
+            Email: <a href="mailto:office@supremegroupbd.com" style={{ color: "#38B6FF", fontWeight: 600 }}>office@supremegroupbd.com</a>
             {" · "}
             Phone: <span style={{ fontWeight: 600, color: "rgba(255,255,255,0.8)" }}>+8801678038802</span>
           </p>

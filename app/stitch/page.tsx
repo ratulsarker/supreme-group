@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import CountUpStats from "@/components/CountUpStats";
 
 export const metadata: Metadata = {
-  title: "Supreme Stitch Ltd. — 100% Export Oriented Garments Manufacturer",
+  title: "Supreme Stitch Ltd. | 100% Export Oriented Garments Manufacturer",
   description: "Supreme Stitch Ltd. is a vertically integrated garment manufacturer in Bangladesh, trusted by Fanatics, Hanes, Walmart & Champion. 60,000 knitwear items per day.",
 };
 
@@ -59,7 +59,7 @@ const features = [
     title: "Trusted by Global Brands",
     stat: "World-Class",
     statLabel: "Partner Network",
-    description: "Proud supplier to Fanatics, Hanes, Walmart, and Champion — some of the world's largest sportswear and retail brands.",
+    description: "Proud supplier to Fanatics, Hanes, Walmart, and Champion, some of the world's largest sportswear and retail brands.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10"/>
@@ -146,7 +146,7 @@ export default function StitchPage() {
           background: "linear-gradient(135deg, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.75) 50%, rgba(10,22,40,0.45) 100%)",
         }} />
         {/* Subtle horizontal rule at top */}
-        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, transparent, #C9A84C, transparent)" }} />
+        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, transparent, #38B6FF, transparent)" }} />
 
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px" }}>
           <div style={{ maxWidth: "700px" }}>
@@ -163,13 +163,13 @@ export default function StitchPage() {
               marginBottom: "16px",
               maxWidth: "560px",
             }}>
-              Cutting-edge technology, sustainable practices, and expert craftsmanship — delivering high-quality garments that meet international standards.
+              Cutting-edge technology, sustainable practices, and expert craftsmanship, delivering high-quality garments that meet international standards.
             </p>
             <p style={{
               fontSize: "0.975rem",
               color: "rgba(255,255,255,0.5)",
               fontStyle: "italic",
-              fontFamily: "'Playfair Display', serif",
+              fontFamily: "var(--font-head)",
               lineHeight: 1.7,
               marginBottom: "40px",
               maxWidth: "560px",
@@ -188,7 +188,7 @@ export default function StitchPage() {
       <CountUpStats />
 
       {/* OFFICE INFO */}
-      <section style={{ background: "#f8f6f1", padding: "56px 0" }}>
+      <section style={{ background: "#F2F8FC", padding: "56px 0" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px" }}>
             <div className="info-card-bordered">
@@ -212,7 +212,7 @@ export default function StitchPage() {
       </section>
 
       {/* VIDEO SECTION */}
-      <section id="video" className="section-pad" style={{ background: "#0A1628" }}>
+      <section id="video" className="section-pad" style={{ background: "#0B1D2E" }}>
         <div className="container" style={{ textAlign: "center" }}>
           <p className="section-eyebrow">See Us In Action</p>
           <h2 className="section-h2-light">Factory Tour</h2>
@@ -222,7 +222,7 @@ export default function StitchPage() {
             height: 0,
             overflow: "hidden",
             borderRadius: "4px",
-            border: "1px solid rgba(201,168,76,0.25)",
+            border: "1px solid rgba(56,182,255,0.25)",
             maxWidth: "900px",
             margin: "0 auto",
           }}>
@@ -238,7 +238,7 @@ export default function StitchPage() {
       </section>
 
       {/* CLIENTS MARQUEE */}
-      <section className="section-pad" style={{ background: "#f8f6f1", borderTop: "1px solid #e8e8e0", borderBottom: "1px solid #e8e8e0", overflow: "hidden" }}>
+      <section className="section-pad" style={{ background: "#F2F8FC", borderTop: "1px solid #DCE8F0", borderBottom: "1px solid #DCE8F0", overflow: "hidden" }}>
         <div style={{ textAlign: "center", marginBottom: "40px" }}>
           <p className="section-eyebrow">Our Clients</p>
           <h2 className="section-h2-dark">Trusted by Global Brands</h2>
@@ -260,20 +260,20 @@ export default function StitchPage() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about" className="section-pad" style={{ background: "#f8f6f1" }}>
+      <section id="about" className="section-pad" style={{ background: "#F2F8FC" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "72px", alignItems: "center" }}>
             <div>
               <p className="section-eyebrow">About Supreme Stitch</p>
               <h2 className="section-h2-dark" style={{ marginBottom: "16px" }}>
-                Vertically Integrated <span style={{ color: "#C9A84C" }}>Excellence</span>
+                Vertically Integrated <span style={{ color: "#0E86D4" }}>Excellence</span>
               </h2>
               <div className="gold-divider" />
-              <p style={{ color: "#4a5568", lineHeight: 1.85, marginBottom: "20px", fontSize: "1rem" }}>
+              <p style={{ color: "#52697C", lineHeight: 1.85, marginBottom: "20px", fontSize: "1rem" }}>
                 At Supreme Stitch Ltd., we combine cutting-edge technology, sustainable practices, and expert craftsmanship to deliver high-quality garments that meet international standards.
               </p>
-              <p style={{ color: "#4a5568", lineHeight: 1.85, marginBottom: "32px", fontSize: "1rem" }}>
-                As a vertically integrated manufacturer, we oversee the entire supply chain — from fabric production to final packaging. Our state-of-the-art facilities and in-house accessory manufacturing allow us to maintain the highest quality standards while reducing lead times and costs.
+              <p style={{ color: "#52697C", lineHeight: 1.85, marginBottom: "32px", fontSize: "1rem" }}>
+                As a vertically integrated manufacturer, we oversee the entire supply chain, from fabric production to final packaging. Our state-of-the-art facilities and in-house accessory manufacturing allow us to maintain the highest quality standards while reducing lead times and costs.
               </p>
               <a
                 href="/supreme-stitch-company-profile.pdf"
@@ -301,17 +301,17 @@ export default function StitchPage() {
         </div>
       </section>
 
-      {/* WHAT SETS US APART — Premium redesign */}
-      <section className="section-pad" style={{ background: "#0A1628" }}>
+      {/* WHAT SETS US APART */}
+      <section className="section-pad" style={{ background: "#0B1D2E" }}>
         <div className="container">
           {/* Section Header */}
           <div style={{ textAlign: "center", marginBottom: "72px" }}>
             <p className="section-eyebrow">Why Choose Us</p>
             <h2 className="section-h2-light">What Sets Us Apart</h2>
-            <div style={{ width: "40px", height: "1px", background: "#C9A84C", margin: "24px auto 0", opacity: 0.6 }} />
+            <div style={{ width: "40px", height: "1px", background: "#38B6FF", margin: "24px auto 0", opacity: 0.6 }} />
           </div>
 
-          {/* Feature Grid — 2-column with large stat numbers */}
+          {/* Feature Grid: 2-column with large stat numbers */}
           <div className="features-grid">
             {features.map((feature, index) => (
               <div
@@ -342,12 +342,12 @@ export default function StitchPage() {
       </section>
 
       {/* FACTORY IMAGES */}
-      <section className="section-pad" style={{ background: "#f8f6f1" }}>
+      <section className="section-pad" style={{ background: "#F2F8FC" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "48px" }}>
             <p className="section-eyebrow">The Facility</p>
             <h2 className="section-h2-dark">Inside Our Factory</h2>
-            <div style={{ width: "40px", height: "1px", background: "#C9A84C", margin: "20px auto 0", opacity: 0.6 }} />
+            <div style={{ width: "40px", height: "1px", background: "#38B6FF", margin: "20px auto 0", opacity: 0.6 }} />
           </div>
           {/* Primary large image */}
           <div style={{ position: "relative", height: "480px", borderRadius: "4px", overflow: "hidden", marginBottom: "16px" }}>
@@ -371,7 +371,7 @@ export default function StitchPage() {
       </section>
 
       {/* CERTIFICATIONS */}
-      <section style={{ background: "#112240", padding: "80px 0" }}>
+      <section style={{ background: "#123049", padding: "80px 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
           <p className="section-eyebrow">Compliance & Certifications</p>
           <h2 className="section-h2-light" style={{ marginBottom: "56px" }}>Internationally Certified</h2>
@@ -404,13 +404,13 @@ export default function StitchPage() {
       </section>
 
       {/* GOOGLE MAPS */}
-      <section style={{ background: "#f8f6f1", padding: "60px 0" }}>
+      <section style={{ background: "#F2F8FC", padding: "60px 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
           <h2 className="section-h2-dark" style={{ marginBottom: "32px" }}>Our Location</h2>
           <div style={{
             borderRadius: "4px",
             overflow: "hidden",
-            border: "1px solid rgba(201,168,76,0.25)",
+            border: "1px solid rgba(56,182,255,0.25)",
             maxWidth: "900px",
             margin: "0 auto",
           }}>
@@ -449,7 +449,7 @@ export default function StitchPage() {
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <p className="section-eyebrow">Work With Us</p>
           <h2 style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "var(--font-head)",
             fontSize: "clamp(1.8rem, 4vw, 3rem)",
             fontWeight: 700,
             color: "white",
@@ -468,19 +468,19 @@ export default function StitchPage() {
       <style>{`
         .hero-eyebrow {
           display: inline-block;
-          background: rgba(201,168,76,0.12);
-          border: 1px solid rgba(201,168,76,0.35);
+          background: rgba(56,182,255,0.12);
+          border: 1px solid rgba(56,182,255,0.35);
           border-radius: 2px;
           padding: 6px 16px;
           margin-bottom: 24px;
-          color: #C9A84C;
+          color: #38B6FF;
           font-size: 0.72rem;
           font-weight: 600;
           letter-spacing: 2.5px;
           text-transform: uppercase;
         }
         .hero-h1 {
-          font-family: 'Playfair Display', serif;
+          font-family: var(--font-head);
           font-size: clamp(2.5rem, 5.5vw, 4.5rem);
           font-weight: 700;
           color: #ffffff;
@@ -489,47 +489,47 @@ export default function StitchPage() {
         }
         .section-eyebrow {
           font-size: 0.72rem;
-          color: #C9A84C;
+          color: #38B6FF;
           font-weight: 700;
           letter-spacing: 3px;
           text-transform: uppercase;
           margin-bottom: 14px;
         }
         .section-h2-light {
-          font-family: 'Playfair Display', serif;
+          font-family: var(--font-head);
           font-size: clamp(1.8rem, 3.5vw, 2.6rem);
           font-weight: 700;
           color: white;
           line-height: 1.15;
         }
         .section-h2-dark {
-          font-family: 'Playfair Display', serif;
+          font-family: var(--font-head);
           font-size: clamp(1.8rem, 3.5vw, 2.6rem);
           font-weight: 700;
-          color: #0A1628;
+          color: #0B1D2E;
           line-height: 1.15;
         }
         .info-card-bordered {
           padding: 28px 32px;
           background: white;
           border-radius: 4px;
-          border-left: 3px solid #C9A84C;
+          border-left: 3px solid #38B6FF;
           box-shadow: 0 2px 12px rgba(0,0,0,0.04);
         }
         .info-card-label {
-          font-family: 'Playfair Display', serif;
+          font-family: var(--font-head);
           font-size: 1rem;
           font-weight: 600;
-          color: #0A1628;
+          color: #0B1D2E;
           margin-bottom: 10px;
         }
         .info-card-body {
           font-size: 0.875rem;
-          color: #4a5568;
+          color: #52697C;
           line-height: 1.75;
         }
         .link-gold {
-          color: #C9A84C;
+          color: #38B6FF;
           text-decoration: none;
         }
         .link-gold:hover {
@@ -541,19 +541,19 @@ export default function StitchPage() {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 1px;
-          background: rgba(201,168,76,0.08);
-          border: 1px solid rgba(201,168,76,0.08);
+          background: rgba(56,182,255,0.08);
+          border: 1px solid rgba(56,182,255,0.08);
           border-radius: 4px;
           overflow: hidden;
         }
         .feature-card {
-          background: #0A1628;
+          background: #0B1D2E;
           padding: 40px 36px;
           transition: background 0.3s ease;
           position: relative;
         }
         .feature-card:hover {
-          background: #112240;
+          background: #123049;
         }
         .feature-card::after {
           content: '';
@@ -562,24 +562,24 @@ export default function StitchPage() {
           left: 36px;
           right: 36px;
           height: 1px;
-          background: rgba(201,168,76,0.08);
+          background: rgba(56,182,255,0.08);
         }
         .feature-number {
-          font-family: 'Playfair Display', serif;
+          font-family: var(--font-head);
           font-size: 0.75rem;
-          color: rgba(201,168,76,0.4);
+          color: rgba(56,182,255,0.4);
           font-weight: 600;
           letter-spacing: 2px;
         }
         .feature-icon {
-          color: rgba(201,168,76,0.7);
+          color: rgba(56,182,255,0.7);
           flex-shrink: 0;
         }
         .feature-stat {
-          font-family: 'Playfair Display', serif;
+          font-family: var(--font-head);
           font-size: 2.2rem;
           font-weight: 700;
-          color: #C9A84C;
+          color: #38B6FF;
           line-height: 1;
           margin-bottom: 4px;
         }
@@ -594,11 +594,11 @@ export default function StitchPage() {
         .feature-divider {
           width: 32px;
           height: 1px;
-          background: rgba(201,168,76,0.3);
+          background: rgba(56,182,255,0.3);
           margin: 20px 0;
         }
         .feature-title {
-          font-family: 'Playfair Display', serif;
+          font-family: var(--font-head);
           font-size: 1.05rem;
           font-weight: 600;
           color: white;
