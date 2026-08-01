@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "./Logo";
 
 const companies = [
   { href: "/stitch", label: "Supreme Stitch Ltd." },
@@ -18,14 +18,8 @@ export default function Footer() {
           
           {/* Brand */}
           <div>
-            <div style={{ marginBottom: "16px" }}>
-              <Image
-                src="/images/logo.png"
-                alt="Supreme Group Bangladesh"
-                width={160}
-                height={54}
-                style={{ height: "40px", width: "auto", opacity: 0.9 }}
-              />
+            <div style={{ marginBottom: "16px", color: "#38B6FF" }}>
+              <Logo className="footer-logo" />
             </div>
             <p style={{ fontSize: "0.875rem", lineHeight: "1.7", color: "rgba(255,255,255,0.55)", maxWidth: "260px", marginTop: "16px" }}>
               A diversified garments conglomerate based in Bangladesh with interests spanning manufacturing, accessories, agro, embellishment, and retail.
