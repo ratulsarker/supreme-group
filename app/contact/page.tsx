@@ -27,9 +27,9 @@ export default function ContactPage() {
           style={{ objectFit: "cover", opacity: 0.15 }}
         />
         <div style={{ position: "absolute", inset: 0, background: "rgba(10,22,40,0.85)" }} />
-        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, transparent, #38B6FF, transparent)" }} />
+        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, transparent, #C9A84C, transparent)" }} />
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px", paddingBottom: "60px" }}>
-          <p style={{ fontSize: "0.72rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
             Contact Us
           </p>
           <h1 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700, color: "white", marginBottom: "20px" }}>
@@ -53,8 +53,8 @@ export default function ContactPage() {
               <div style={{ width: "40px", height: "2px", background: "#38B6FF", marginBottom: "36px" }} />
 
               {/* Head Office */}
-              <div style={{ marginBottom: "36px", paddingBottom: "36px", borderBottom: "1px solid #DCE8F0" }}>
-                <p style={{ fontSize: "0.7rem", color: "#0E86D4", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", marginBottom: "10px" }}>
+              <div style={{ marginBottom: "36px", paddingBottom: "36px", borderBottom: "1px solid #E8E2D4" }}>
+                <p style={{ fontSize: "0.7rem", color: "#A8832E", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", marginBottom: "10px" }}>
                   Head Office
                 </p>
                 <h3 style={{ fontFamily: "var(--font-head)", fontSize: "1.1rem", fontWeight: 600, color: "#0B1D2E", marginBottom: "12px" }}>
@@ -72,8 +72,8 @@ export default function ContactPage() {
               </div>
 
               {/* Factory */}
-              <div style={{ marginBottom: "36px", paddingBottom: "36px", borderBottom: "1px solid #DCE8F0" }}>
-                <p style={{ fontSize: "0.7rem", color: "#0E86D4", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", marginBottom: "10px" }}>
+              <div style={{ marginBottom: "36px", paddingBottom: "36px", borderBottom: "1px solid #E8E2D4" }}>
+                <p style={{ fontSize: "0.7rem", color: "#A8832E", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", marginBottom: "10px" }}>
                   Factory
                 </p>
                 <h3 style={{ fontFamily: "var(--font-head)", fontSize: "1.1rem", fontWeight: 600, color: "#0B1D2E", marginBottom: "12px" }}>
@@ -92,7 +92,7 @@ export default function ContactPage() {
 
               {/* General */}
               <div>
-                <p style={{ fontSize: "0.7rem", color: "#0E86D4", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", marginBottom: "10px" }}>
+                <p style={{ fontSize: "0.7rem", color: "#A8832E", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", marginBottom: "10px" }}>
                   General Inquiries
                 </p>
                 <p style={{ fontSize: "0.875rem", color: "#52697C", lineHeight: 1.85 }}>
@@ -110,7 +110,7 @@ export default function ContactPage() {
       </section>
 
       {/* GOOGLE MAPS - Head Office & Factory */}
-      <section style={{ background: "#F2F8FC", padding: "60px 0" }}>
+      <section style={{ background: "#F6F4EE", padding: "60px 0" }}>
         <div className="container">
           <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2rem", fontWeight: 700, color: "#0B1D2E", textAlign: "center", marginBottom: "32px" }}>Our Locations</h2>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", maxWidth: "1000px", margin: "0 auto" }}>

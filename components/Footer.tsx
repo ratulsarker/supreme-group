@@ -34,7 +34,7 @@ export default function Footer() {
 
           {/* Our Companies */}
           <div>
-            <h4 style={{ fontFamily: "var(--font-head)", fontSize: "1rem", color: "#38B6FF", marginBottom: "20px", fontWeight: 600 }}>
+            <h4 style={{ fontFamily: "var(--font-head)", fontSize: "1rem", color: "#D9BC6B", marginBottom: "20px", fontWeight: 600 }}>
               Our Companies
             </h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -55,7 +55,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 style={{ fontFamily: "var(--font-head)", fontSize: "1rem", color: "#38B6FF", marginBottom: "20px", fontWeight: 600 }}>
+            <h4 style={{ fontFamily: "var(--font-head)", fontSize: "1rem", color: "#D9BC6B", marginBottom: "20px", fontWeight: 600 }}>
               Quick Links
             </h4>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -81,7 +81,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 style={{ fontFamily: "var(--font-head)", fontSize: "1rem", color: "#38B6FF", marginBottom: "20px", fontWeight: 600 }}>
+            <h4 style={{ fontFamily: "var(--font-head)", fontSize: "1rem", color: "#D9BC6B", marginBottom: "20px", fontWeight: 600 }}>
               Head Office
             </h4>
             <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>

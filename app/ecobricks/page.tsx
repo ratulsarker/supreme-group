@@ -15,7 +15,7 @@ export default function EcoBricksPage() {
         <Image src="/images/eco-wide.jpg" alt="Supreme Eco Bricks & Agro Farm" fill priority style={{ objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(10,22,40,0.88) 0%, rgba(10,22,40,0.5) 100%)" }} />
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px" }}>
-          <div style={{ fontSize: "0.75rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
+          <div style={{ fontSize: "0.75rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
             Sustainable Agriculture
           </div>
           <h1 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700, color: "white", marginBottom: "20px" }}>
@@ -76,7 +76,7 @@ export default function EcoBricksPage() {
       {/* VIDEO */}
       <section className="section-pad" style={{ background: "#0B1D2E" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <div style={{ fontSize: "0.75rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
+          <div style={{ fontSize: "0.75rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
             Watch
           </div>
           <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2.2rem", fontWeight: 700, color: "white", marginBottom: "32px" }}>
@@ -123,7 +123,7 @@ export default function EcoBricksPage() {
       </section>
 
       {/* MORE IMAGES */}
-      <section className="section-pad" style={{ background: "#F2F8FC" }}>
+      <section className="section-pad" style={{ background: "#F6F4EE" }}>
         <div className="container">
           <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2rem", fontWeight: 700, color: "#0B1D2E", textAlign: "center", marginBottom: "40px" }}>
             Life at the Farm
@@ -140,7 +140,7 @@ export default function EcoBricksPage() {
       </section>
 
       {/* GOOGLE MAP */}
-      <section style={{ background: "#F2F8FC", padding: "60px 0" }}>
+      <section style={{ background: "#F6F4EE", padding: "60px 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
           <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "32px" }}>Our Location</h2>
           <div style={{ borderRadius: "8px", overflow: "hidden", border: "2px solid rgba(56,182,255,0.3)", maxWidth: "900px", margin: "0 auto" }}>
@@ -152,7 +152,7 @@ export default function EcoBricksPage() {
       {/* CTA */}
       <section style={{ background: "#0B1D2E", padding: "80px 0", textAlign: "center", borderTop: "1px solid rgba(56,182,255,0.15)" }}>
         <div className="container">
-          <p style={{ fontSize: "0.72rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
             Get In Touch
           </p>
           <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.8rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "white", marginBottom: "36px" }}>

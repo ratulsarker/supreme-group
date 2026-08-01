@@ -34,9 +34,9 @@ export default function SweetsPage() {
           style={{ objectFit: "cover" }}
         />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.6) 60%, transparent 100%)" }} />
-        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, transparent, #38B6FF, transparent)" }} />
+        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, transparent, #C9A84C, transparent)" }} />
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px", paddingBottom: "80px" }}>
-          <p style={{ fontSize: "0.72rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
             Food &amp; Retail
           </p>
           <h1 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700, color: "white", marginBottom: "20px", lineHeight: 1.1 }}>
@@ -75,7 +75,7 @@ export default function SweetsPage() {
       <section className="section-pad" style={{ background: "#0B1D2E" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "48px" }}>
-            <div style={{ fontSize: "0.75rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
+            <div style={{ fontSize: "0.75rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
               Our Locations
             </div>
             <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2.2rem", fontWeight: 700, color: "white" }}>
@@ -107,7 +107,7 @@ export default function SweetsPage() {
       </section>
 
       {/* GOOGLE MAPS - All Outlets */}
-      <section style={{ background: "#F2F8FC", padding: "60px 0" }}>
+      <section style={{ background: "#F6F4EE", padding: "60px 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
           <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "32px" }}>Find Us</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px", maxWidth: "1000px", margin: "0 auto" }}>

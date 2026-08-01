@@ -2,7 +2,7 @@
 
 export default function ContactForm() {
   return (
-    <div style={{ background: "white", borderRadius: "4px", padding: "40px 36px", border: "1px solid #DCE8F0" }}>
+    <div style={{ background: "white", borderRadius: "4px", padding: "40px 36px", border: "1px solid #E8E2D4" }}>
       <h2 style={{ fontFamily: "var(--font-head)", fontSize: "1.7rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "8px" }}>
         Send Us a Message
       </h2>
@@ -53,8 +53,8 @@ export default function ContactForm() {
         .form-input {
           width: 100%;
           padding: 12px 16px;
-          border: 1px solid #DCE8F0;
-          border-bottom: 2px solid #DCE8F0;
+          border: 1px solid #E8E2D4;
+          border-bottom: 2px solid #E8E2D4;
           border-radius: 3px;
           font-size: 0.9rem;
           background: #fafaf8;

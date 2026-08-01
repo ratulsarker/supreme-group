@@ -2,9 +2,10 @@
 
 /* ─────────────────────────────────────────────
    Supreme Group design tokens
-   Palette: "Sky on Deep Navy"
-   Sky #38B6FF (brand logo blue) as the single accent,
-   deep blue-black grounds, ice-blue light sections.
+   Palette: "Sky & Brass"
+   Sky #38B6FF (brand logo blue) as the primary accent for
+   buttons, links and stats; restrained brass #C9A84C for
+   eyebrow labels and fine rules; warm cream light sections.
    ───────────────────────────────────────────── */
 :root {
   --sky: #38B6FF;
@@ -15,8 +16,11 @@
   --ink-raised: #123049;
   --ink-footer: #081521;
   --white: #ffffff;
-  --ice: #F2F8FC;
-  --line-light: #DCE8F0;
+  --brass: #C9A84C;
+  --brass-light: #D9BC6B;
+  --brass-dark: #A8832E;
+  --ice: #F6F4EE;
+  --line-light: #E8E2D4;
   --slate: #52697C;
   --slate-dark: #3D5468;
   --gray-500: #64748b;
@@ -29,9 +33,9 @@
   --navy: var(--ink);
   --navy-light: var(--ink-raised);
   --navy-mid: var(--ink-mid);
-  --gold: var(--sky);
-  --gold-light: var(--sky-soft);
-  --gold-dark: var(--sky-deep);
+  --gold: var(--brass);
+  --gold-light: var(--brass-light);
+  --gold-dark: var(--brass-dark);
   --off-white: var(--ice);
   --gray-100: var(--ice);
   --gray-200: var(--line-light);
@@ -88,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 60px;
   height: 3px;
-  background: var(--sky);
+  background: var(--brass);
 }
 
 /* Card hover */
@@ -124,8 +128,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-outline-gold {
   display: inline-block;
-  border: 2px solid var(--sky);
-  color: var(--sky);
+  border: 2px solid var(--brass);
+  color: var(--brass-light);
   font-weight: 600;
   font-family: var(--font-body);
   padding: 12px 30px;
@@ -137,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-outline-gold:hover {
-  background: var(--sky);
+  background: var(--brass);
   color: var(--ink);
 }
 
@@ -159,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
 .gold-divider {
   width: 60px;
   height: 3px;
-  background: var(--sky);
+  background: var(--brass);
   margin: 16px 0 24px;
 }
 
@@ -179,15 +183,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .marquee-logo {
-  height: 72px;
+  height: 104px;
   width: auto;
   flex-shrink: 0;
-  transition: filter 0.3s ease, opacity 0.3s ease;
-  filter: grayscale(100%) opacity(0.45);
+  transition: transform 0.3s ease;
 }
 
 .marquee-logo:hover {
-  filter: grayscale(0%) opacity(1);
+  transform: scale(1.05);
 }
 
 @keyframes marquee-scroll {
@@ -201,7 +204,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .marquee-logo {
-    height: 56px;
+    height: 76px;
   }
   .marquee-track {
     gap: 64px;
@@ -231,7 +234,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ─── Shared typography helpers ─── */
 .section-eyebrow {
   font-size: 0.72rem;
-  color: var(--sky-deep);
+  color: var(--brass-dark);
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -254,13 +257,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.15;
 }
 
-/* Thin sky rule for section headers */
+/* Thin brass rule for section headers */
 .gold-rule {
   width: 40px;
   height: 2px;
-  background: var(--sky);
+  background: var(--brass);
   margin: 20px auto 0;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 /* ─── Scroll reveal utility ─── */
@@ -326,7 +329,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 50;
   background: rgba(11, 29, 46, 0.96);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(56, 182, 255, 0.18);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.28);
   transition: all 0.3s ease;
 }
 
@@ -386,13 +389,13 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--sky), transparent);
+  background: linear-gradient(90deg, transparent, var(--brass), transparent);
 }
 
 /* Quote/highlight block */
 .highlight-block {
   background: var(--ice);
-  border-left: 4px solid var(--sky);
+  border-left: 4px solid var(--brass);
   padding: 24px 32px;
   margin: 32px 0;
 }

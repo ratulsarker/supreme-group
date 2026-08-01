@@ -99,21 +99,21 @@ export default function Home() {
           left: 0,
           right: 0,
           height: "2px",
-          background: "linear-gradient(90deg, transparent, #38B6FF, transparent)",
+          background: "linear-gradient(90deg, transparent, #C9A84C, transparent)",
         }} />
 
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "140px", paddingBottom: "72px" }}>
           <div style={{ maxWidth: "780px" }}>
             <div style={{
               display: "inline-block",
-              background: "rgba(56,182,255,0.12)",
-              border: "1px solid rgba(56,182,255,0.35)",
+              background: "rgba(201,168,76,0.12)",
+              border: "1px solid rgba(201,168,76,0.4)",
               borderRadius: "4px",
               padding: "6px 16px",
               marginBottom: "28px",
               backdropFilter: "blur(4px)",
             }}>
-              <span style={{ color: "#6FCBFF", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "2px", textTransform: "uppercase" }}>
+              <span style={{ color: "#D9BC6B", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "2px", textTransform: "uppercase" }}>
                 Bangladesh&apos;s Trusted Garments Conglomerate
               </span>
             </div>
@@ -179,9 +179,9 @@ export default function Home() {
       </section>
 
       {/* CLIENTS MARQUEE */}
-      <section style={{ background: "#F2F8FC", borderTop: "1px solid #DCE8F0", borderBottom: "1px solid #DCE8F0", padding: "40px 0", overflow: "hidden" }}>
+      <section style={{ background: "#F6F4EE", borderTop: "1px solid #E8E2D4", borderBottom: "1px solid #E8E2D4", padding: "40px 0", overflow: "hidden" }}>
         <div style={{ textAlign: "center", marginBottom: "20px" }}>
-          <span style={{ fontSize: "0.68rem", fontWeight: 700, color: "#52697C", letterSpacing: "3px", textTransform: "uppercase" }}>Trusted by Global Brands</span>
+          <span style={{ fontSize: "0.68rem", fontWeight: 700, color: "#8A7A55", letterSpacing: "3px", textTransform: "uppercase" }}>Trusted by Global Brands</span>
         </div>
         <div className="marquee-container">
           <div className="marquee-track">
@@ -250,7 +250,7 @@ export default function Home() {
                 background: "#0B1D2E",
                 padding: "20px 28px",
                 borderRadius: "6px",
-                borderTop: "3px solid #38B6FF",
+                borderTop: "3px solid #C9A84C",
               }}>
                 <div style={{ fontFamily: "var(--font-head)", fontSize: "1.6rem", fontWeight: 800, color: "#38B6FF" }}>$70M+</div>
                 <div style={{ fontSize: "0.68rem", color: "rgba(255,255,255,0.55)", marginTop: "4px", letterSpacing: "1.5px", textTransform: "uppercase" }}>Annual Revenue</div>
@@ -265,7 +265,7 @@ export default function Home() {
       <section className="section-pad" style={{ background: "#0B1D2E" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "48px" }}>
-            <div style={{ fontSize: "0.75rem", color: "#6FCBFF", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
+            <div style={{ fontSize: "0.75rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
               The Group at a Glance
             </div>
             <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.9rem, 4vw, 2.6rem)", fontWeight: 800, color: "white", marginBottom: "16px" }}>
@@ -287,7 +287,7 @@ export default function Home() {
               borderRadius: "8px",
               padding: "16px 40px",
             }}>
-              <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", color: "#6FCBFF", marginBottom: "4px" }}>
+              <div style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", color: "#D9BC6B", marginBottom: "4px" }}>
                 The Group
               </div>
               <div style={{ fontFamily: "var(--font-head)", fontSize: "1.25rem", fontWeight: 800, color: "white" }}>
@@ -321,7 +321,7 @@ export default function Home() {
                   }} />
                 </div>
                 <div style={{ padding: "24px 26px 28px" }}>
-                  <div style={{ fontSize: "0.68rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "8px" }}>
+                  <div style={{ fontSize: "0.68rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "8px" }}>
                     {company.category}
                   </div>
                   <h3 style={{ fontFamily: "var(--font-head)", fontSize: "1.3rem", fontWeight: 700, color: "white", marginBottom: "10px", lineHeight: 1.25 }}>
@@ -355,7 +355,7 @@ export default function Home() {
             {supporting.map((company) => (
               <Link key={company.href} href={company.href} className="tree-card">
                 <div style={{ padding: "20px 20px 22px" }}>
-                  <div style={{ fontSize: "0.62rem", color: "#6FCBFF", fontWeight: 700, letterSpacing: "1.4px", textTransform: "uppercase", marginBottom: "8px" }}>
+                  <div style={{ fontSize: "0.62rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "1.4px", textTransform: "uppercase", marginBottom: "8px" }}>
                     {company.category}
                   </div>
                   <h3 style={{ fontFamily: "var(--font-head)", fontSize: "1rem", fontWeight: 700, color: "white", marginBottom: "8px", lineHeight: 1.3 }}>
@@ -394,7 +394,7 @@ export default function Home() {
           pointerEvents: "none",
         }} />
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
-          <p style={{ fontSize: "0.72rem", color: "#6FCBFF", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
             Work With Us
           </p>
           <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.9rem, 4vw, 3rem)", fontWeight: 800, color: "white", marginBottom: "20px", lineHeight: 1.15 }}>

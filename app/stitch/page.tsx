@@ -146,7 +146,7 @@ export default function StitchPage() {
           background: "linear-gradient(135deg, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.75) 50%, rgba(10,22,40,0.45) 100%)",
         }} />
         {/* Subtle horizontal rule at top */}
-        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, transparent, #38B6FF, transparent)" }} />
+        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, transparent, #C9A84C, transparent)" }} />
 
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px" }}>
           <div style={{ maxWidth: "700px" }}>
@@ -188,7 +188,7 @@ export default function StitchPage() {
       <CountUpStats />
 
       {/* OFFICE INFO */}
-      <section style={{ background: "#F2F8FC", padding: "56px 0" }}>
+      <section style={{ background: "#F6F4EE", padding: "56px 0" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px" }}>
             <div className="info-card-bordered">
@@ -238,7 +238,7 @@ export default function StitchPage() {
       </section>
 
       {/* CLIENTS MARQUEE */}
-      <section className="section-pad" style={{ background: "#F2F8FC", borderTop: "1px solid #DCE8F0", borderBottom: "1px solid #DCE8F0", overflow: "hidden" }}>
+      <section className="section-pad" style={{ background: "#F6F4EE", borderTop: "1px solid #E8E2D4", borderBottom: "1px solid #E8E2D4", overflow: "hidden" }}>
         <div style={{ textAlign: "center", marginBottom: "40px" }}>
           <p className="section-eyebrow">Our Clients</p>
           <h2 className="section-h2-dark">Trusted by Global Brands</h2>
@@ -260,7 +260,7 @@ export default function StitchPage() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about" className="section-pad" style={{ background: "#F2F8FC" }}>
+      <section id="about" className="section-pad" style={{ background: "#F6F4EE" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "72px", alignItems: "center" }}>
             <div>
@@ -282,7 +282,7 @@ export default function StitchPage() {
               >
                 Download Company Profile
               </a>
-              <Link href="/contact" className="btn-outline-gold" style={{ marginLeft: "16px" }}>
+              <Link href="/contact" className="btn-outline-gold" style={{ marginLeft: "16px", color: "#A8832E" }}>
                 Get in Touch
               </Link>
             </div>
@@ -342,7 +342,7 @@ export default function StitchPage() {
       </section>
 
       {/* FACTORY IMAGES */}
-      <section className="section-pad" style={{ background: "#F2F8FC" }}>
+      <section className="section-pad" style={{ background: "#F6F4EE" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "48px" }}>
             <p className="section-eyebrow">The Facility</p>
@@ -404,7 +404,7 @@ export default function StitchPage() {
       </section>
 
       {/* GOOGLE MAPS */}
-      <section style={{ background: "#F2F8FC", padding: "60px 0" }}>
+      <section style={{ background: "#F6F4EE", padding: "60px 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
           <h2 className="section-h2-dark" style={{ marginBottom: "32px" }}>Our Location</h2>
           <div style={{

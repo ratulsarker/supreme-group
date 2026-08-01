@@ -15,7 +15,7 @@ export default function OutfitPage() {
         <Image src="/images/wa-factory-0020.jpg" alt="Supreme Outfit Factory Campus" fill priority style={{ objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(10,22,40,0.9) 0%, rgba(10,22,40,0.6) 100%)" }} />
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px" }}>
-          <p style={{ fontSize: "0.72rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
             Garment Manufacturing
           </p>
           <h1 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700, color: "white", marginBottom: "20px" }}>
@@ -76,9 +76,9 @@ export default function OutfitPage() {
       </section>
 
       {/* CANVA PRESENTATION */}
-      <section className="section-pad" style={{ background: "#F2F8FC" }}>
+      <section className="section-pad" style={{ background: "#F6F4EE" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <div style={{ fontSize: "0.75rem", color: "#0E86D4", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
+          <div style={{ fontSize: "0.75rem", color: "#A8832E", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
             Company Presentation
           </div>
           <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2.2rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "40px" }}>
@@ -113,7 +113,7 @@ export default function OutfitPage() {
       </section>
 
       {/* GOOGLE MAP */}
-      <section style={{ background: "#F2F8FC", padding: "60px 0" }}>
+      <section style={{ background: "#F6F4EE", padding: "60px 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
           <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "32px" }}>
             Our Location

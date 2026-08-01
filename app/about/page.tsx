@@ -36,9 +36,9 @@ export default function AboutPage() {
           style={{ objectFit: "cover", opacity: 0.2 }}
         />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.7) 100%)" }} />
-        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, transparent, #38B6FF, transparent)" }} />
+        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, transparent, #C9A84C, transparent)" }} />
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px", paddingBottom: "80px" }}>
-          <p style={{ fontSize: "0.72rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
             About Supreme Group
           </p>
           <h1 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700, color: "white", marginBottom: "20px", lineHeight: 1.1 }}>
@@ -80,7 +80,7 @@ export default function AboutPage() {
                 background: "#0B1D2E",
                 padding: "24px 32px",
                 borderRadius: "4px",
-                borderLeft: "4px solid #38B6FF",
+                borderLeft: "4px solid #C9A84C",
               }}>
                 <div style={{ fontFamily: "var(--font-head)", fontSize: "2rem", fontWeight: 700, color: "#38B6FF" }}>6</div>
                 <div style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.6)", marginTop: "4px" }}>Sister Concerns</div>
@@ -95,7 +95,7 @@ export default function AboutPage() {
       <section className="section-pad" style={{ background: "#0B1D2E" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "56px" }}>
-            <p style={{ fontSize: "0.72rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+            <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
               The Group
             </p>
             <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 700, color: "white" }}>
@@ -141,9 +141,9 @@ export default function AboutPage() {
       </section>
 
       {/* VALUES */}
-      <section className="section-pad" style={{ background: "#F2F8FC" }}>
+      <section className="section-pad" style={{ background: "#F6F4EE" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <p style={{ fontSize: "0.72rem", color: "#0E86D4", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#A8832E", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
             What We Stand For
           </p>
           <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 700, color: "#0B1D2E", marginBottom: "56px" }}>
@@ -158,7 +158,7 @@ export default function AboutPage() {
             ].map((v) => (
               <div key={v.title} className="card-hover" style={{
                 background: "white",
-                border: "1px solid #DCE8F0",
+                border: "1px solid #E8E2D4",
                 borderRadius: "4px",
                 padding: "36px 28px",
                 textAlign: "left",
@@ -180,7 +180,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section style={{ background: "#0B1D2E", padding: "80px 0", textAlign: "center", borderTop: "1px solid rgba(56,182,255,0.15)" }}>
         <div className="container">
-          <p style={{ fontSize: "0.72rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
             Let&apos;s Build Together
           </p>
           <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 700, color: "white", marginBottom: "24px" }}>

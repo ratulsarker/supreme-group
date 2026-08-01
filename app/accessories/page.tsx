@@ -14,9 +14,9 @@ export default function AccessoriesPage() {
       <section style={{ position: "relative", minHeight: "70vh", display: "flex", alignItems: "center", overflow: "hidden" }}>
         <Image src="/images/accessories-front.jpg" alt="Supreme Accessories Industries" fill priority style={{ objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.55) 60%, rgba(10,22,40,0.2) 100%)" }} />
-        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, transparent, #38B6FF, transparent)" }} />
+        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, transparent, #C9A84C, transparent)" }} />
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px" }}>
-          <p style={{ fontSize: "0.72rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
             Garment Accessories
           </p>
           <h1 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700, color: "white", marginBottom: "20px", lineHeight: 1.1 }}>
@@ -102,9 +102,9 @@ export default function AccessoriesPage() {
       </section>
 
       {/* PRODUCTS LIST */}
-      <section className="section-pad" style={{ background: "#F2F8FC" }}>
+      <section className="section-pad" style={{ background: "#F6F4EE" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <p style={{ fontSize: "0.72rem", color: "#0E86D4", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#A8832E", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
             What We Make
           </p>
           <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.8rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "#0B1D2E", marginBottom: "48px" }}>
@@ -120,7 +120,7 @@ export default function AccessoriesPage() {
           <style>{`
             .product-tag {
               background: white;
-              border: 1px solid #DCE8F0;
+              border: 1px solid #E8E2D4;
               border-top: 2px solid transparent;
               border-radius: 3px;
               padding: 18px 16px;
@@ -139,7 +139,7 @@ export default function AccessoriesPage() {
       </section>
 
       {/* GOOGLE MAP */}
-      <section style={{ background: "#F2F8FC", padding: "60px 0" }}>
+      <section style={{ background: "#F6F4EE", padding: "60px 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
           <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2rem", fontWeight: 700, color: "#0B1D2E", marginBottom: "32px" }}>Our Location</h2>
           <div style={{ borderRadius: "8px", overflow: "hidden", border: "2px solid rgba(56,182,255,0.3)", maxWidth: "900px", margin: "0 auto" }}>
@@ -151,7 +151,7 @@ export default function AccessoriesPage() {
       {/* CTA */}
       <section style={{ background: "#0B1D2E", padding: "80px 0", textAlign: "center", borderTop: "1px solid rgba(56,182,255,0.15)" }}>
         <div className="container">
-          <p style={{ fontSize: "0.72rem", color: "#38B6FF", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+          <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
             Work With Us
           </p>
           <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.8rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "white", marginBottom: "16px" }}>
