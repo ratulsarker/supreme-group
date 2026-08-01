@@ -134,8 +134,8 @@ export default function StitchPage() {
         overflow: "hidden",
       }}>
         <Image
-          src="/images/stitch-bg-slideshow.jpg"
-          alt="Supreme Stitch Factory"
+          src="/images/hero-building.jpg"
+          alt="Supreme Stitch factory building"
           fill
           priority
           style={{ objectFit: "cover" }}
@@ -288,13 +288,13 @@ export default function StitchPage() {
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
               <div style={{ position: "relative", height: "280px", borderRadius: "4px", overflow: "hidden" }}>
-                <Image src="/images/stitch-bg-2.jpg" alt="Supreme Stitch production" fill style={{ objectFit: "cover" }} sizes="300px" />
+                <Image src="/images/wa-factory-0016.jpg" alt="Factory front elevation" fill style={{ objectFit: "cover" }} sizes="300px" />
               </div>
               <div style={{ position: "relative", height: "280px", borderRadius: "4px", overflow: "hidden", marginTop: "40px" }}>
-                <Image src="/images/stitch-bg-slideshow.jpg" alt="Supreme Stitch quality" fill style={{ objectFit: "cover" }} sizes="300px" />
+                <Image src="/images/stitch-building.jpg" alt="Supreme Stitch building" fill style={{ objectFit: "cover" }} sizes="300px" />
               </div>
               <div style={{ position: "relative", height: "200px", borderRadius: "4px", overflow: "hidden", gridColumn: "span 2" }}>
-                <Image src="/images/stitch-cta-bg.jpg" alt="Supreme Stitch factory floor" fill style={{ objectFit: "cover" }} sizes="600px" />
+                <Image src="/images/wa-factory-0034.jpg" alt="Factory facade" fill style={{ objectFit: "cover" }} sizes="600px" />
               </div>
             </div>
           </div>
@@ -346,20 +346,20 @@ export default function StitchPage() {
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "48px" }}>
             <p className="section-eyebrow">The Facility</p>
-            <h2 className="section-h2-dark">Inside Our Factory</h2>
+            <h2 className="section-h2-dark">Our Facilities</h2>
             <div style={{ width: "40px", height: "1px", background: "#38B6FF", margin: "20px auto 0", opacity: 0.6 }} />
           </div>
           {/* Primary large image */}
           <div style={{ position: "relative", height: "480px", borderRadius: "4px", overflow: "hidden", marginBottom: "16px" }}>
-            <Image src="/images/stitch-building.jpg" alt="Factory overview" fill style={{ objectFit: "cover" }} sizes="1200px" />
+            <Image src="/images/hero-building.jpg" alt="Factory overview" fill style={{ objectFit: "cover" }} sizes="1200px" />
           </div>
           {/* Grid of 4 */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px" }}>
             {[
               { src: "/images/stitch-building.jpg", alt: "Factory building" },
-              { src: "/images/stitch-cta-bg.jpg", alt: "Production machinery" },
-              { src: "/images/stitch-bg-slideshow.jpg", alt: "Sewing operations" },
-              { src: "/images/stitch-bg-2.jpg", alt: "Quality control" },
+              { src: "/images/wa-factory-0015.jpg", alt: "Campus skybridges" },
+              { src: "/images/wa-factory-0025.jpg", alt: "Landscaped walkway" },
+              { src: "/images/wa-special.jpg", alt: "Campus overview" },
             ].map((img) => (
               <div key={img.src} style={{ position: "relative", height: "200px", borderRadius: "4px", overflow: "hidden" }}>
                 <Image src={img.src} alt={img.alt} fill style={{ objectFit: "cover" }} sizes="300px" />
@@ -436,8 +436,8 @@ export default function StitchPage() {
         overflow: "hidden",
       }}>
         <Image
-          src="/images/stitch-cta-bg.jpg"
-          alt="CTA Background"
+          src="/images/wa-factory-0026.jpg"
+          alt="Supreme Group campus"
           fill
           style={{ objectFit: "cover" }}
         />

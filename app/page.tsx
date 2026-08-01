@@ -72,11 +72,11 @@ export default function Home() {
         }}
       >
         <Image
-          src="/images/wa-special.jpg"
-          alt="Supreme Group manufacturing campus"
+          src="/images/hero-building.jpg"
+          alt="Supreme Group factory building"
           fill
           priority
-          style={{ objectFit: "cover", objectPosition: "center 35%" }}
+          style={{ objectFit: "cover", objectPosition: "center 45%" }}
           sizes="100vw"
         />
         {/* Scrim: readable text over the rendering */}
