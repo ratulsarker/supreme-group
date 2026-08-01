@@ -20,10 +20,10 @@ export default function ContactPage() {
         background: "#0B1D2E",
       }}>
         <Image
-          src="/images/wa-factory-0034.jpg"
+          src="/images/hero-building.jpg"
           alt="Contact Supreme Group"
           fill
-          priority
+          preload
           style={{ objectFit: "cover", opacity: 0.15 }}
         />
         <div style={{ position: "absolute", inset: 0, background: "rgba(10,22,40,0.85)" }} />

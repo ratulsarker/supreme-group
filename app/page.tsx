@@ -18,7 +18,7 @@ const flagships = [
   },
   {
     href: "/outfit",
-    image: "/images/outfit.jpg",
+    image: "/images/hero-building.jpg",
     name: "Supreme Outfit Ltd.",
     category: "Flagship · Garment Manufacturing",
     description:
@@ -39,7 +39,7 @@ const supporting = [
     href: "/embellishment",
     name: "Supreme Embellishment",
     category: "Printing & Embroidery",
-    description: "62,000 sq ft facility with 520 skilled professionals.",
+    description: "62,000 sq ft facility with 700 skilled professionals.",
     highlight: "80,000 pcs/day prints",
   },
   {
@@ -240,7 +240,7 @@ export default function Home() {
             </div>
             <div style={{ position: "relative" }}>
               <div style={{ position: "relative", height: "500px", borderRadius: "6px", overflow: "hidden" }}>
-                <Image src="/images/outfit.jpg" alt="Supreme Group factory" fill style={{ objectFit: "cover" }} sizes="600px" />
+                <Image src="/images/hero-building.jpg" alt="Supreme Group factory" fill style={{ objectFit: "cover" }} sizes="600px" />
               </div>
               {/* Floating badge */}
               <div style={{

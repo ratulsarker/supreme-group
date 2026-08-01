@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const companies = [
   { href: "/stitch", name: "Supreme Stitch Ltd.", desc: "Flagship company. 100% export oriented garment manufacturer. Vertically integrated from fabric to finished product. Trusted by Fanatics, Hanes, Walmart & Champion." },
   { href: "/accessories", name: "Supreme Accessories Industries Ltd.", desc: "Complete garment accessories manufacturer producing poly bags, labels, threads, elastic, twill tape across 12 production lines." },
-  { href: "/embellishment", name: "Supreme Embellishment Ltd.", desc: "62,000 sq ft printing and embroidery facility with 520 professionals and 80,000 pcs/day capacity." },
+  { href: "/embellishment", name: "Supreme Embellishment Ltd.", desc: "62,000 sq ft printing and embroidery facility with 700 professionals and 80,000 pcs/day capacity." },
   { href: "/outfit", name: "Supreme Outfit Ltd.", desc: "High-capacity manufacturing with 5 buildings, 1,350+ sewing machines, and 1 MW solar power." },
   { href: "/ecobricks", name: "Supreme Eco Bricks & Agro Ltd.", desc: "Sustainable farm in Dhamrai with 400+ cows, 150 sheep, biogas generation, and 100% natural farming." },
   { href: "/sweets", name: "Supreme Sweets", desc: "Authentic Bengali confectionery chain with 6 outlets across Dhaka." },
@@ -71,7 +71,7 @@ export default function AboutPage() {
             </div>
             <div style={{ position: "relative" }}>
               <div style={{ position: "relative", height: "400px", borderRadius: "4px", overflow: "hidden" }}>
-                <Image src="/images/wa-factory-0005.jpg" alt="Aerial view of the Supreme Group manufacturing campus" fill style={{ objectFit: "cover" }} sizes="600px" />
+                <Image src="/images/hero-building.jpg" alt="Supreme Group manufacturing campus" fill style={{ objectFit: "cover" }} sizes="600px" />
               </div>
               <div style={{
                 position: "absolute",

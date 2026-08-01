@@ -12,7 +12,7 @@ export default function OutfitPage() {
     <>
       {/* HERO */}
       <section style={{ position: "relative", minHeight: "70vh", display: "flex", alignItems: "center", overflow: "hidden" }}>
-        <Image src="/images/wa-factory-0020.jpg" alt="Supreme Outfit Factory Campus" fill priority style={{ objectFit: "cover" }} />
+        <Image src="/images/hero-building.jpg" alt="Supreme Outfit Factory Campus" fill preload style={{ objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(10,22,40,0.9) 0%, rgba(10,22,40,0.6) 100%)" }} />
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px" }}>
           <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>

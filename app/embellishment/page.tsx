@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Supreme Embellishment Ltd.",
-  description: "High-capacity embellishment facility specializing in advanced printing and embroidery. 62,000 sq ft, 520 professionals, 80,000 pcs/day.",
+  description: "High-capacity embellishment facility specializing in advanced printing and embroidery. 62,000 sq ft, 700 professionals, 80,000 pcs/day.",
 };
 
 export default function EmbellishmentPage() {
@@ -12,7 +12,7 @@ export default function EmbellishmentPage() {
     <>
       {/* HERO */}
       <section style={{ position: "relative", minHeight: "70vh", display: "flex", alignItems: "center", overflow: "hidden" }}>
-        <Image src="/images/embellishment-hero.jpg" alt="Supreme Embellishment Facility" fill priority style={{ objectFit: "cover" }} />
+        <Image src="/images/embellishment-hero.jpg" alt="Supreme Embellishment Facility" fill preload style={{ objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(10,22,40,0.88) 0%, rgba(10,22,40,0.5) 100%)" }} />
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px" }}>
           <div style={{ fontSize: "0.75rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "12px" }}>
@@ -47,7 +47,7 @@ export default function EmbellishmentPage() {
             {[
               { num: "62,000", label: "Sq Ft Floor" },
               { num: "80,000", label: "Print Pcs / Day" },
-              { num: "520", label: "Professionals" },
+              { num: "700", label: "Professionals" },
               { num: "3 m³/hr", label: "ETP Capacity" },
             ].map((s, i) => (
               <div key={s.label} style={{
@@ -87,7 +87,7 @@ export default function EmbellishmentPage() {
                 On the embroidery side, we are equipped with a comprehensive range of multi-head embroidery machines, capable of producing intricate and high-quality designs across a wide variety of garments. Our advanced setups allow for speed, precision, and consistency, catering to diverse client needs including fashion, promotional, and industrial applications.
               </p>
               <p style={{ color: "#374151", lineHeight: 1.8, marginBottom: "20px" }}>
-                Our workforce is our greatest strength: a team of 520 highly skilled professionals trained to maintain top-tier quality standards and optimize production efficiency. Whether it&apos;s a complex embroidery pattern or a large-scale print run, we combine craftsmanship and technology to deliver excellence at every stage.
+                Our workforce is our greatest strength: a team of 700 highly skilled professionals trained to maintain top-tier quality standards and optimize production efficiency. Whether it&apos;s a complex embroidery pattern or a large-scale print run, we combine craftsmanship and technology to deliver excellence at every stage.
               </p>
               <div className="highlight-block">
                 <p style={{ color: "#0B1D2E", fontStyle: "italic", fontWeight: 500, lineHeight: 1.7 }}>
@@ -168,7 +168,7 @@ export default function EmbellishmentPage() {
             Need Printing or Embroidery Services?
           </h2>
           <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "1rem", marginBottom: "36px", maxWidth: "480px", margin: "0 auto 36px", lineHeight: 1.8 }}>
-            80,000 pcs/day capacity with 520 skilled professionals ready to deliver excellence.
+            80,000 pcs/day capacity with 700 skilled professionals ready to deliver excellence.
           </p>
           <Link href="/contact" className="btn-gold">Get In Touch</Link>
         </div>
