@@ -223,15 +223,15 @@ export default function StitchPage() {
       {/* HERO */}
       <section style={{ position: "relative", minHeight: "88vh", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
         <Image
-          src="/images/st-sewing-lines.jpg"
-          alt="Sewing lines running through the Supreme Stitch factory floor"
+          src="/images/st-building.jpg"
+          alt="The Supreme Stitch Ltd. factory building"
           fill
           priority
-          style={{ objectFit: "cover", objectPosition: "center 45%" }}
+          style={{ objectFit: "cover", objectPosition: "center 62%" }}
           sizes="100vw"
         />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(105deg, rgba(7,22,36,0.94) 0%, rgba(7,22,36,0.74) 45%, rgba(9,40,64,0.4) 100%)" }} />
-        <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: "50%", background: "linear-gradient(transparent, rgba(7,22,36,0.9))" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(105deg, rgba(7,22,36,0.88) 0%, rgba(7,22,36,0.55) 48%, rgba(9,40,64,0.2) 100%)" }} />
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: "46%", background: "linear-gradient(transparent, rgba(7,22,36,0.82))" }} />
         <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, transparent, #C9A84C, transparent)" }} />
 
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "150px", paddingBottom: "64px" }}>
@@ -505,8 +505,11 @@ export default function StitchPage() {
               </div>
             </Link>
             <Link href="/accessories" className="sister-card">
-              <div className="sister-img">
-                <Image src="/images/accessories-ground.jpg" alt="Supreme Accessories facility" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 33vw" />
+              {/* No photography exists for Accessories yet, so this card uses a
+                  typographic panel rather than borrowing another company's factory. */}
+              <div className="sister-img sister-panel">
+                <span className="sister-panel-num">12</span>
+                <span className="sister-panel-lbl">Product lines</span>
               </div>
               <div className="sister-body">
                 <h3>Supreme Accessories Industries Ltd.</h3>

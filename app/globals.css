@@ -1610,3 +1610,186 @@ h1, h2, h3, h4, h5, h6 {
   .lab-grid { grid-template-columns: 1fr; }
   .mv-card { padding: 28px 26px 32px; }
 }
+
+/* ─────────────────────────────────────────────
+   Accessories capacity table
+   ───────────────────────────────────────────── */
+.cap-table {
+  background: #fff;
+  border: 1px solid var(--line-light);
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.cap-head,
+.cap-row {
+  display: grid;
+  grid-template-columns: 1fr 150px 200px;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 26px;
+}
+
+.cap-head {
+  background: var(--ink);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--brass-light);
+}
+
+.cap-head span:nth-child(2),
+.cap-head span:nth-child(3) { text-align: right; }
+
+.cap-row {
+  border-bottom: 1px solid var(--line-light);
+  transition: background 0.18s ease;
+}
+
+.cap-row:last-child { border-bottom: none; }
+.cap-row:hover { background: var(--ice); }
+
+.cap-row.is-feature { background: rgba(56, 182, 255, 0.045); }
+.cap-row.is-feature:hover { background: rgba(56, 182, 255, 0.09); }
+
+.cap-item {
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.cap-machines {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.cap-machines-num {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--slate);
+  font-variant-numeric: tabular-nums;
+}
+
+.cap-machines-lbl {
+  font-size: 0.68rem;
+  color: var(--gray-500);
+}
+
+.cap-capacity {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.cap-capacity strong {
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0E86D4;
+  font-variant-numeric: tabular-nums;
+}
+
+.cap-capacity em {
+  font-style: normal;
+  font-size: 0.72rem;
+  color: var(--gray-500);
+  white-space: nowrap;
+}
+
+/* Who we supply */
+.supply-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.supply-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--ice);
+  border: 1px solid var(--line-light);
+  border-left: 3px solid var(--sky);
+  border-radius: 6px;
+  padding: 24px 24px 26px;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.supply-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(11, 29, 46, 0.12);
+}
+
+.supply-name {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.supply-note {
+  font-size: 0.82rem;
+  color: var(--slate);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.supply-go {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--sky-deep);
+}
+
+@media (max-width: 800px) {
+  .supply-grid { grid-template-columns: 1fr; }
+  .cap-head { display: none; }
+  .cap-row {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "item cap" "mach cap";
+    gap: 4px 16px;
+    padding: 16px 20px;
+  }
+  .cap-item { grid-area: item; }
+  .cap-machines { grid-area: mach; justify-content: flex-start; }
+  .cap-capacity { grid-area: cap; flex-direction: column; align-items: flex-end; gap: 2px; }
+}
+
+/* Sister card panel: stands in where a company has no photography yet */
+.sister-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background:
+    radial-gradient(circle at 74% 26%, rgba(56,182,255,0.22) 0%, transparent 58%),
+    linear-gradient(140deg, #0B1D2E 0%, #123049 100%);
+}
+
+.sister-panel-num {
+  font-family: var(--font-head);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--sky);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.sister-panel-lbl {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
