@@ -266,37 +266,48 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.8;
 }
 
-/* ─── Scroll reveal utility ─── */
-.reveal {
+/* ─── Scroll reveal utility ─────────────────────────────────────────────
+   Content is visible by default. Only once ScrollInit has run does the
+   `js-reveal` flag on <html> arm the hidden state, so a JS error or a
+   missed observer can never leave a page blank.
+   ─────────────────────────────────────────────────────────────────────── */
+.reveal,
+.reveal-left,
+.reveal-right {
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.js-reveal .reveal:not(.visible) {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.75s ease, transform 0.75s ease;
 }
-.reveal.visible {
-  opacity: 1;
-  transform: none;
-}
-.reveal-left {
+
+.js-reveal .reveal-left:not(.visible) {
   opacity: 0;
   transform: translateX(-24px);
-  transition: opacity 0.75s ease, transform 0.75s ease;
 }
-.reveal-left.visible {
-  opacity: 1;
-  transform: none;
-}
-.reveal-right {
+
+.js-reveal .reveal-right:not(.visible) {
   opacity: 0;
   transform: translateX(24px);
-  transition: opacity 0.75s ease, transform 0.75s ease;
 }
+
+.reveal.visible,
+.reveal-left.visible,
 .reveal-right.visible {
   opacity: 1;
   transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal, .reveal-left, .reveal-right {
+  /* Must out-specify `.js-reveal .reveal:not(.visible)` above, otherwise the
+     hidden state would win and content would never appear. */
+  .js-reveal .reveal,
+  .js-reveal .reveal-left,
+  .js-reveal .reveal-right,
+  .js-reveal .reveal:not(.visible),
+  .js-reveal .reveal-left:not(.visible),
+  .js-reveal .reveal-right:not(.visible) {
     opacity: 1;
     transform: none;
     transition: none;
