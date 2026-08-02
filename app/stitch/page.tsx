@@ -1,101 +1,196 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import CountUpStats from "@/components/CountUpStats";
+import ExportChart from "@/components/ExportChart";
 
 export const metadata: Metadata = {
   title: "Supreme Stitch Ltd. | 100% Export Oriented Garments Manufacturer",
-  description: "Supreme Stitch Ltd. is a vertically integrated garment manufacturer in Bangladesh, trusted by Fanatics, Hanes, Walmart & Champion. 60,000 knitwear items per day.",
+  description:
+    "Established 2008. A leading knitwear exporter in Bangladesh producing 60,000 items a day across 38 sewing lines, with 3,000+ employees and 94% renewable energy.",
 };
 
-const features = [
+const keyFigures = [
+  { num: "$70M", label: "Annual turnover" },
+  { num: "60,000", label: "Knitwear pieces per day" },
+  { num: "3,000+", label: "Employees" },
+  { num: "94%", label: "Renewable energy" },
+];
+
+const overview = [
   {
-    number: "01",
-    title: "Sustainable & Solar Powered",
-    stat: "468 KW",
-    statLabel: "Solar Installation",
-    description: "A 468 KW solar installation generates 94% of our energy from renewable sources. Sustainability is embedded in every stage of production.",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="5"/>
-        <line x1="12" y1="1" x2="12" y2="3"/>
-        <line x1="12" y1="21" x2="12" y2="23"/>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-        <line x1="1" y1="12" x2="3" y2="12"/>
-        <line x1="21" y1="12" x2="23" y2="12"/>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-      </svg>
-    ),
+    group: "Facility",
+    rows: [
+      { k: "Factory area", v: "201,000 sq ft" },
+      { k: "Manufacturing area", v: "90,000 sq ft" },
+      { k: "Office area", v: "2,736 sq ft" },
+      { k: "Canteen and dining", v: "9,300 sq ft" },
+    ],
   },
   {
-    number: "02",
-    title: "High Production Capacity",
-    stat: "60,000",
-    statLabel: "Items Per Day",
-    description: "60,000 knitwear items produced daily with consistent quality. Vertically integrated from yarn to finished product.",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-      </svg>
-    ),
+    group: "Stores",
+    rows: [
+      { k: "Fabric store", v: "43,600 sq ft" },
+      { k: "Finished goods store", v: "17,084 sq ft" },
+      { k: "Cut panel store", v: "9,600 sq ft" },
+      { k: "Yarn store", v: "5,800 sq ft" },
+      { k: "Accessories store", v: "3,600 sq ft" },
+    ],
   },
   {
-    number: "03",
-    title: "Uncompromising Quality",
-    stat: "AQL 1.0",
-    statLabel: "Quality Standard",
-    description: "In-house testing laboratory with AQL 1.0 quality control. Every garment passes multi-stage inspections before shipment.",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        <polyline points="9 12 11 14 15 10"/>
-      </svg>
-    ),
+    group: "Operations",
+    rows: [
+      { k: "Total energy capacity", v: "500 kW" },
+      { k: "Solar power capacity", v: "468 kW" },
+      { k: "Male to female ratio", v: "60% / 40%" },
+      { k: "Lead time", v: "90 to 120 days" },
+    ],
+  },
+];
+
+const clientStories = [
+  {
+    name: "Fanatics",
+    since: "2019",
+    text: "A leading retailer of licensed sports merchandise, including apparel, accessories and collectibles. The partnership also covers Mad Engine and Walmart.",
   },
   {
-    number: "04",
-    title: "Trusted by Global Brands",
-    stat: "World-Class",
-    statLabel: "Partner Network",
-    description: "Proud supplier to Fanatics, Hanes, Walmart, and Champion, some of the world's largest sportswear and retail brands.",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/>
-        <line x1="2" y1="12" x2="22" y2="12"/>
-        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-      </svg>
-    ),
+    name: "Hanes",
+    since: "2015",
+    text: "A leading manufacturer of basic apparel including underwear, t-shirts and socks. The partnership extends to their retail partners Walmart and Champion.",
   },
   {
-    number: "05",
-    title: "Innovation & Technology",
-    stat: "1,064",
-    statLabel: "Sewing Machines",
-    description: "Operating 1,064 sewing machines, CAD-CAM design software, and automated printing systems for precision and efficiency at scale.",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="3"/>
-        <path d="M19.07 4.93l-1.41 1.41M18.36 18.36l-1.41-1.41M4.93 4.93l1.41 1.41M5.64 18.36l1.41-1.41M12 2v2M12 20v2M2 12h2M20 12h2"/>
-      </svg>
-    ),
+    name: "Roly",
+    since: "2016",
+    text: "A prominent European brand specialising in promotional, casual, sports and workwear textiles.",
   },
   {
-    number: "06",
-    title: "Employee Welfare",
-    stat: "2,500+",
-    statLabel: "Workers",
-    description: "On-site medical care, childcare facilities, free worker transport, group insurance, and comprehensive welfare programs for all employees.",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-        <circle cx="9" cy="7" r="4"/>
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-      </svg>
-    ),
+    name: "Gelmart Industries",
+    since: "2023",
+    text: "A leading intimate apparel manufacturer founded in 1952 and headquartered in New York.",
   },
+];
+
+const production = [
+  {
+    eyebrow: "Knitting Section",
+    title: "Knitting",
+    image: "/images/st-knitting.jpg",
+    alt: "Circular knitting machine on the knitting floor",
+    capacity: "104 tons per month",
+    specs: [
+      "14 knitting machines",
+      "Single jersey and terry",
+      "Diameter range 24 in to 42 in",
+    ],
+  },
+  {
+    eyebrow: "Fabric Storage",
+    title: "Fabric store",
+    image: "/images/st-fabric-store.jpg",
+    alt: "Racked rolls of fabric in the fabric store",
+    capacity: "43,600 sq ft fabric store",
+    specs: [
+      "Dedicated relaxation racks before cutting",
+      "Yarn store of 5,800 sq ft alongside",
+      "Cut panel store of 9,600 sq ft feeding the sewing floors",
+    ],
+  },
+  {
+    eyebrow: "Sample Section & CAD-CAM",
+    title: "Sampling",
+    image: "/images/st-cadcam.jpg",
+    alt: "CAD-CAM pattern software on screen",
+    capacity: "Up to 250 unique items per day",
+    specs: [
+      "50 highly skilled sample technicians",
+      "CAD-CAM software for pattern and marker making",
+      "High-speed toolpaths for reduced cycle times",
+    ],
+  },
+  {
+    eyebrow: "Cutting Section",
+    title: "Cutting",
+    image: "/images/st-cutting.jpg",
+    alt: "Operator at an Eastman cutting machine",
+    capacity: "7 cutting tables with automated spreading",
+    specs: [
+      "1 auto spreading machine and 3 manual spreaders",
+      "14 manual cutting machines",
+      "1 fabric inspection machine",
+      "20 relaxation racks",
+    ],
+  },
+  {
+    eyebrow: "Sewing Section",
+    title: "Sewing",
+    image: "/images/st-sewing.jpg",
+    alt: "Operators working on a sewing line",
+    capacity: "1,064 machines across 38 sewing lines",
+    specs: [
+      "A complete set of machines for any product type",
+      "Knit and woven, children's, men's and women's",
+      "100% in-line quality control at AQL 1.0",
+    ],
+  },
+  {
+    eyebrow: "Pressing Section",
+    title: "Pressing",
+    image: "/images/st-pressing.jpg",
+    alt: "Pressing section with steam irons",
+    capacity: "66 steam irons with vacuum tables",
+    specs: [
+      "15 heat pressing machines for heat transfer",
+      "Moisture control room for humidity and temperature",
+      "Protects fabric and preserves quality before packing",
+    ],
+  },
+  {
+    eyebrow: "Finishing Section",
+    title: "Finishing",
+    image: "/images/st-metal-detect.jpg",
+    alt: "Hashima metal detection machine scanning a garment",
+    capacity: "Dedicated C-TPAT packing area",
+    specs: [
+      "2 double-headed Hashima metal detection machines",
+      "Rigorous screening, especially for children's items",
+      "Every garment checked free of metal contaminants",
+    ],
+  },
+];
+
+const labEquipment = [
+  "Light box",
+  "Button pull test",
+  "Hand needle detector",
+  "Crock master",
+  "Neck stretch measuring fixture",
+  "Fusing bond strength",
+  "Washing machines (2)",
+  "Dryers (2)",
+  "Gray scale",
+  "Relaxation tray",
+  "Dark room",
+];
+
+const facilities = [
+  "Medical facility",
+  "Childcare facility",
+  "Free transportation",
+  "Group insurance",
+  "Prayer room",
+  "Workers welfare activities",
+  "Canteen facility",
+  "Training and awareness programmes",
+  "Fair price shop",
+];
+
+const fireProtection = [
+  "Diesel pump, 1250 GPM positive suction",
+  "Electric pump, 1250 GPM",
+  "Fire alarm system",
+  "Smoke detectors",
+  "Emergency exits",
+  "Fire safety training",
 ];
 
 const certifications = [
@@ -113,7 +208,7 @@ const certifications = [
   { src: "/images/cert-9.png", alt: "Certification" },
 ];
 
-const clients = [
+const clientLogos = [
   { src: "/images/walmart-logo.png", alt: "Walmart" },
   { src: "/images/fanatics-logo.png", alt: "Fanatics" },
   { src: "/images/champion-logo.png", alt: "Champion" },
@@ -126,510 +221,451 @@ export default function StitchPage() {
   return (
     <>
       {/* HERO */}
-      <section style={{
-        position: "relative",
-        minHeight: "90vh",
-        display: "flex",
-        alignItems: "center",
-        overflow: "hidden",
-      }}>
+      <section style={{ position: "relative", minHeight: "88vh", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
         <Image
-          src="/images/hero-building.jpg"
-          alt="Supreme Stitch factory building"
+          src="/images/st-sewing-lines.jpg"
+          alt="Sewing lines running through the Supreme Stitch factory floor"
           fill
           priority
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: "cover", objectPosition: "center 45%" }}
+          sizes="100vw"
         />
-        <div style={{
-          position: "absolute",
-          inset: 0,
-          background: "linear-gradient(135deg, rgba(10,22,40,0.95) 0%, rgba(10,22,40,0.75) 50%, rgba(10,22,40,0.45) 100%)",
-        }} />
-        {/* Subtle horizontal rule at top */}
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(105deg, rgba(7,22,36,0.94) 0%, rgba(7,22,36,0.74) 45%, rgba(9,40,64,0.4) 100%)" }} />
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: "50%", background: "linear-gradient(transparent, rgba(7,22,36,0.9))" }} />
         <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(90deg, transparent, #C9A84C, transparent)" }} />
 
-        <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "100px" }}>
-          <div style={{ maxWidth: "700px" }}>
-            <div className="hero-eyebrow">
-              100% Export Oriented Garments Manufacturer
-            </div>
-            <h1 className="hero-h1">
+        <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "150px", paddingBottom: "64px" }}>
+          <div style={{ maxWidth: "790px" }}>
+            <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "16px" }}>
+              Company Profile · Established 2008
+            </p>
+            <h1 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(2.4rem, 5.5vw, 4.2rem)", fontWeight: 800, color: "white", marginBottom: "18px", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
               Supreme Stitch Ltd.
             </h1>
-            <p style={{
-              fontSize: "1.15rem",
-              color: "rgba(255,255,255,0.78)",
-              lineHeight: 1.85,
-              marginBottom: "16px",
-              maxWidth: "560px",
-            }}>
-              Cutting-edge technology, sustainable practices, and expert craftsmanship, delivering high-quality garments that meet international standards.
+            <p style={{ fontSize: "1.05rem", color: "rgba(255,255,255,0.78)", maxWidth: "630px", lineHeight: 1.85, marginBottom: "34px" }}>
+              One of the leading and most cost-effective garment exporters in Bangladesh.
+              Knit and woven apparel for children, men and women, produced across 38 sewing
+              lines and shipped to brands around the world.
             </p>
-            <p style={{
-              fontSize: "0.975rem",
-              color: "rgba(255,255,255,0.5)",
-              fontStyle: "italic",
-              fontFamily: "var(--font-head)",
-              lineHeight: 1.7,
-              marginBottom: "40px",
-              maxWidth: "560px",
-            }}>
-              &ldquo;To be a globally recognized leader in the garment industry, setting new standards for quality, innovation, and sustainability.&rdquo;
-            </p>
-            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-              <Link href="/contact" className="btn-gold">Partner With Us</Link>
-              <a href="#video" className="btn-outline-gold">Watch Video</a>
+            <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
+              <a href="/supreme-stitch-company-profile.pdf" download className="btn-gold">
+                Download Company Profile
+              </a>
+              <Link href="/contact" className="btn-outline-gold" style={{ borderColor: "rgba(255,255,255,0.5)", color: "#fff" }}>
+                Partner With Us
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* STATS BAR */}
-      <CountUpStats />
-
-      {/* OFFICE INFO */}
-      <section style={{ background: "#F6F4EE", padding: "56px 0" }}>
+      {/* KEY FIGURES */}
+      <section style={{ background: "#38B6FF", padding: "40px 0" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px" }}>
-            <div className="info-card-bordered">
-              <div className="info-card-label">Head Office</div>
-              <p className="info-card-body">
-                49/1 Purana Paltan Line, Dhaka-1000, Bangladesh<br />
-                Phone: +88-02-9359825 &nbsp;|&nbsp; Fax: 88-02-9350660<br />
-                <a href="mailto:office@supremegroupbd.com" className="link-gold">office@supremegroupbd.com</a>
+          <div className="outfit-stats">
+            {keyFigures.map((s, i) => (
+              <div key={s.label} style={{ padding: "6px 22px", borderRight: i < keyFigures.length - 1 ? "1px solid rgba(6,38,60,0.2)" : "none" }}>
+                <div style={{ fontFamily: "var(--font-head)", fontSize: "2.3rem", fontWeight: 800, color: "#06263C", lineHeight: 1, textAlign: "center", fontVariantNumeric: "tabular-nums" }}>
+                  {s.num}
+                </div>
+                <div style={{ fontSize: "0.7rem", color: "rgba(6,38,60,0.68)", marginTop: "10px", textAlign: "center", lineHeight: 1.5 }}>
+                  {s.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="section-pad" style={{ background: "white" }}>
+        <div className="container">
+          <div className="outfit-split reveal">
+            <div>
+              <p className="section-eyebrow">About Us</p>
+              <h2 className="section-h2-dark" style={{ marginBottom: "22px" }}>
+                Sixteen years of<br />export manufacturing
+              </h2>
+              <p style={{ color: "#52697C", lineHeight: 1.9, marginBottom: "18px" }}>
+                Supreme Stitch Ltd., established in 2008, is one of the leading and most
+                cost-effective garment exporters in Bangladesh. Modern machinery lets us
+                produce up to 60,000 knitwear items per day.
+              </p>
+              <p style={{ color: "#52697C", lineHeight: 1.9, marginBottom: "18px" }}>
+                We employ over 3,000 people, led by a team of professionals considered
+                pioneers in the country&apos;s garment industry.
+              </p>
+              <p style={{ color: "#52697C", lineHeight: 1.9 }}>
+                We specialise in knit and woven items across children&apos;s, men&apos;s and
+                women&apos;s clothing. In-house testing facilities ensure strict quality
+                control, on-time delivery and reasonable prices.
               </p>
             </div>
-            <div className="info-card-bordered">
-              <div className="info-card-label">Factory</div>
-              <p className="info-card-body">
-                358 West Shaildube, Kashimpur Gazipur – 1700, Bangladesh<br />
-                Phone: +8801678038802<br />
-                <a href="mailto:admin@supremegroupbd.com" className="link-gold">admin@supremegroupbd.com</a>
+            <div style={{ position: "relative", width: "100%", minHeight: "420px", borderRadius: "8px", overflow: "hidden" }}>
+              <Image src="/images/st-management.jpg" alt="Supreme Stitch management team in a meeting" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 560px" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MISSION & VISION */}
+      <section className="section-pad" style={{ background: "#0B1D2E" }}>
+        <div className="container">
+          <div className="mv-grid reveal">
+            <div className="mv-card">
+              <p style={{ fontSize: "0.7rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "16px" }}>
+                Our Vision
+              </p>
+              <p style={{ fontFamily: "var(--font-head)", fontSize: "1.28rem", fontWeight: 600, color: "white", lineHeight: 1.55 }}>
+                To be a globally recognised leader in the garment industry, setting new
+                standards for quality, innovation and sustainability.
+              </p>
+              <p style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.85, marginTop: "18px", fontSize: "0.93rem" }}>
+                We aspire to drive meaningful change by creating sustainable solutions and
+                fostering positive impacts on society and the environment.
+              </p>
+            </div>
+            <div className="mv-card">
+              <p style={{ fontSize: "0.7rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "2.5px", textTransform: "uppercase", marginBottom: "16px" }}>
+                Our Mission
+              </p>
+              <p style={{ fontFamily: "var(--font-head)", fontSize: "1.28rem", fontWeight: 600, color: "white", lineHeight: 1.55 }}>
+                To partner with global apparel brands, delivering high-quality, innovative
+                and sustainable garment solutions.
+              </p>
+              <p style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.85, marginTop: "18px", fontSize: "0.93rem" }}>
+                While maintaining a strong commitment to social and environmental
+                responsibility at every stage of production.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* VIDEO SECTION */}
-      <section id="video" className="section-pad" style={{ background: "#0B1D2E" }}>
-        <div className="container" style={{ textAlign: "center" }}>
-          <p className="section-eyebrow">See Us In Action</p>
-          <h2 className="section-h2-light">Factory Tour</h2>
-          <div style={{
-            position: "relative",
-            paddingBottom: "56.25%",
-            height: 0,
-            overflow: "hidden",
-            borderRadius: "4px",
-            border: "1px solid rgba(56,182,255,0.25)",
-            maxWidth: "900px",
-            margin: "0 auto",
-          }}>
-            <iframe
-              src="https://www.youtube.com/embed/jY8u0RTi92I"
-              title="Supreme Stitch Ltd. Factory Tour"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
-            />
+      {/* EXPORT GROWTH */}
+      <section className="section-pad" style={{ background: "#F6F4EE", borderTop: "1px solid #E8E2D4", borderBottom: "1px solid #E8E2D4" }}>
+        <div className="container reveal" style={{ maxWidth: "960px" }}>
+          <ExportChart />
+        </div>
+      </section>
+
+      {/* COMPANY OVERVIEW */}
+      <section className="section-pad" style={{ background: "white" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "50px" }} className="reveal">
+            <p className="section-eyebrow">Company Overview</p>
+            <h2 className="section-h2-dark">The facility in numbers</h2>
+            <div className="gold-rule" />
+          </div>
+          <div className="spec-table-grid reveal">
+            {overview.map((g) => (
+              <div key={g.group} className="spec-table">
+                <h3>{g.group}</h3>
+                <dl>
+                  {g.rows.map((r) => (
+                    <div key={r.k}>
+                      <dt>{r.k}</dt>
+                      <dd>{r.v}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CLIENTS MARQUEE */}
-      <section className="section-pad" style={{ background: "#F6F4EE", borderTop: "1px solid #E8E2D4", borderBottom: "1px solid #E8E2D4", overflow: "hidden" }}>
-        <div style={{ textAlign: "center", marginBottom: "40px" }}>
-          <p className="section-eyebrow">Our Clients</p>
-          <h2 className="section-h2-dark">Trusted by Global Brands</h2>
+      {/* CLIENTS */}
+      <section className="section-pad" style={{ background: "#0E2438" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "50px" }} className="reveal">
+            <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+              Our Loyal Clients
+            </p>
+            <h2 className="section-h2-light">Long-running partnerships</h2>
+            <div className="gold-rule" />
+          </div>
+          <div className="client-grid reveal">
+            {clientStories.map((c) => (
+              <div key={c.name} className="client-card">
+                <div className="client-since">Since {c.since}</div>
+                <h3>{c.name}</h3>
+                <p>{c.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CLIENT LOGOS */}
+      <section style={{ background: "#F6F4EE", borderTop: "1px solid #E8E2D4", borderBottom: "1px solid #E8E2D4", padding: "40px 0", overflow: "hidden" }}>
+        <div style={{ textAlign: "center", marginBottom: "20px" }}>
+          <span style={{ fontSize: "0.68rem", fontWeight: 700, color: "#8A7A55", letterSpacing: "3px", textTransform: "uppercase" }}>
+            Trusted by Global Brands
+          </span>
         </div>
         <div className="marquee-container">
           <div className="marquee-track">
-            {[...Array(3)].map((_, setIdx) => (
-              clients.map((logo, i) => (
-                <img
-                  key={`${setIdx}-${i}`}
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="marquee-logo"
-                />
+            {[...Array(3)].map((_, setIdx) =>
+              clientLogos.map((logo, i) => (
+                <img key={`${setIdx}-${i}`} src={logo.src} alt={logo.alt} className="marquee-logo" />
               ))
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* PRODUCTION */}
+      <section className="section-pad" style={{ background: "white" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "54px" }} className="reveal">
+            <p className="section-eyebrow">Production Overview</p>
+            <h2 className="section-h2-dark">From yarn to finished garment</h2>
+            <div className="gold-rule" />
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: "26px" }}>
+            {production.map((s, i) => (
+              <div key={s.title} className={`spec-block reveal${i % 2 === 1 ? " is-flipped" : ""}`} style={{ background: "#F6F4EE" }}>
+                <div style={{ position: "relative", minHeight: "320px" }}>
+                  <Image src={s.image} alt={s.alt} fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 520px" />
+                </div>
+                <div className="spec-body">
+                  <p style={{ fontSize: "0.68rem", color: "#A8832E", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", marginBottom: "10px" }}>
+                    {s.eyebrow}
+                  </p>
+                  <h3 style={{ fontFamily: "var(--font-head)", fontSize: "1.75rem", fontWeight: 800, color: "#0B1D2E", marginBottom: "8px" }}>
+                    {s.title}
+                  </h3>
+                  <p style={{ color: "#0E86D4", fontWeight: 600, fontSize: "0.92rem", marginBottom: "20px" }}>
+                    {s.capacity}
+                  </p>
+                  <ul className="spec-list">
+                    {s.specs.map((sp) => <li key={sp}>{sp}</li>)}
+                  </ul>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ABOUT SECTION */}
-      <section id="about" className="section-pad" style={{ background: "#F6F4EE" }}>
-        <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "72px", alignItems: "center" }}>
-            <div>
-              <p className="section-eyebrow">About Supreme Stitch</p>
-              <h2 className="section-h2-dark" style={{ marginBottom: "16px" }}>
-                Vertically Integrated <span style={{ color: "#0E86D4" }}>Excellence</span>
-              </h2>
-              <div className="gold-divider" />
-              <p style={{ color: "#52697C", lineHeight: 1.85, marginBottom: "20px", fontSize: "1rem" }}>
-                At Supreme Stitch Ltd., we combine cutting-edge technology, sustainable practices, and expert craftsmanship to deliver high-quality garments that meet international standards.
-              </p>
-              <p style={{ color: "#52697C", lineHeight: 1.85, marginBottom: "32px", fontSize: "1rem" }}>
-                As a vertically integrated manufacturer, we oversee the entire supply chain, from fabric production to final packaging. Our state-of-the-art facilities and in-house accessory manufacturing allow us to maintain the highest quality standards while reducing lead times and costs.
-              </p>
-              <a
-                href="/supreme-stitch-company-profile.pdf"
-                download
-                className="btn-gold"
-              >
-                Download Company Profile
-              </a>
-              <Link href="/contact" className="btn-outline-gold" style={{ marginLeft: "16px", color: "#A8832E" }}>
-                Get in Touch
-              </Link>
-            </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-              <div style={{ position: "relative", height: "280px", borderRadius: "4px", overflow: "hidden" }}>
-                <Image src="/images/wa-factory-0016.jpg" alt="Factory front elevation" fill style={{ objectFit: "cover" }} sizes="300px" />
-              </div>
-              <div style={{ position: "relative", height: "280px", borderRadius: "4px", overflow: "hidden", marginTop: "40px" }}>
-                <Image src="/images/stitch-building.jpg" alt="Supreme Stitch building" fill style={{ objectFit: "cover" }} sizes="300px" />
-              </div>
-              <div style={{ position: "relative", height: "200px", borderRadius: "4px", overflow: "hidden", gridColumn: "span 2" }}>
-                <Image src="/images/wa-factory-0034.jpg" alt="Factory facade" fill style={{ objectFit: "cover" }} sizes="600px" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* WHAT SETS US APART */}
+      {/* QUALITY & LAB */}
       <section className="section-pad" style={{ background: "#0B1D2E" }}>
         <div className="container">
-          {/* Section Header */}
-          <div style={{ textAlign: "center", marginBottom: "72px" }}>
-            <p className="section-eyebrow">Why Choose Us</p>
-            <h2 className="section-h2-light">What Sets Us Apart</h2>
-            <div style={{ width: "40px", height: "1px", background: "#38B6FF", margin: "24px auto 0", opacity: 0.6 }} />
-          </div>
-
-          {/* Feature Grid: 2-column with large stat numbers */}
-          <div className="features-grid">
-            {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="feature-card"
-                style={{ animationDelay: `${index * 80}ms` }}
-              >
-                {/* Top row: number + icon */}
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "28px" }}>
-                  <span className="feature-number">{feature.number}</span>
-                  <span className="feature-icon">{feature.icon}</span>
-                </div>
-
-                {/* Stat */}
-                <div className="feature-stat">{feature.stat}</div>
-                <div className="feature-stat-label">{feature.statLabel}</div>
-
-                {/* Divider */}
-                <div className="feature-divider" />
-
-                {/* Title + description */}
-                <h3 className="feature-title">{feature.title}</h3>
-                <p className="feature-desc">{feature.description}</p>
+          <div className="outfit-split reveal">
+            <div>
+              <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+                In-Line Quality Control
+              </p>
+              <h2 className="section-h2-light" style={{ marginBottom: "20px" }}>
+                Perfection in every stitch
+              </h2>
+              <p style={{ color: "rgba(255,255,255,0.68)", lineHeight: 1.9, marginBottom: "30px" }}>
+                A 100% in-line quality control system with random checks at AQL 1.0 confirms
+                quality at every stage, backed by an in-house testing lab.
+              </p>
+              <p style={{ fontSize: "0.68rem", color: "#6FCBFF", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", marginBottom: "16px" }}>
+                Lab Equipment
+              </p>
+              <div className="lab-grid">
+                {labEquipment.map((e) => (
+                  <div key={e} className="lab-item">{e}</div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div style={{ position: "relative", width: "100%", minHeight: "440px", borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(56,182,255,0.22)" }}>
+              <Image src="/images/st-quality.jpg" alt="Needle detection check on a finished garment" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 560px" />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* FACTORY IMAGES */}
-      <section className="section-pad" style={{ background: "#F6F4EE" }}>
+      {/* SISTER CONCERNS */}
+      <section className="section-pad" style={{ background: "#F6F4EE", borderTop: "1px solid #E8E2D4" }}>
         <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "48px" }}>
-            <p className="section-eyebrow">The Facility</p>
-            <h2 className="section-h2-dark">Our Facilities</h2>
-            <div style={{ width: "40px", height: "1px", background: "#38B6FF", margin: "20px auto 0", opacity: 0.6 }} />
+          <div style={{ textAlign: "center", marginBottom: "50px" }} className="reveal">
+            <p className="section-eyebrow">In-House Across the Group</p>
+            <h2 className="section-h2-dark">Printing, embroidery and accessories</h2>
+            <p style={{ color: "#52697C", lineHeight: 1.8, maxWidth: "62ch", margin: "18px auto 0", fontSize: "0.95rem" }}>
+              Sister concerns keep embellishment and trims inside the group, so an order
+              never depends on subcontracting.
+            </p>
           </div>
-          {/* Primary large image */}
-          <div style={{ position: "relative", height: "480px", borderRadius: "4px", overflow: "hidden", marginBottom: "16px" }}>
-            <Image src="/images/hero-building.jpg" alt="Factory overview" fill style={{ objectFit: "cover" }} sizes="1200px" />
-          </div>
-          {/* Grid of 4 */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px" }}>
-            {[
-              { src: "/images/stitch-building.jpg", alt: "Factory building" },
-              { src: "/images/wa-factory-0015.jpg", alt: "Campus skybridges" },
-              { src: "/images/wa-factory-0025.jpg", alt: "Landscaped walkway" },
-              { src: "/images/wa-special.jpg", alt: "Campus overview" },
-            ].map((img) => (
-              <div key={img.src} style={{ position: "relative", height: "200px", borderRadius: "4px", overflow: "hidden" }}>
-                <Image src={img.src} alt={img.alt} fill style={{ objectFit: "cover" }} sizes="300px" />
+
+          <div className="sister-grid reveal">
+            <Link href="/embellishment" className="sister-card">
+              <div className="sister-img">
+                <Image src="/images/st-embroidery.jpg" alt="Multi-head embroidery machines" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 33vw" />
               </div>
-            ))}
+              <div className="sister-body">
+                <h3>Supreme Embellishment Ltd.</h3>
+                <p>62,000 sq ft printing and embroidery floor with an ETP at 3 m³/hour. 140 embroidery staff across two shifts on Barudan and Tajima machines.</p>
+                <span className="sister-stat">80,000 pcs/day printing →</span>
+              </div>
+            </Link>
+            <Link href="/accessories" className="sister-card">
+              <div className="sister-img">
+                <Image src="/images/accessories-ground.jpg" alt="Supreme Accessories facility" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 33vw" />
+              </div>
+              <div className="sister-body">
+                <h3>Supreme Accessories Industries Ltd.</h3>
+                <p>Cartons, elastic, poly bags, sewing thread, printed labels, twill tape, interlining, drawstrings and neck boards, all produced in-house.</p>
+                <span className="sister-stat">3,20,000 poly bags/day →</span>
+              </div>
+            </Link>
+            <Link href="/outfit" className="sister-card">
+              <div className="sister-img">
+                <Image src="/images/hero-building.jpg" alt="Supreme Outfit factory" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 33vw" />
+              </div>
+              <div className="sister-body">
+                <h3>Supreme Outfit Ltd.</h3>
+                <p>Our newest facility, dedicated to knit garments and outerwear, with in-house printing tables and oval machines for full production independence.</p>
+                <span className="sister-stat">60,000 pcs/day, Phase 1 →</span>
+              </div>
+            </Link>
           </div>
         </div>
-        <style>{`@media(max-width:768px){.factory-img-grid{grid-template-columns:repeat(2,1fr)!important;}}`}</style>
       </section>
 
       {/* CERTIFICATIONS */}
-      <section style={{ background: "#123049", padding: "80px 0" }}>
-        <div className="container" style={{ textAlign: "center" }}>
-          <p className="section-eyebrow">Compliance & Certifications</p>
-          <h2 className="section-h2-light" style={{ marginBottom: "56px" }}>Internationally Certified</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: "24px", maxWidth: "900px", margin: "0 auto" }}>
-            {certifications.map((cert, i) => (
-              <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
-                <div style={{
-                  background: "white",
-                  borderRadius: "6px",
-                  padding: "12px",
-                  width: "88px",
-                  height: "88px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}>
-                  <Image
-                    src={cert.src}
-                    alt={cert.alt}
-                    width={64}
-                    height={64}
-                    style={{ maxHeight: "60px", width: "auto", objectFit: "contain" }}
-                  />
-                </div>
-                <span style={{ fontSize: "0.68rem", color: "rgba(255,255,255,0.45)", fontWeight: 500, letterSpacing: "0.5px" }}>{cert.alt}</span>
+      <section className="section-pad" style={{ background: "#123049" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "44px" }} className="reveal">
+            <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "14px" }}>
+              Compliance Strength
+            </p>
+            <h2 className="section-h2-light">Internationally Certified</h2>
+            <div className="gold-rule" />
+          </div>
+          <div className="cert-grid reveal">
+            {certifications.map((c, i) => (
+              <div key={`${c.src}-${i}`} className="cert-tile">
+                <Image src={c.src} alt={c.alt} width={110} height={70} style={{ objectFit: "contain", width: "auto", height: "46px" }} />
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* GOOGLE MAPS */}
-      <section style={{ background: "#F6F4EE", padding: "60px 0" }}>
+      {/* WELFARE, SAFETY, ENERGY */}
+      <section className="section-pad" style={{ background: "white" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "50px" }} className="reveal">
+            <p className="section-eyebrow">People, Safety and Energy</p>
+            <h2 className="section-h2-dark">Beyond the production floor</h2>
+            <div className="gold-rule" />
+          </div>
+
+          <div className="care-grid reveal">
+            <div className="care-card">
+              <div className="care-img">
+                <Image src="/images/st-childcare.jpg" alt="Childcare facility at the factory" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 33vw" />
+              </div>
+              <div className="care-body">
+                <h3>Supreme Facilities</h3>
+                <ul className="care-list">
+                  {facilities.map((f) => <li key={f}>{f}</li>)}
+                </ul>
+              </div>
+            </div>
+
+            <div className="care-card">
+              <div className="care-img">
+                <Image src="/images/st-fire.jpg" alt="Fire protection pump house" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 33vw" />
+              </div>
+              <div className="care-body">
+                <h3>Fire Protection System</h3>
+                <ul className="care-list">
+                  {fireProtection.map((f) => <li key={f}>{f}</li>)}
+                </ul>
+              </div>
+            </div>
+
+            <div className="care-card">
+              <div className="care-img">
+                <Image src="/images/st-solar.jpg" alt="Rooftop solar array" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 33vw" />
+              </div>
+              <div className="care-body">
+                <h3>Renewable Energy</h3>
+                <div className="energy-rows">
+                  <div>
+                    <span className="energy-name">Supreme Stitch Ltd.</span>
+                    <span className="energy-bar"><span style={{ width: "94%" }} /></span>
+                    <span className="energy-val">468 kW of 500 kW · 94% renewable</span>
+                  </div>
+                  <div>
+                    <span className="energy-name">Supreme Embellishment Ltd.</span>
+                    <span className="energy-bar"><span style={{ width: "73%" }} /></span>
+                    <span className="energy-val">1,100 kW of 1,500 kW · 73% renewable</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DOWNLOAD BAND */}
+      <section className="section-pad" style={{ background: "#F6F4EE", borderTop: "1px solid #E8E2D4" }}>
+        <div className="container reveal">
+          <div className="download-band" style={{ background: "white" }}>
+            <div>
+              <p className="section-eyebrow" style={{ marginBottom: "10px" }}>Company Profile</p>
+              <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(1.5rem, 3vw, 2.1rem)", fontWeight: 800, color: "#0B1D2E", marginBottom: "12px" }}>
+                Take the full profile with you
+              </h2>
+              <p style={{ color: "#52697C", lineHeight: 1.8, maxWidth: "480px" }}>
+                Machinery lists, section-by-section capacity, compliance certifications and
+                export figures in one PDF. We also warmly invite you to visit the factory.
+              </p>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: "12px", alignItems: "flex-start" }}>
+              <a href="/supreme-stitch-company-profile.pdf" download className="btn-gold">
+                Download PDF
+              </a>
+              <Link href="/contact" className="btn-outline-gold" style={{ borderColor: "#A8832E", color: "#A8832E" }}>
+                Arrange a visit
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LOCATION */}
+      <section style={{ background: "white", padding: "70px 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <h2 className="section-h2-dark" style={{ marginBottom: "32px" }}>Our Location</h2>
-          <div style={{
-            borderRadius: "4px",
-            overflow: "hidden",
-            border: "1px solid rgba(56,182,255,0.25)",
-            maxWidth: "900px",
-            margin: "0 auto",
-          }}>
+          <p className="section-eyebrow">West Shaildubi, Kashimpur, Gazipur</p>
+          <h2 style={{ fontFamily: "var(--font-head)", fontSize: "1.9rem", fontWeight: 800, color: "#0B1D2E", marginBottom: "32px" }}>
+            Our Location
+          </h2>
+          <div style={{ borderRadius: "8px", overflow: "hidden", border: "1px solid #E8E2D4", maxWidth: "900px", margin: "0 auto" }}>
             <iframe
-              src="https://maps.google.com/maps?q=Supreme%20Stitch%20Ltd.%20Kashimpur%20Gazipur&t=m&z=17&output=embed&iwloc=near"
+              src="https://maps.google.com/maps?q=West%20Shaildubi%2C%20Kashimpur%2C%20Gazipur%2C%20Bangladesh&t=m&z=14&output=embed&iwloc=near"
               width="100%"
               height="400"
               style={{ border: "none", display: "block" }}
               allowFullScreen
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Supreme Stitch Factory Location"
+              title="Supreme Stitch Ltd. location, Kashimpur, Gazipur"
             />
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section style={{
-        position: "relative",
-        padding: "120px 0",
-        textAlign: "center",
-        overflow: "hidden",
-      }}>
-        <Image
-          src="/images/wa-factory-0026.jpg"
-          alt="Supreme Group campus"
-          fill
-          style={{ objectFit: "cover" }}
-        />
-        <div style={{
-          position: "absolute",
-          inset: 0,
-          background: "rgba(10,22,40,0.88)",
-        }} />
-        <div className="container" style={{ position: "relative", zIndex: 1 }}>
-          <p className="section-eyebrow">Work With Us</p>
-          <h2 style={{
-            fontFamily: "var(--font-head)",
-            fontSize: "clamp(1.8rem, 4vw, 3rem)",
-            fontWeight: 700,
-            color: "white",
-            marginBottom: "20px",
-            lineHeight: 1.2,
-          }}>
-            Partner with a Leader in<br />Garment Manufacturing
-          </h2>
-          <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "1.05rem", marginBottom: "40px", maxWidth: "560px", margin: "0 auto 40px", lineHeight: 1.8 }}>
-            Join global brands like Fanatics, Hanes, and Walmart who trust us for high-quality, sustainable apparel.
+      {/* CONTACT */}
+      <section style={{ background: "#0B1D2E", padding: "60px 0" }}>
+        <div className="container" style={{ textAlign: "center" }}>
+          <h3 style={{ fontFamily: "var(--font-head)", fontSize: "1.5rem", fontWeight: 700, color: "white", marginBottom: "16px" }}>
+            Contact Supreme Stitch
+          </h3>
+          <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "1rem" }}>
+            Email: <a href="mailto:admin@supremegroupbd.com" style={{ color: "#38B6FF", fontWeight: 600 }}>admin@supremegroupbd.com</a>
+            {" · "}
+            Phone: <span style={{ fontWeight: 600, color: "rgba(255,255,255,0.8)" }}>01678038801-04</span>
           </p>
-          <Link href="/contact" className="btn-gold">Get In Touch</Link>
         </div>
       </section>
-
-      <style>{`
-        .hero-eyebrow {
-          display: inline-block;
-          background: rgba(56,182,255,0.12);
-          border: 1px solid rgba(56,182,255,0.35);
-          border-radius: 2px;
-          padding: 6px 16px;
-          margin-bottom: 24px;
-          color: #38B6FF;
-          font-size: 0.72rem;
-          font-weight: 600;
-          letter-spacing: 2.5px;
-          text-transform: uppercase;
-        }
-        .hero-h1 {
-          font-family: var(--font-head);
-          font-size: clamp(2.5rem, 5.5vw, 4.5rem);
-          font-weight: 700;
-          color: #ffffff;
-          line-height: 1.1;
-          margin-bottom: 24px;
-        }
-        .section-eyebrow {
-          font-size: 0.72rem;
-          color: #38B6FF;
-          font-weight: 700;
-          letter-spacing: 3px;
-          text-transform: uppercase;
-          margin-bottom: 14px;
-        }
-        .section-h2-light {
-          font-family: var(--font-head);
-          font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-          font-weight: 700;
-          color: white;
-          line-height: 1.15;
-        }
-        .section-h2-dark {
-          font-family: var(--font-head);
-          font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-          font-weight: 700;
-          color: #0B1D2E;
-          line-height: 1.15;
-        }
-        .info-card-bordered {
-          padding: 28px 32px;
-          background: white;
-          border-radius: 4px;
-          border-left: 3px solid #38B6FF;
-          box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-        }
-        .info-card-label {
-          font-family: var(--font-head);
-          font-size: 1rem;
-          font-weight: 600;
-          color: #0B1D2E;
-          margin-bottom: 10px;
-        }
-        .info-card-body {
-          font-size: 0.875rem;
-          color: #52697C;
-          line-height: 1.75;
-        }
-        .link-gold {
-          color: #38B6FF;
-          text-decoration: none;
-        }
-        .link-gold:hover {
-          text-decoration: underline;
-        }
-
-        /* ─── Feature Cards ─── */
-        .features-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1px;
-          background: rgba(56,182,255,0.08);
-          border: 1px solid rgba(56,182,255,0.08);
-          border-radius: 4px;
-          overflow: hidden;
-        }
-        .feature-card {
-          background: #0B1D2E;
-          padding: 40px 36px;
-          transition: background 0.3s ease;
-          position: relative;
-        }
-        .feature-card:hover {
-          background: #123049;
-        }
-        .feature-card::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 36px;
-          right: 36px;
-          height: 1px;
-          background: rgba(56,182,255,0.08);
-        }
-        .feature-number {
-          font-family: var(--font-head);
-          font-size: 0.75rem;
-          color: rgba(56,182,255,0.4);
-          font-weight: 600;
-          letter-spacing: 2px;
-        }
-        .feature-icon {
-          color: rgba(56,182,255,0.7);
-          flex-shrink: 0;
-        }
-        .feature-stat {
-          font-family: var(--font-head);
-          font-size: 2.2rem;
-          font-weight: 700;
-          color: #38B6FF;
-          line-height: 1;
-          margin-bottom: 4px;
-        }
-        .feature-stat-label {
-          font-size: 0.7rem;
-          color: rgba(255,255,255,0.35);
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          font-weight: 500;
-          margin-bottom: 0;
-        }
-        .feature-divider {
-          width: 32px;
-          height: 1px;
-          background: rgba(56,182,255,0.3);
-          margin: 20px 0;
-        }
-        .feature-title {
-          font-family: var(--font-head);
-          font-size: 1.05rem;
-          font-weight: 600;
-          color: white;
-          margin-bottom: 10px;
-          line-height: 1.35;
-        }
-        .feature-desc {
-          font-size: 0.845rem;
-          color: rgba(255,255,255,0.5);
-          line-height: 1.75;
-        }
-
-        @media(max-width:1024px) {
-          .features-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media(max-width:768px) {
-          .features-grid { grid-template-columns: 1fr; }
-          .feature-card { padding: 32px 28px; }
-          .info-card-bordered { padding: 24px; }
-        }
-        @media(max-width:600px) {
-          [style*="grid-template-columns: repeat(6"] {
-            grid-template-columns: repeat(3,1fr) !important;
-          }
-        }
-        @media(max-width:480px) {
-          [style*="grid-template-columns: repeat(6"] {
-            grid-template-columns: repeat(2,1fr) !important;
-          }
-        }
-      `}</style>
     </>
   );
 }
