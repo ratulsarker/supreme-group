@@ -85,6 +85,49 @@ const sections = [
   },
 ];
 
+const icon = (d: string) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <path d={d} />
+  </svg>
+);
+
+const layoutFacts = [
+  {
+    title: "4 × Six-Storied Blocks",
+    icon: icon("M3 21h18M5 21V7l7-4 7 4v14M9 21v-4h6v4M9 10h.01M12 10h.01M15 10h.01M9 13h.01M12 13h.01M15 13h.01"),
+    items: [
+      { label: "Phase 1", text: "Buildings 1 & 2" },
+      { label: "Phase 2", text: "Buildings 3 & 4" },
+    ],
+  },
+  {
+    title: "Worker Welfare & Support",
+    icon: icon("M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M19 8v6M22 11h-6"),
+    items: [
+      { label: "Building 5, Ground", text: "Childcare & medical services" },
+      { label: "Building 5, 1st Floor", text: "Worker's canteen" },
+    ],
+  },
+  {
+    title: "Utilities & Compliance",
+    icon: icon("M13 2 4.09 12.11a1 1 0 0 0 .77 1.64h6.09l-1.04 8.25 8.9-10.11a1 1 0 0 0-.77-1.64h-6.09L13 2Z"),
+    items: [
+      { label: "", text: "Effluent treatment plant (ETP)" },
+      { label: "", text: "Fire-pump house" },
+      { label: "", text: "Dual septic-tank system, hygienic zoning" },
+    ],
+  },
+  {
+    title: "Site & Environment",
+    icon: icon("M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10ZM2 21c0-3 1.85-5.36 5.08-6"),
+    items: [
+      { label: "", text: "100-car dedicated parking zone" },
+      { label: "", text: "Large pond for rainwater harvesting" },
+      { label: "", text: "30% landscaped green buffer" },
+    ],
+  },
+];
+
 const sustainability = [
   { stat: "1.4 MW", label: "Rooftop PV across Buildings 1 & 2" },
   { stat: "≈ 70%", label: "Of the Phase 1 electricity load supplied by solar" },
@@ -223,61 +266,47 @@ export default function OutfitPage() {
             <div className="gold-rule" />
           </div>
 
-          <div className="outfit-split reveal" style={{ alignItems: "start" }}>
-            <div className="layout-cards">
-              <div className="layout-card">
-                <h3>4 × Six-Storied Blocks</h3>
-                <ul>
-                  <li><strong>Phase 1</strong> Buildings 1 &amp; 2</li>
-                  <li><strong>Phase 2</strong> Buildings 3 &amp; 4</li>
-                </ul>
-              </div>
-              <div className="layout-card">
-                <h3>Worker Welfare &amp; Support</h3>
-                <ul>
-                  <li><strong>Building 5, Ground</strong> Childcare &amp; medical services</li>
-                  <li><strong>Building 5, 1st Floor</strong> Worker&apos;s canteen</li>
-                </ul>
-              </div>
-              <div className="layout-card">
-                <h3>Utilities &amp; Compliance</h3>
-                <ul>
-                  <li>Effluent treatment plant (ETP)</li>
-                  <li>Fire-pump house</li>
-                  <li>Dual septic-tank system with hygienic zoning</li>
-                </ul>
-              </div>
-              <div className="layout-card">
-                <h3>Site &amp; Environment</h3>
-                <ul>
-                  <li>100-car dedicated parking zone</li>
-                  <li>Large pond for rainwater harvesting</li>
-                  <li>30% landscaped green buffer</li>
-                </ul>
-              </div>
+          {/* Site imagery: the CAD render leads, supporting views beside it */}
+          <div className="layout-media reveal">
+            <figure className="layout-media-main">
+              <Image
+                src="/images/wa-factory-0005.jpg"
+                alt="Proposed CAD model of the Supreme Outfit campus"
+                fill
+                style={{ objectFit: "cover" }}
+                sizes="(max-width: 900px) 100vw, 66vw"
+              />
+              <figcaption>Proposed CAD model of Supreme Outfit Ltd.</figcaption>
+            </figure>
+            <div className="layout-media-side">
+              {[
+                { src: "/images/outfit-welfare.jpg", cap: "Welfare block, Building 5" },
+                { src: "/images/outfit-pond.jpg", cap: "Rainwater harvesting pond" },
+              ].map((im) => (
+                <figure key={im.src}>
+                  <Image src={im.src} alt={im.cap} fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 50vw, 33vw" />
+                  <figcaption>{im.cap}</figcaption>
+                </figure>
+              ))}
             </div>
+          </div>
 
-            <div>
-              <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 10", borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(56,182,255,0.25)" }}>
-                <Image src="/images/wa-factory-0005.jpg" alt="CAD model of the Supreme Outfit campus" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 560px" />
+          {/* Site facts, one row, equal height */}
+          <div className="layout-cards reveal">
+            {layoutFacts.map((f) => (
+              <div key={f.title} className="layout-card">
+                <span className="layout-icon" aria-hidden="true">{f.icon}</span>
+                <h3>{f.title}</h3>
+                <ul>
+                  {f.items.map((it) => (
+                    <li key={it.label}>
+                      {it.label ? <strong>{it.label}</strong> : null}
+                      {it.text}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.45)", marginTop: "12px", textAlign: "center" }}>
-                Proposed CAD model of Supreme Outfit Ltd.
-              </p>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginTop: "16px" }}>
-                {[
-                  { src: "/images/outfit-welfare.jpg", cap: "Welfare block" },
-                  { src: "/images/outfit-pond.jpg", cap: "Rainwater pond" },
-                ].map((im) => (
-                  <div key={im.src}>
-                    <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 10", borderRadius: "6px", overflow: "hidden", border: "1px solid rgba(56,182,255,0.2)" }}>
-                      <Image src={im.src} alt={im.cap} fill style={{ objectFit: "cover" }} sizes="280px" />
-                    </div>
-                    <p style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.4)", marginTop: "8px", textAlign: "center" }}>{im.cap}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
