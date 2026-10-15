@@ -311,48 +311,6 @@ export default function StitchPage() {
         </div>
       </section>
 
-      {/* VIDEO */}
-      <section
-        id="video"
-        style={{
-          position: "relative",
-          background: "radial-gradient(ellipse 70% 60% at 50% 0%, rgba(56,182,255,0.16) 0%, rgba(56,182,255,0) 60%), #050E1C",
-          borderTop: "1px solid rgba(217,188,107,0.35)",
-          borderBottom: "1px solid rgba(217,188,107,0.35)",
-          padding: "110px 0 120px",
-        }}
-      >
-        <div className="container" style={{ textAlign: "center" }}>
-          <p className="section-eyebrow">See Us In Action</p>
-          <h2 className="section-h2-light" style={{ marginBottom: "18px" }}>Company Profile Video</h2>
-          <p style={{ color: "rgba(255,255,255,0.72)", fontSize: "1.05rem", lineHeight: 1.6, maxWidth: "640px", margin: "0 auto 48px" }}>
-            A nine-minute walk through Supreme Stitch Ltd., from knitting and dyeing to our
-            38 sewing lines, in-house lab and certifications.
-          </p>
-          <div
-            style={{
-              position: "relative",
-              paddingBottom: "56.25%",
-              height: 0,
-              overflow: "hidden",
-              borderRadius: "14px",
-              border: "1px solid rgba(217,188,107,0.45)",
-              boxShadow: "0 40px 90px rgba(0,0,0,0.65), 0 0 0 1px rgba(56,182,255,0.12)",
-              background: "#000",
-            }}
-          >
-            <iframe
-              src="https://www.youtube.com/embed/jY8u0RTi92I?rel=0&modestbranding=1"
-              title="Supreme Stitch Ltd. company profile video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
-            />
-          </div>
-        </div>
-      </section>
-
       {/* MISSION & VISION */}
       <section className="section-pad" style={{ background: "#0B1D2E" }}>
         <div className="container">
@@ -696,6 +654,48 @@ export default function StitchPage() {
               allowFullScreen
               loading="lazy"
               title="Supreme Stitch Ltd. location, Kashimpur, Gazipur"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* VIDEO */}
+      <section
+        id="video"
+        style={{
+          position: "relative",
+          background: "radial-gradient(ellipse 70% 60% at 50% 0%, rgba(56,182,255,0.16) 0%, rgba(56,182,255,0) 60%), #050E1C",
+          borderTop: "1px solid rgba(217,188,107,0.35)",
+          borderBottom: "1px solid rgba(217,188,107,0.35)",
+          padding: "110px 0 120px",
+        }}
+      >
+        <div className="container" style={{ textAlign: "center" }}>
+          <p className="section-eyebrow">See Us In Action</p>
+          <h2 className="section-h2-light" style={{ marginBottom: "18px" }}>Company Profile Video</h2>
+          <p style={{ color: "rgba(255,255,255,0.72)", fontSize: "1.05rem", lineHeight: 1.6, maxWidth: "640px", margin: "0 auto 48px" }}>
+            A nine-minute walk through Supreme Stitch Ltd., from knitting and dyeing to our
+            38 sewing lines, in-house lab and certifications.
+          </p>
+          <div
+            style={{
+              position: "relative",
+              paddingBottom: "56.25%",
+              height: 0,
+              overflow: "hidden",
+              borderRadius: "14px",
+              border: "1px solid rgba(217,188,107,0.45)",
+              boxShadow: "0 40px 90px rgba(0,0,0,0.65), 0 0 0 1px rgba(56,182,255,0.12)",
+              background: "#000",
+            }}
+          >
+            <iframe
+              src="https://www.youtube.com/embed/jY8u0RTi92I?rel=0&modestbranding=1"
+              title="Supreme Stitch Ltd. company profile video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
             />
           </div>
         </div>
