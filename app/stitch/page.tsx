@@ -254,6 +254,9 @@ export default function StitchPage() {
               <Link href="/contact" className="btn-outline-gold" style={{ borderColor: "rgba(255,255,255,0.5)", color: "#fff" }}>
                 Partner With Us
               </Link>
+              <a href="#video" className="btn-outline-gold" style={{ borderColor: "rgba(255,255,255,0.5)", color: "#fff" }}>
+                Watch Video
+              </a>
             </div>
           </div>
         </div>
@@ -304,6 +307,33 @@ export default function StitchPage() {
             <div style={{ position: "relative", width: "100%", minHeight: "420px", borderRadius: "8px", overflow: "hidden" }}>
               <Image src="/images/st-management.jpg" alt="Supreme Stitch management team in a meeting" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 560px" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* VIDEO */}
+      <section id="video" className="section-pad" style={{ background: "#0B1D2E" }}>
+        <div className="container" style={{ textAlign: "center" }}>
+          <p className="section-eyebrow">See Us In Action</p>
+          <h2 className="section-h2-light">Company Profile Video</h2>
+          <div style={{
+            position: "relative",
+            paddingBottom: "56.25%",
+            height: 0,
+            overflow: "hidden",
+            borderRadius: "8px",
+            border: "1px solid rgba(56,182,255,0.25)",
+            maxWidth: "900px",
+            margin: "0 auto",
+          }}>
+            <iframe
+              src="https://www.youtube.com/embed/jY8u0RTi92I"
+              title="Supreme Stitch Ltd. company profile video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
+            />
           </div>
         </div>
       </section>
