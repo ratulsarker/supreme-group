@@ -20,7 +20,7 @@ export default function ContactPage() {
         background: "#0B1D2E",
       }}>
         <Image
-          src="/images/hero-building.jpg"
+          src="/images/outfit-campus.jpg"
           alt="Contact Supreme Group"
           fill
           preload
