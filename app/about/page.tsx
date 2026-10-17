@@ -71,7 +71,7 @@ export default function AboutPage() {
             </div>
             <div style={{ position: "relative" }}>
               <div style={{ position: "relative", height: "400px", borderRadius: "4px", overflow: "hidden" }}>
-                <Image src="/images/hero-building.jpg" alt="Supreme Group manufacturing campus" fill style={{ objectFit: "cover" }} sizes="600px" />
+                <Image src="/images/outfit-campus.jpg" alt="Supreme Group manufacturing campus" fill style={{ objectFit: "cover" }} sizes="600px" />
               </div>
               <div style={{
                 position: "absolute",

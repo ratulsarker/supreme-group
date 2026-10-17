@@ -522,7 +522,7 @@ export default function StitchPage() {
             </Link>
             <Link href="/outfit" className="sister-card">
               <div className="sister-img">
-                <Image src="/images/hero-building.jpg" alt="Supreme Outfit factory" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 33vw" />
+                <Image src="/images/outfit-campus.jpg" alt="Supreme Outfit factory" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 33vw" />
               </div>
               <div className="sister-body">
                 <h3>Supreme Outfit Ltd.</h3>

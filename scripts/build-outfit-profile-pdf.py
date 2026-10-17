@@ -1,13 +1,16 @@
 """Rebuild the Supreme Outfit company profile as a clean, watermark-free PDF."""
 import os
+import tempfile
 from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
 from reportlab.lib.colors import Color, HexColor
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
-IMG = "/home/user/supreme-group/public/images/"
-OUT = "/home/user/supreme-group/public/supreme-outfit-company-profile.pdf"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+IMG = os.path.join(ROOT, "public", "images") + os.sep
+OUT = os.path.join(ROOT, "public", "supreme-outfit-company-profile.pdf")
+TMP = tempfile.mkdtemp(prefix="outfit-profile-")
 
 W, H = 1280.0, 720.0  # 16:9 deck
 
@@ -24,25 +27,30 @@ SLATE = HexColor("#52697C")
 WHITE = HexColor("#FFFFFF")
 
 # Fonts: Archivo-like heavy grotesque for headings, clean sans for body.
+# Liberation Sans (Linux) and Arial (macOS) are metric-compatible, so the
+# layout is identical on either machine.
 FONT_DIRS = [
     "/usr/share/fonts/truetype/liberation/",
     "/usr/share/fonts/truetype/dejavu/",
+    "/System/Library/Fonts/Supplemental/",
+    "/Library/Fonts/",
 ]
 
 
-def reg(name, filename):
+def reg(name, *filenames):
     for d in FONT_DIRS:
-        p = os.path.join(d, filename)
-        if os.path.exists(p):
-            pdfmetrics.registerFont(TTFont(name, p))
-            return True
+        for filename in filenames:
+            p = os.path.join(d, filename)
+            if os.path.exists(p):
+                pdfmetrics.registerFont(TTFont(name, p))
+                return True
     return False
 
 
-HEAD = "Head" if reg("Head", "LiberationSans-Bold.ttf") else "Helvetica-Bold"
-BODY = "Body" if reg("Body", "LiberationSans-Regular.ttf") else "Helvetica"
-BODY_B = "BodyB" if reg("BodyB", "LiberationSans-Bold.ttf") else "Helvetica-Bold"
-BODY_I = "BodyI" if reg("BodyI", "LiberationSans-Italic.ttf") else "Helvetica-Oblique"
+HEAD = "Head" if reg("Head", "LiberationSans-Bold.ttf", "Arial Bold.ttf") else "Helvetica-Bold"
+BODY = "Body" if reg("Body", "LiberationSans-Regular.ttf", "Arial.ttf") else "Helvetica"
+BODY_B = "BodyB" if reg("BodyB", "LiberationSans-Bold.ttf", "Arial Bold.ttf") else "Helvetica-Bold"
+BODY_I = "BodyI" if reg("BodyI", "LiberationSans-Italic.ttf", "Arial Italic.ttf") else "Helvetica-Oblique"
 
 c = canvas.Canvas(OUT, pagesize=(W, H))
 c.setTitle("Supreme Outfit Ltd. | Company Profile")
@@ -81,18 +89,23 @@ def draw_image_cover(path, x, y, w, h, focus=0.5):
 _scrim_cache = {}
 
 
-def scrimmed(path, w, h, rgb, a_left, a_right, focus=0.5):
+def scrimmed(path, w, h, rgb, a_left, a_right, focus=0.5, crop=None):
     """Crop-to-fill an image and bake a smooth horizontal scrim onto it.
 
     Drawing the gradient as stacked translucent rects in the PDF produced
     visible banding, so the blend happens in pixel space instead.
+    `crop` is an optional (x0, y0, x1, y1) box in 0..1 fractions applied
+    before the fill-crop, to zoom into part of the frame.
     """
     from PIL import Image as PILImage
-    key = (path, int(w), int(h), rgb, a_left, a_right, focus)
+    key = (path, int(w), int(h), rgb, a_left, a_right, focus, crop)
     if key in _scrim_cache:
         return _scrim_cache[key]
     ow, oh = int(w * 2), int(h * 2)          # 2x for print sharpness
     im = PILImage.open(IMG + path).convert("RGB")
+    if crop:
+        im = im.crop((int(crop[0] * im.width), int(crop[1] * im.height),
+                      int(crop[2] * im.width), int(crop[3] * im.height)))
     box_ar, img_ar = ow / oh, im.width / im.height
     if img_ar > box_ar:
         cw = int(im.height * box_ar)
@@ -108,7 +121,7 @@ def scrimmed(path, w, h, rgb, a_left, a_right, focus=0.5):
     lo, hi = int(a_left * 255), int(a_right * 255)
     mask = mask.point(lambda v: lo + (hi - lo) * v // 255)
     im = PILImage.composite(overlay, im, mask)
-    out = f"scrim_{abs(hash(key))}.jpg"
+    out = os.path.join(TMP, f"scrim_{abs(hash(key))}.jpg")
     im.save(out, quality=90, optimize=True)
     _scrim_cache[key] = out
     return out
@@ -170,8 +183,10 @@ def rule(x, y, w=54, color=BRASS, h=2.5):
 
 
 # ── 01 COVER ────────────────────────────────────────────────────────────────
-c.drawImage(scrimmed("hero-building.jpg", W, H, (7 / 255, 22 / 255, 36 / 255),
-                     0.97, 0.55, focus=0.45), 0, 0, width=W, height=H)
+# zoom into the left three-quarters so the blocks sit right of the title
+c.drawImage(scrimmed("outfit-aerial.jpg", W, H, (7 / 255, 22 / 255, 36 / 255),
+                     0.95, 0.35, focus=0.5, crop=(0.0, 0.12, 0.78, 0.92)),
+            0, 0, width=W, height=H)
 c.setFillColor(BRASS)
 c.rect(0, H - 4, W, 4, stroke=0, fill=1)
 
@@ -194,7 +209,7 @@ page_no[0] = 1
 c.showPage()
 c.setFillColor(INK)
 c.rect(0, 0, W, H, stroke=0, fill=1)
-draw_image_cover("wa-factory-0011.jpg", 0, 0, W, H, focus=0.4)
+draw_image_cover("outfit-skybridge.jpg", 0, 0, W, H, focus=0.5)
 c.setFillColor(Color(11 / 255, 29 / 255, 46 / 255, 0.90))
 c.rect(0, 0, W, H, stroke=0, fill=1)
 page_frame(dark=True)
@@ -225,7 +240,8 @@ y = para("A state-of-the-art garment factory specialising in knitwear production
          "Supreme Stitch Ltd., a leading garment exporter with years of experience in "
          "high-quality apparel.", 96, 492, BODY, 14, 25, 500)
 y = para("Built on a 15-hectare site in Dhamrai, the project brings knitting, printing, "
-         "cutting, sewing and finishing onto a single campus.", 96, y - 14, BODY, 14, 25, 500)
+         "cutting, sewing and finishing onto a single campus. Phase 1 is now in production.",
+         96, y - 14, BODY, 14, 25, 500)
 
 # Total project area callout
 c.setFillColor(CREAM)
@@ -279,7 +295,7 @@ cards = [
     ("4 x Six-Storied Blocks", ["Phase 1  ·  Buildings 1 & 2", "Phase 2  ·  Buildings 3 & 4"]),
     ("Worker Welfare & Support", ["Building 5, Ground  ·  Childcare & medical",
                                   "Building 5, 1st Floor  ·  Worker's canteen"]),
-    ("Utilities & Compliance", ["Effluent treatment plant (ETP)", "Fire-pump house",
+    ("Utilities & Compliance", ["Effluent treatment plant (ETP), 15,000 L/h", "Fire-pump house",
                                 "Dual septic-tank system, hygienic zoning"]),
     ("Site & Environment", ["100-car dedicated parking zone",
                             "Large pond for rainwater harvesting",
@@ -369,19 +385,19 @@ rule(96, 574)
 
 b1 = [("Ground", "Finished Goods Store", False), ("1st", "Finishing & C-TPAT", False),
       ("2nd", "Sewing Section", False), ("3rd", "Sewing Section", False),
-      ("4th", "Cut Panel Store", False), ("5th", "Office, CAD & Sample", False)]
+      ("4th", "Cut Panel Store", False), ("5th", "Office & CAD", False)]
 b2 = [("Ground", "Yarn & Knitting", False), ("1st", "Screen Printing", False),
-      ("2nd", "Auto Printing", False), ("3rd", "Proposed for Outerwear", True),
-      ("4th", "Cutting Section", False), ("5th", "Proposed for Outerwear", True)]
+      ("2nd", "Auto Printing", False), ("3rd", "Proposed for Printing", True),
+      ("4th", "Cutting Section", False), ("5th", "Sample Section", False)]
 floor_plan(96, 528, 500, "Building 1", "Sewing, finishing & dispatch", b1)
-floor_plan(684, 528, 500, "Building 2", "Fabric, print & cutting", b2)
+floor_plan(684, 528, 500, "Building 2", "Fabric, print, cutting & sample", b2)
 
 # ── 06 PHASE 1 TARGETS ──────────────────────────────────────────────────────
 c.showPage()
 c.setFillColor(INK_MID)
 c.rect(0, 0, W, H, stroke=0, fill=1)
-c.drawImage(scrimmed("wa-factory-0011.jpg", 660, H, (14 / 255, 36 / 255, 56 / 255),
-                     1.0, 0.5, focus=0.45), 620, 0, width=660, height=H)
+c.drawImage(scrimmed("outfit-sewing.jpg", 660, H, (14 / 255, 36 / 255, 56 / 255),
+                     1.0, 0.35, focus=0.5), 620, 0, width=660, height=H)
 c.setFillColor(INK_MID)
 c.rect(0, 0, 621, H, stroke=0, fill=1)
 page_frame(dark=True)
@@ -416,13 +432,13 @@ c.setStrokeColor(Color(56 / 255, 182 / 255, 255 / 255, 0.35))
 c.roundRect(96, 110, 380, 84, 6, stroke=1, fill=0)
 c.setFont(BODY_B, 9)
 c.setFillColor(HexColor("#6FCBFF"))
-c.drawString(120, 162, "T R I A L   P R O D U C T I O N   S T A R T   T A R G E T")
+c.drawString(120, 162, "P R O D U C T I O N   S T A T U S")
 c.setFont(HEAD, 26)
 c.setFillColor(WHITE)
-c.drawString(120, 128, "September 2025")
+c.drawString(120, 128, "Production started")
 
 
-# ── 07-09 PRODUCTION SECTIONS ───────────────────────────────────────────────
+# ── 07-10 PRODUCTION SECTIONS ───────────────────────────────────────────────
 def section_page(eb, title, capacity, specs, image, focus=0.5, flip=False):
     c.showPage()
     c.setFillColor(WHITE)
@@ -466,7 +482,7 @@ section_page("Building 2  ·  Ground Floor", "Knitting", "Capacity: 12 tons of f
               "4 x circular knitting machines, fleece (Gong Li)",
               "2 x circular knitting machines, rib (Gong Li)",
               "2 x fabric inspection machines"],
-             "outfit-knitting.jpg", 0.5)
+             "outfit-knitting-floor.jpg", 0.5)
 
 section_page("Building 2  ·  1st & 2nd Floor", "Printing",
              "Screen, automatic and oval printing in-house",
@@ -475,7 +491,7 @@ section_page("Building 2  ·  1st & 2nd Floor", "Printing",
               "18 x auto-run dryers",
               "2 x curing machines",
               "Well-equipped colour and quality lab"],
-             "outfit-printing.jpg", 0.5, flip=True)
+             "outfit-printing-floor.jpg", 0.5, flip=True)
 
 section_page("Building 2  ·  4th Floor", "Cutting", "CAD-linked automated cutting",
              ["6 x 80 ft cutting tables",
@@ -483,11 +499,18 @@ section_page("Building 2  ·  4th Floor", "Cutting", "CAD-linked automated cutti
               "2 x CAD-linked auto cutters",
               "1 x steam fabric relaxer",
               "2 x fabric inspection machines"],
-             "wa-factory-0014.jpg", 0.5)
+             "outfit-cutting.jpg", 0.5)
 
-# ── 10 SOLAR & SUSTAINABILITY ───────────────────────────────────────────────
+section_page("Utilities  ·  Zero Discharge", "Effluent Treatment",
+             "Capacity: 15,000 litres per hour",
+             ["Effluent treatment plant (ETP), 15,000 L/h capacity",
+              "Plus 15 m³ HTP for all water streams",
+              "Zero-discharge handling of every wastewater stream on site"],
+             "outfit-etp.jpg", 0.35, flip=True)
+
+# ── 11 SOLAR & SUSTAINABILITY ───────────────────────────────────────────────
 c.showPage()
-draw_image_cover("outfit-solar.jpg", 0, 0, W, H, focus=0.5)
+draw_image_cover("outfit-rooftop-solar.jpg", 0, 0, W, H, focus=0.5)
 c.setFillColor(Color(7 / 255, 22 / 255, 36 / 255, 0.88))
 c.rect(0, 0, W, H, stroke=0, fill=1)
 page_frame(dark=True)
@@ -527,11 +550,11 @@ c.setFillColor(BRASS_LT)
 c.drawString(122, 173, "Zero discharge")
 c.setFont(BODY, 12.5)
 c.setFillColor(Color(1, 1, 1, 0.72))
-c.drawString(258, 173, "15 m3/h ETP + HTP for all wastewater streams")
+c.drawString(258, 173, "15,000 L/h ETP, plus 15 m³ HTP for all water streams")
 
-# ── 11 CLOSING ──────────────────────────────────────────────────────────────
+# ── 12 CLOSING ──────────────────────────────────────────────────────────────
 c.showPage()
-draw_image_cover("wa-factory-0005.jpg", 0, 0, W, H, focus=0.5)
+draw_image_cover("outfit-aerial.jpg", 0, 0, W, H, focus=0.5)
 c.setFillColor(Color(11 / 255, 29 / 255, 46 / 255, 0.92))
 c.rect(0, 0, W, H, stroke=0, fill=1)
 c.setFillColor(BRASS)

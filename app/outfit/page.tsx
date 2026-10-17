@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Supreme Outfit Ltd.",
   description:
-    "A state-of-the-art knitwear factory in Dhamrai, Dhaka. 15 hectares, four six-storied blocks, 60,000 pieces a day, 1,350 sewing machines and 1.4 MW of rooftop solar.",
+    "A state-of-the-art knitwear factory in Dhamrai, Dhaka, now in production. 15 hectares, four six-storied blocks, 60,000 pieces a day, 1,350 sewing machines and 1.4 MW of rooftop solar.",
 };
 
 const heroStats = [
@@ -29,24 +29,24 @@ const buildingOne = [
   { floor: "2nd", use: "Sewing Section" },
   { floor: "3rd", use: "Sewing Section" },
   { floor: "4th", use: "Cut Panel Store" },
-  { floor: "5th", use: "Office, CAD & Sample" },
+  { floor: "5th", use: "Office & CAD" },
 ];
 
 const buildingTwo = [
   { floor: "Ground", use: "Yarn & Knitting" },
   { floor: "1st", use: "Screen Printing" },
   { floor: "2nd", use: "Auto Printing" },
-  { floor: "3rd", use: "Proposed for Outerwear", proposed: true },
+  { floor: "3rd", use: "Proposed for Printing", proposed: true },
   { floor: "4th", use: "Cutting Section" },
-  { floor: "5th", use: "Proposed for Outerwear", proposed: true },
+  { floor: "5th", use: "Sample Section" },
 ];
 
 const sections = [
   {
     eyebrow: "Building 2 · Ground Floor",
     title: "Knitting",
-    image: "/images/outfit-knitting.jpg",
-    alt: "Circular knitting machines on the knitting floor",
+    image: "/images/outfit-knitting-floor.jpg",
+    alt: "Circular knitting machines running on the knitting floor, Building 2",
     capacity: "12 tons of fabric per day",
     specs: [
       "26 × circular knitting machines, single jersey (Gong Li)",
@@ -58,8 +58,8 @@ const sections = [
   {
     eyebrow: "Building 2 · 1st & 2nd Floor",
     title: "Printing",
-    image: "/images/outfit-printing.jpg",
-    alt: "Automatic oval printing machines",
+    image: "/images/outfit-printing-floor.jpg",
+    alt: "Operator at an automatic oval printing machine on the printing floor",
     capacity: "Screen, automatic and oval printing in-house",
     specs: [
       "18 × 80 ft screen printing tables",
@@ -72,8 +72,8 @@ const sections = [
   {
     eyebrow: "Building 2 · 4th Floor",
     title: "Cutting",
-    image: "/images/hero-building.jpg",
-    alt: "Supreme Outfit factory building",
+    image: "/images/outfit-cutting.jpg",
+    alt: "Automatic fabric spreader on the cutting floor, Building 2",
     capacity: "CAD-linked automated cutting",
     specs: [
       "6 × 80 ft cutting tables",
@@ -81,6 +81,18 @@ const sections = [
       "2 × CAD-linked auto cutters",
       "1 × steam fabric relaxer",
       "2 × fabric inspection machines",
+    ],
+  },
+  {
+    eyebrow: "Utilities · Zero Discharge",
+    title: "Effluent Treatment",
+    image: "/images/outfit-etp.jpg",
+    alt: "Effluent treatment plant clarifier tanks beside the production blocks",
+    capacity: "15,000 litres per hour",
+    specs: [
+      "Effluent treatment plant (ETP), 15,000 L/h capacity",
+      "Plus 15 m³ HTP for all water streams",
+      "Zero-discharge handling of every wastewater stream on site",
     ],
   },
 ];
@@ -112,7 +124,7 @@ const layoutFacts = [
     title: "Utilities & Compliance",
     icon: icon("M13 2 4.09 12.11a1 1 0 0 0 .77 1.64h6.09l-1.04 8.25 8.9-10.11a1 1 0 0 0-.77-1.64h-6.09L13 2Z"),
     items: [
-      { label: "", text: "Effluent treatment plant (ETP)" },
+      { label: "", text: "Effluent treatment plant (ETP), 15,000 L/h" },
       { label: "", text: "Fire-pump house" },
       { label: "", text: "Dual septic-tank system, hygienic zoning" },
     ],
@@ -141,8 +153,8 @@ export default function OutfitPage() {
       {/* HERO */}
       <section style={{ position: "relative", minHeight: "88vh", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
         <Image
-          src="/images/hero-building.jpg"
-          alt="Supreme Outfit factory campus"
+          src="/images/outfit-aerial.jpg"
+          alt="Aerial view of the Supreme Outfit campus in Dhamrai"
           fill
           priority
           style={{ objectFit: "cover", objectPosition: "center 45%" }}
@@ -155,7 +167,7 @@ export default function OutfitPage() {
         <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "150px", paddingBottom: "64px" }}>
           <div style={{ maxWidth: "780px" }}>
             <p style={{ fontSize: "0.72rem", color: "#D9BC6B", fontWeight: 700, letterSpacing: "3px", textTransform: "uppercase", marginBottom: "16px" }}>
-              Company Profile · Garment Manufacturing
+              Company Profile · Now in Production
             </p>
             <h1 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(2.4rem, 5.5vw, 4.2rem)", fontWeight: 800, color: "white", marginBottom: "18px", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
               Supreme Outfit Ltd.
@@ -163,7 +175,7 @@ export default function OutfitPage() {
             <p style={{ fontSize: "1.05rem", color: "rgba(255,255,255,0.75)", maxWidth: "620px", lineHeight: 1.85, marginBottom: "34px" }}>
               A state-of-the-art knitwear factory in Dhamrai, Dhaka. Fifteen hectares, four
               six-storied production blocks and a dedicated welfare building, purpose-built for
-              high-volume export manufacturing.
+              high-volume export manufacturing. Phase 1 is now in production.
             </p>
             <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
               <a href="/supreme-outfit-company-profile.pdf" download className="btn-gold">
@@ -233,7 +245,7 @@ export default function OutfitPage() {
               <p style={{ color: "#52697C", lineHeight: 1.9, marginBottom: "26px" }}>
                 Built on a 15-hectare site in Dhamrai, the project brings knitting, printing, cutting,
                 sewing and finishing onto a single campus, so an order can move from yarn to finished
-                garment without leaving the site.
+                garment without leaving the site. Phase 1 is now in production.
               </p>
               <Link href="/stitch" style={{ color: "#0E86D4", fontWeight: 600, fontSize: "0.9rem", textDecoration: "none" }}>
                 Visit Supreme Stitch, our parent company →
@@ -323,7 +335,7 @@ export default function OutfitPage() {
           <div className="floorplan-grid reveal">
             {[
               { name: "Building 1", sub: "Sewing, finishing & dispatch", floors: buildingOne },
-              { name: "Building 2", sub: "Fabric, print & cutting", floors: buildingTwo },
+              { name: "Building 2", sub: "Fabric, print, cutting & sample", floors: buildingTwo },
             ].map((b) => (
               <div key={b.name} className="floorplan">
                 <div className="floorplan-head">
@@ -373,16 +385,16 @@ export default function OutfitPage() {
 
               <div style={{ marginTop: "34px", padding: "20px 24px", background: "rgba(56,182,255,0.08)", border: "1px solid rgba(56,182,255,0.28)", borderRadius: "6px" }}>
                 <div style={{ fontSize: "0.68rem", color: "#6FCBFF", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", marginBottom: "6px" }}>
-                  Trial Production Start Target
+                  Production Status
                 </div>
                 <div style={{ fontFamily: "var(--font-head)", fontSize: "1.5rem", fontWeight: 800, color: "white" }}>
-                  September 2025
+                  Production started
                 </div>
               </div>
             </div>
 
             <div style={{ position: "relative", width: "100%", minHeight: "420px", borderRadius: "8px", overflow: "hidden", border: "1px solid rgba(56,182,255,0.25)" }}>
-              <Image src="/images/wa-factory-0011.jpg" alt="Supreme Outfit production blocks and skybridges" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 560px" />
+              <Image src="/images/outfit-sewing.jpg" alt="Sewing lines in production, Building 1" fill style={{ objectFit: "cover" }} sizes="(max-width: 900px) 100vw, 560px" />
             </div>
           </div>
         </div>
@@ -425,7 +437,7 @@ export default function OutfitPage() {
 
       {/* SOLAR & SUSTAINABILITY */}
       <section style={{ position: "relative", padding: "110px 0", overflow: "hidden" }}>
-        <Image src="/images/outfit-solar.jpg" alt="Rooftop solar array at sunset" fill style={{ objectFit: "cover" }} sizes="100vw" />
+        <Image src="/images/outfit-rooftop-solar.jpg" alt="Rooftop solar array across Buildings 1 and 2" fill style={{ objectFit: "cover" }} sizes="100vw" />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(100deg, rgba(7,22,36,0.95) 0%, rgba(7,22,36,0.8) 55%, rgba(7,22,36,0.55) 100%)" }} />
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <div className="reveal" style={{ maxWidth: "760px" }}>
@@ -452,7 +464,7 @@ export default function OutfitPage() {
             <div style={{ marginTop: "28px", display: "inline-flex", alignItems: "center", gap: "12px", padding: "14px 22px", background: "rgba(201,168,76,0.12)", border: "1px solid rgba(201,168,76,0.4)", borderRadius: "6px" }}>
               <span style={{ color: "#D9BC6B", fontWeight: 700, fontSize: "0.9rem" }}>Zero discharge</span>
               <span style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.88rem" }}>
-                15 m³/h ETP + HTP for all wastewater streams
+                15,000 L/h ETP, plus 15 m³ HTP for all water streams
               </span>
             </div>
           </div>
